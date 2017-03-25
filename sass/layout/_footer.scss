@@ -1,0 +1,21 @@
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+	background-color: $color__background-accent;
+    p{
+        color:$color__text-reverse;
+    }
+
+    .copyright{
+        float: left;
+        margin-left: 1em;
+    }
+
+
+    .site-credit{
+        float: right;
+        margin-right: 1em;
+    }
+
+}
+
