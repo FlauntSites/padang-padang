@@ -13,6 +13,8 @@
 
 	</div><!-- #content -->
 
+	<?php get_template_part( 'footer-meta' ); ?>
+	
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 

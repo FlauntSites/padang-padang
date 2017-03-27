@@ -9,18 +9,6 @@
 	],
 "creatorBuild": "25504",
 "files": {
-	"\/.jscsrc": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.jscsrc",
-		"oF": 0
-		},
-	"\/.jshintignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/.jshintignore",
-		"oF": 0
-		},
 	"\/404.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -37,6 +25,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/comments.php",
+		"oF": 0
+		},
+	"\/footer-cta.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/footer-cta.php",
+		"oF": 0
+		},
+	"\/footer-meta.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/footer-meta.php",
 		"oF": 0
 		},
 	"\/footer.php": {
@@ -710,6 +710,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sidebar.php",
+		"oF": 0
+		},
+	"\/single-services.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-services.php",
 		"oF": 0
 		},
 	"\/single.php": {
