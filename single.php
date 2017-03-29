@@ -11,8 +11,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area row">
 		<main id="main" class="site-main small-12 small-centered" role="main">
-		<?php echo the_author(); ?>
-
 		<?php
 		while ( have_posts() ) : the_post();
 
