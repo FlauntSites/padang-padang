@@ -71,6 +71,20 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "navigation/navigation";
 
 /*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Media Query | Breakpoints
+--------------------------------------------------------------*/
+@import "breakpoints/_base.scss";
+@import "breakpoints/_40em-up.scss";
+@import "breakpoints/_64em-up.scss";
+@import "breakpoints/_90em-up.scss";
+@import "breakpoints/_2x.scss";
+
+/*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 @import "modules/accessibility";
@@ -91,11 +105,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
-# Content
---------------------------------------------------------------*/
-@import "site/site";
-
-/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 @import "modules/infinite-scroll";
@@ -104,12 +113,3 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 --------------------------------------------------------------*/
 @import "media/media";
-
-
-/*--------------------------------------------------------------
-# Media Query | Breakpoints
---------------------------------------------------------------*/
-@import "breakpoints/_40em-up.scss";
-@import "breakpoints/_64em-up.scss";
-@import "breakpoints/_90em-up.scss";
-@import "breakpoints/_2x.scss";
