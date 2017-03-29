@@ -42,5 +42,24 @@
 
 <?php wp_footer(); ?>
 
+<script>
+	var mySwiper = new Swiper ('.swiper-container', {
+	// Optional parameters
+	loop: true,
+		speed: 2000,
+		autoplay: 1000,
+		effect: "fade",
+		preloadImages: false,
+		lazyLoadingInPrevNext: true,
+		autoHeight: true,
+
+
+	// Navigation arrows
+	nextButton: '.swiper-button-next',
+	prevButton: '.swiper-button-prev',
+
+	})
+</script>
+
 </body>
 </html>
