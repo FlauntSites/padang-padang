@@ -81,6 +81,62 @@
 		"oAP": "\/inc\/jetpack.php",
 		"oF": 0
 		},
+	"\/inc\/swiper\/maps\/swiper.jquery.min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/swiper\/maps\/swiper.jquery.min.js.map",
+		"oF": 0
+		},
+	"\/inc\/swiper\/maps\/swiper.jquery.umd.min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/swiper\/maps\/swiper.jquery.umd.min.js.map",
+		"oF": 0
+		},
+	"\/inc\/swiper\/maps\/swiper.min.js.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/swiper\/maps\/swiper.min.js.map",
+		"oF": 0
+		},
+	"\/inc\/swiper\/swiper-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/inc\/swiper\/swiper-min-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/inc\/swiper\/swiper.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/inc\/swiper\/swiper-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/inc\/swiper\/swiper.jquery.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/inc\/swiper\/swiper.jquery.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/inc\/swiper\/swiper.min.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/inc\/swiper\/swiper.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/inc\/template-tags.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -259,6 +315,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/breakpoints\/_90em-up.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/breakpoints\/_base.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/breakpoints\/_base.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -706,6 +775,12 @@
 		"oAP": "\/search.php",
 		"oF": 0
 		},
+	"\/sidebar-services.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/sidebar-services.php",
+		"oF": 0
+		},
 	"\/sidebar.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -722,6 +797,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/single.php",
+		"oF": 0
+		},
+	"\/slideshow.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/slideshow.php",
 		"oF": 0
 		},
 	"\/style-min.css": {
