@@ -173,6 +173,19 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 
 			</figure>
 
+			<script type="application/ld+json">
+				{
+				"@context": "http://schema.org",
+				"@type": "ImageObject",
+				"author": "<?php the_author(); ?>",
+				"contentUrl": "<?php echo $thumb; ?>",
+				"datePublished": "<?php echo $image[ 'created_timestamp' ]; ?>",
+				"description": "<?php echo $image[ 'alt' ]; ?>",
+				"name": "<?php echo $image[ 'title' ]; ?>",
+				"copyright": "<?php echo $image[ 'copyright' ]; ?>"
+				}
+			</script>
+
 		<?php endif; 
 }
 
