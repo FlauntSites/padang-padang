@@ -114,7 +114,9 @@ function padang_padang_scripts() {
 	wp_enqueue_script( 'padang-padang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'swiper-slider-jquery', get_template_directory_uri() . '/inc/swiper/swiper.jquery.min.js', array( 'jquery' ), '', false );
+	
 	wp_enqueue_script( 'swiper-slider-script', get_template_directory_uri() . '/inc/swiper/swiper.min.js', array( 'jquery' ), '', false );
+	
 	wp_enqueue_style( 'swiper-slider-styles', get_template_directory_uri() . '/inc/swiper/swiper.css', array(), ''  );
 
 
@@ -141,6 +143,16 @@ require get_template_directory() . '/inc/template-tags.php';
 require get_template_directory() . '/inc/extras.php';
 
 /**
+ * Recommend the Kirki plugin
+ */
+require get_template_directory() . '/inc/include-kirki.php';
+
+/**
+ * Load the Kirki Fallback class
+ */
+require get_template_directory() . '/inc/kirki-fallback.php';
+
+/**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
@@ -153,7 +165,17 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
+
 function fsc_figure( $image, $size, $imageclass, $captionclass ){
+
+	/**
+	* Let plugins pre-filter the image meta to be able to fix inconsistencies in the stored data.
+	*
+	* @param string 	$image    		The ACF field name (i.e. 'your_photo_name').
+	* @param string  	$size    		Thumbnail size (i.e. 'Thumbnail', 'Medium', 'Large')
+	* @param string 	$imageclass     The Figure class you want to use (ex: 'my-figure') 
+	* @param string    	$captionclass 	The Figcaption class you want to use (ex: 'caption-blue') 
+	*/
 
 		$image = get_field( $image );
 		$size = $size;
@@ -163,9 +185,9 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 
 			<figure class="<?php echo $imageclass; ?>">
 			
-				<img src="<?php echo $thumb; ?>" alt="<?php echo $image[ 'alt' ]; ?>" />
+					<?php echo wp_get_attachment_image( $image['ID'], $size, false, array( 'alt' => $image['alt'] ) );  ?>
 
-					<figcaption class="<?php echo $captionclass; ?>">
+					<figcaption class="<?php echo $captionclass; ?>" style="background-color:<?php echo get_theme_mod( 'caption_background_color', '#000' ); ?>">
 
 						<?php echo $image[ 'caption' ]; ?>
 
