@@ -3,7 +3,7 @@ Theme Name: Padang Padang
 Theme URI: http://underscores.me/
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
-Description: Description
+Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
 Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,11 +78,50 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Media Query | Breakpoints
 --------------------------------------------------------------*/
-@import "breakpoints/_base.scss";
-@import "breakpoints/_40em-up.scss";
-@import "breakpoints/_64em-up.scss";
-@import "breakpoints/_90em-up.scss";
-@import "breakpoints/_2x.scss";
+/*--------------------
+BASE (MOBILE) SIZE
+--------------------*/
+
+@import "breakpoints/base";
+
+/*--------------------
+TABLET & SMALLER LAPTOPS
+--------------------*/
+@media screen and (min-width: 40em) {
+
+	@import "breakpoints/40em-up";
+
+} // end of media query
+
+/*--------------------
+DESKTOP
+--------------------*/
+@media screen and (min-width: 64em) {
+
+	@import "breakpoints/64em-up";
+
+} // end of media query
+
+/*--------------------
+LARGE VIEWING SIZE
+--------------------*/
+
+@media only screen and (min-width: 90.063em) {
+
+	@import "breakpoints/90em-up";
+
+} // end of media query
+
+/*--------------------
+RETINA (2x RESOLUTION DEVICES)
+--------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	@import "breakpoints/2x";
+
+} // end of media query
 
 /*--------------------------------------------------------------
 # Accessibility
