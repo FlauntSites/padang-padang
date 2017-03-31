@@ -1,9 +1,10 @@
+@charset "UTF-8";
 /*!
 Theme Name: Padang Padang
 Theme URI: http://underscores.me/
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
-Description: Description
+Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
 Version: 0.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1313,6 +1314,9 @@ a {
 /*--------------------------------------------------------------
 # Media Query | Breakpoints
 --------------------------------------------------------------*/
+/*--------------------
+BASE (MOBILE) SIZE
+--------------------*/
 /******************************************************************
 Site Name:
 Author:
@@ -1564,7 +1568,11 @@ CTA STYLES
   text-align: center;
   display: block; }
 
-/******************************************************************
+/*--------------------
+TABLET & SMALLER LAPTOPS
+--------------------*/
+@media screen and (min-width: 40em) {
+  /******************************************************************
 Site Name:
 Author:
 
@@ -1577,257 +1585,236 @@ and other resources. You'll also notice the grid starts to
 come into play. Have fun!
 
 ******************************************************************/
-/*********************
+  /*********************
 GENERAL STYLES
 *********************/
-/*********************
+  /*********************
 LAYOUT & GRID STYLES
 *********************/
-/*********************
+  /*********************
 HEADER STYLES
 *********************/
-.meta-header {
-  float: left;
-  width: 100%; }
-  .meta-header .social {
+  .meta-header {
     float: left;
-    width: 200px;
-    margin: 0 0 0 20px;
-    top: 8px;
-    position: relative; }
-  .meta-header .social-icon {
-    float: left;
-    background-repeat: no-repeat;
-    margin-right: 1em;
-    color: #444; }
-
-.page-id-8780 #Stage_animated-logo_2 {
-  display: inherit; }
-
-.page-id-8780 .svg-logo {
-  display: none; }
-
-#client-search {
-  display: inherit;
-  float: right;
-  margin: 8px 20px 0 0; }
-  #client-search #client {
-    float: left;
-    border-radius: 25px; }
-    #client-search #client a {
-      line-height: 28px;
-      font-size: 1em;
-      color: #fff;
-      text-decoration: none; }
-  #client-search #search {
-    float: left;
-    margin-right: 10px; }
-
-/*********************
+    width: 100%; }
+    .meta-header .social {
+      float: left;
+      width: 200px;
+      margin: 0 0 0 20px;
+      top: 8px;
+      position: relative; }
+    .meta-header .social-icon {
+      float: left;
+      background-repeat: no-repeat;
+      margin-right: 1em;
+      color: #444; }
+  .page-id-8780 #Stage_animated-logo_2 {
+    display: inherit; }
+  .page-id-8780 .svg-logo {
+    display: none; }
+  #client-search {
+    display: inherit;
+    float: right;
+    margin: 8px 20px 0 0; }
+    #client-search #client {
+      float: left;
+      border-radius: 25px; }
+      #client-search #client a {
+        line-height: 28px;
+        font-size: 1em;
+        color: #fff;
+        text-decoration: none; }
+    #client-search #search {
+      float: left;
+      margin-right: 10px; }
+  /*********************
 NAVIGATION STYLES
 *********************/
-.mobile-menu {
-  display: none;
-  margin: 0 auto; }
-
-#menu-icon {
-  display: none; }
-
-.desktop-menu {
-  display: inline-block;
-  background-color: #444;
-  width: 100%; }
-
-.menu-toggle {
-  display: none; }
-
-.main-navigation ul {
-  display: block; }
-
-.main-navigation {
-  /* end .menu ul li */
-  /* highlight current page */
-  /* end current highlighters */ }
+  .mobile-menu {
+    display: none;
+    margin: 0 auto; }
+  #menu-icon {
+    display: none; }
+  .desktop-menu {
+    display: inline-block;
+    background-color: #444;
+    width: 100%; }
+  .menu-toggle {
+    display: none; }
   .main-navigation ul {
-    margin: 0 auto;
-    text-align: center;
-    display: table; }
-  .main-navigation li {
-    float: left;
-    position: relative;
-    /*
+    display: block; }
+  .main-navigation {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */ }
+    .main-navigation ul {
+      margin: 0 auto;
+      text-align: center;
+      display: table; }
+    .main-navigation li {
+      float: left;
+      position: relative;
+      /*
 			plan your menus and drop-downs wisely.
 			*/
-    /* showing sub-menus */ }
-    .main-navigation li.current-menu-item {
-      color: #fff; }
-    .main-navigation li a {
-      border-bottom: 0;
-      font-weight: inherit;
-      color: #fff;
-      padding: .5em; }
-      .main-navigation li a:hover, .main-navigation li a:focus {
+      /* showing sub-menus */ }
+      .main-navigation li.current-menu-item {
         color: #fff; }
-      .main-navigation li a:active, .main-navigation li a.current-menu-item {
-        color: #fff; }
-    .main-navigation li ul.sub-menu,
-    .main-navigation li ul.children {
-      margin-top: 0;
-      border: 1px solid #ccc;
-      border-top: 0;
-      position: absolute;
-      visibility: hidden;
-      z-index: 8999;
-      /* highlight sub-menu current page */ }
-      .main-navigation li ul.sub-menu li,
-      .main-navigation li ul.children li {
-        /*
+      .main-navigation li a {
+        border-bottom: 0;
+        font-weight: inherit;
+        color: #fff;
+        padding: .5em; }
+        .main-navigation li a:hover, .main-navigation li a:focus {
+          color: #fff; }
+        .main-navigation li a:active, .main-navigation li a.current-menu-item {
+          color: #fff; }
+      .main-navigation li ul.sub-menu,
+      .main-navigation li ul.children {
+        margin-top: 0;
+        border: 1px solid #ccc;
+        border-top: 0;
+        position: absolute;
+        visibility: hidden;
+        z-index: 8999;
+        /* highlight sub-menu current page */ }
+        .main-navigation li ul.sub-menu li,
+        .main-navigation li ul.children li {
+          /*
 					if you need to go deeper, go nuts
 					just remember deeper menus suck
 					for usability. k, bai.
 					*/ }
-        .main-navigation li ul.sub-menu li a,
-        .main-navigation li ul.children li a {
-          padding-left: 10px;
-          border-right: 0;
-          display: block;
-          width: 180px;
-          border-bottom: 1px solid #ccc; }
-        .main-navigation li ul.sub-menu li:last-child a,
-        .main-navigation li ul.children li:last-child a {
-          border-bottom: 0; }
-        .main-navigation li ul.sub-menu li ul,
-        .main-navigation li ul.children li ul {
-          top: 0;
-          left: 100%; }
-    .main-navigation li:hover > ul {
-      top: auto;
-      visibility: visible; }
-
-/*********************
+          .main-navigation li ul.sub-menu li a,
+          .main-navigation li ul.children li a {
+            padding-left: 10px;
+            border-right: 0;
+            display: block;
+            width: 180px;
+            border-bottom: 1px solid #ccc; }
+          .main-navigation li ul.sub-menu li:last-child a,
+          .main-navigation li ul.children li:last-child a {
+            border-bottom: 0; }
+          .main-navigation li ul.sub-menu li ul,
+          .main-navigation li ul.children li ul {
+            top: 0;
+            left: 100%; }
+      .main-navigation li:hover > ul {
+        top: auto;
+        visibility: visible; }
+  /*********************
 SIDEBARS & ASIDES
 *********************/
-.sidebar {
-  margin-top: 2.2em; }
-
-.widgettitle {
-  border-bottom: 2px solid #444;
-  margin-bottom: 0.75em; }
-
-.widget {
-  padding: 0 10px;
-  margin: 2.2em 0; }
-  .widget ul li {
-    margin-bottom: 0.75em;
-    /* deep nesting */ }
-    .widget ul li ul {
-      margin-top: 0.75em;
-      padding-left: 1em; }
-
-/* links widget */
-/* meta widget */
-/* pages widget */
-/* recent-posts widget */
-/* archives widget */
-/* tag-cloud widget */
-/* calendar widget */
-/* category widget */
-/* recent-comments widget */
-/* search widget */
-/* text widget */
-/*********************
+  .sidebar {
+    margin-top: 2.2em; }
+  .widgettitle {
+    border-bottom: 2px solid #444;
+    margin-bottom: 0.75em; }
+  .widget {
+    padding: 0 10px;
+    margin: 2.2em 0; }
+    .widget ul li {
+      margin-bottom: 0.75em;
+      /* deep nesting */ }
+      .widget ul li ul {
+        margin-top: 0.75em;
+        padding-left: 1em; }
+  /* links widget */
+  /* meta widget */
+  /* pages widget */
+  /* recent-posts widget */
+  /* archives widget */
+  /* tag-cloud widget */
+  /* calendar widget */
+  /* category widget */
+  /* recent-comments widget */
+  /* search widget */
+  /* text widget */
+  /*********************
 FOOTER STYLES
 *********************/
-.footer {
-  position: relative;
-  z-index: 2;
-  width: 100%; }
-  .footer #inner-footer {
-    padding-left: 2%;
-    padding-right: 2%;
-    background-color: #444;
+  .footer {
     position: relative;
-    z-index: 2; }
-  .footer .copyright {
-    font-size: 13px;
-    float: left; }
-  .footer .site-credit {
-    font-size: 13px;
-    float: right; }
-
-.footer-links ul li {
-  /*
+    z-index: 2;
+    width: 100%; }
+    .footer #inner-footer {
+      padding-left: 2%;
+      padding-right: 2%;
+      background-color: #444;
+      position: relative;
+      z-index: 2; }
+    .footer .copyright {
+      font-size: 13px;
+      float: left; }
+    .footer .site-credit {
+      font-size: 13px;
+      float: right; }
+  .footer-links ul li {
+    /*
 			be careful with the depth of your menus.
 			it's very rare to have multi-depth menus in
 			the footer.
 			*/ }
-
-/* end .footer-links */
-/*********************
+  /* end .footer-links */
+  /*********************
 SERVICES
 *********************/
-/*********************
+  /*********************
 ARCHIVE STYLES
 *********************/
-.archive-excerpt {
-  position: relative; }
+  .archive-excerpt {
+    position: relative; }
+  .service-thumb {
+    float: left;
+    width: 40%;
+    margin: 0 1em .5em 0;
+    margin-bottom: 0;
+    display: block; }
+    .service-thumb img {
+      margin-bottom: 0; }
+  .service-footer-thumb img:hover {
+    filter: brightness(110%); }
+  .post-thumb, .service-thumb, .gallery-item {
+    position: relative;
+    line-height: 0; }
+  .post-thumb img {
+    margin-bottom: 0;
+    display: block; }
+  .entry-content dd {
+    margin: 0; }
+  .entry-content img.size-full, .entry-content img.size-large {
+    margin-bottom: 0;
+    display: block; }
+  .entry-content .size-large {
+    margin: 0; }
+  .post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption, figcaption {
+    font-size: 80%;
+    width: 100%;
+    line-height: 1.1em;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    padding: .25em .75em;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out; }
+  p.gallery-item-text {
+    font-size: 100%; }
+  .post-thumb:hover .post-thumb-caption, .service-thumb:hover .service-thumb-caption, .wp-caption:hover p.wp-caption-text, .gallery-item:hover .wp-caption-text.gallery-caption, figure:hover figcaption {
+    opacity: 1;
+    display: inherit; }
+    .post-thumb:hover .post-thumb-caption a, .service-thumb:hover .service-thumb-caption a, .wp-caption:hover p.wp-caption-text a, .gallery-item:hover .wp-caption-text.gallery-caption a, figure:hover figcaption a {
+      color: #fff; }
+    .post-thumb:hover .post-thumb-caption a:hover, .service-thumb:hover .service-thumb-caption a:hover, .wp-caption:hover p.wp-caption-text a:hover, .gallery-item:hover .wp-caption-text.gallery-caption a:hover, figure:hover figcaption a:hover {
+      color: #000; } }
 
-.service-thumb {
-  float: left;
-  width: 40%;
-  margin: 0 1em .5em 0;
-  margin-bottom: 0;
-  display: block; }
-  .service-thumb img {
-    margin-bottom: 0; }
-
-.service-footer-thumb img:hover {
-  filter: brightness(110%); }
-
-.post-thumb, .service-thumb, .gallery-item {
-  position: relative;
-  line-height: 0; }
-
-.post-thumb img {
-  margin-bottom: 0;
-  display: block; }
-
-.entry-content dd {
-  margin: 0; }
-
-.entry-content img.size-full, .entry-content img.size-large {
-  margin-bottom: 0;
-  display: block; }
-
-.entry-content .size-large {
-  margin: 0; }
-
-.post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption, figcaption {
-  font-size: 80%;
-  width: 100%;
-  line-height: 1.1em;
-  color: #fff;
-  position: absolute;
-  bottom: 0;
-  padding: .25em .75em;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity .25s ease-in-out;
-  -moz-transition: opacity .25s ease-in-out;
-  -webkit-transition: opacity .25s ease-in-out; }
-
-p.gallery-item-text {
-  font-size: 100%; }
-
-.post-thumb:hover .post-thumb-caption, .service-thumb:hover .service-thumb-caption, .wp-caption:hover p.wp-caption-text, .gallery-item:hover .wp-caption-text.gallery-caption, figure:hover figcaption {
-  opacity: 1;
-  display: inherit; }
-  .post-thumb:hover .post-thumb-caption a, .service-thumb:hover .service-thumb-caption a, .wp-caption:hover p.wp-caption-text a, .gallery-item:hover .wp-caption-text.gallery-caption a, figure:hover figcaption a {
-    color: #fff; }
-  .post-thumb:hover .post-thumb-caption a:hover, .service-thumb:hover .service-thumb-caption a:hover, .wp-caption:hover p.wp-caption-text a:hover, .gallery-item:hover .wp-caption-text.gallery-caption a:hover, figure:hover figcaption a:hover {
-    color: #000; }
-
-/******************************************************************
+/*--------------------
+DESKTOP
+--------------------*/
+@media screen and (min-width: 64em) {
+  /******************************************************************
 Site Name:
 Author:
 
@@ -1837,10 +1824,14 @@ This is the desktop size. It's larger than an iPad so it will only
 be seen on the Desktop.
 
 ******************************************************************/
-.wrap {
-  width: 100%; }
+  .wrap {
+    width: 100%; } }
 
-/******************************************************************
+/*--------------------
+LARGE VIEWING SIZE
+--------------------*/
+@media only screen and (min-width: 90.063em) {
+  /******************************************************************
 Site Name:
 Author:
 
@@ -1849,8 +1840,13 @@ Stylesheet: Super Large Monitor Stylesheet
 You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
-******************************************************************/
-/******************************************************************
+******************************************************************/ }
+
+/*--------------------
+RETINA (2x RESOLUTION DEVICES)
+--------------------*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /******************************************************************
 Site Name: 
 Author: 
 
@@ -1861,7 +1857,7 @@ if you're not using font icons. Here you can add them in one neat
 place.
 
 ******************************************************************/
-/* 
+  /* 
 
 EXAMPLE 
 Let's say you have an image and you need to make sure it looks ok
@@ -1889,7 +1885,8 @@ it would be 48px x 48px. You'd name it the same, but with a @2x at the end
 (this is pretty standard practice). Set the background image so it matches
 the original dimensions and you are good to go. 
 
-*/
+*/ }
+
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
