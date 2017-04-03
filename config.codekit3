@@ -63,6 +63,12 @@
 		"oAP": "\/inc\/custom-header.php",
 		"oF": 0
 		},
+	"\/inc\/customizer-styles.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/customizer-styles.php",
+		"oF": 0
+		},
 	"\/inc\/customizer.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -75,10 +81,22 @@
 		"oAP": "\/inc\/extras.php",
 		"oF": 0
 		},
+	"\/inc\/include-kirki.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/include-kirki.php",
+		"oF": 0
+		},
 	"\/inc\/jetpack.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/jetpack.php",
+		"oF": 0
+		},
+	"\/inc\/kirki-fallback.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/kirki-fallback.php",
 		"oF": 0
 		},
 	"\/inc\/swiper\/maps\/swiper.jquery.min.js.map": {

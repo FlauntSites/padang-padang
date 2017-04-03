@@ -1221,8 +1221,7 @@ a {
       .main-navigation ul ul li.focus > ul {
         left: 100%; }
       .main-navigation ul ul a {
-        width: 200px;
-        color: #fff; }
+        width: 200px; }
     .main-navigation ul li:hover > ul,
     .main-navigation ul li.focus > ul {
       left: auto; }
@@ -1637,7 +1636,6 @@ NAVIGATION STYLES
     display: none; }
   .desktop-menu {
     display: inline-block;
-    background-color: #444;
     width: 100%; }
   .menu-toggle {
     display: none; }
@@ -1663,12 +1661,7 @@ NAVIGATION STYLES
       .main-navigation li a {
         border-bottom: 0;
         font-weight: inherit;
-        color: #fff;
         padding: .5em; }
-        .main-navigation li a:hover, .main-navigation li a:focus {
-          color: #fff; }
-        .main-navigation li a:active, .main-navigation li a.current-menu-item {
-          color: #fff; }
       .main-navigation li ul.sub-menu,
       .main-navigation li ul.children {
         margin-top: 0;

@@ -57,6 +57,48 @@ padang_padang_Kirki::add_config( 'padang_padang', array(
 	'capability'  => 'edit_theme_options',
 ) );
 
+
+
+/**
+ * Add the typography section
+ */
+padang_padang_Kirki::add_section( 'header', array(
+	'title'      => esc_attr__( 'Header Options', 'padang_padang' ),
+	'priority'   => 1,
+	'capability' => 'edit_theme_options',
+) );
+
+	/**
+	* Toggles Search On and Off.
+	*/
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'toggle',
+		'settings'    => 'header_search',
+		'label'       => esc_attr__( 'Search On/Off', 'padang_padang' ),
+		'description' => esc_attr__( 'Turn Search on or off', 'padang_padang' ),
+		'section'     => 'header',
+		'default'     => '0',
+		'priority'    => 10,
+	) );
+
+	/**
+	* Client Area for photographers that have a proofing site.
+	*/
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'     => 'text',
+	'settings' => 'client_area',
+	'label'    => __( 'Client Area', 'padang_padang' ),
+	'description' => esc_attr__( 'Turn Search on or off', 'padang_padang' ),
+	'section'  => 'header',
+	'default'  => esc_attr__( 'http://zenfolio.com', 'padang_padang' ),
+	'priority' => 10,
+) );
+
+
+
+
+
+
 /**
  * Add the typography section
  */
@@ -79,11 +121,11 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	'priority'    => 10,
 	'default'     => array(
 		'font-family'    => 'Julius Sans One',
-		'variant'        => '400',
+		// 'variant'        => '400',
 		'font-size'      => '16px',
-		'line-height'    => '1.5',
+		// 'line-height'    => '1.5',
 		// 'letter-spacing' => '0',
-		'color'          => '#333333',
+		// 'color'          => '#333333',
 	),
 	'output' => array(
 		array(
@@ -107,11 +149,11 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	'priority'    => 10,
 	'default'     => array(
 		'font-family'    => 'Roboto',
-		'variant'        => '400',
+		// 'variant'        => '400',
 		'font-size'      => '16px',
-		'line-height'    => '1.5',
+		// 'line-height'    => '1.5',
 		// 'letter-spacing' => '0',
-		'color'          => '#333333',
+		// 'color'          => '#333333',
 	),
 	'output' => array(
 		array(
@@ -132,29 +174,83 @@ padang_padang_Kirki::add_section( 'menu_appearance', array(
 	'capability' => 'edit_theme_options',
 ) );
 
+
+/**
+ * Add the Menu Typography control
+ */
+padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'        => 'typography',
+	'settings'    => 'menu_font',
+	'label'       => esc_attr__( 'Headers Typography', 'padang_padang' ),
+	'description' => esc_attr__( 'Select the typography options for your headers.', 'padang_padang' ),
+	'section'     => 'menu_appearance',
+	'priority'    => 10,
+	'default'     => array(
+		'font-family'    => 'Julius Sans One',
+		'font-size'      => '16px',
+	),
+	'output' => array(
+			'element' => '.main-navigation li a',
+	),
+) );
+
 padang_padang_Kirki::add_field( 'padang_padang', array(
 	'type'        => 'color',
 	'settings'    => 'menu_background_color',
-	'label'       => __( 'Menu Background Color', 'my_textdomain' ),
+	'label'       => __( 'Menu Background Color', 'padang_padang' ),
 	'section'     => 'menu_appearance',
-	'default'     => '#00b2d6',
+	'default'     => 'ddd',
 	'priority'    => 10,
-	'choices'     => array(
-		'alpha' => true,
+	'output' => array(
+			'element'  => '.main-navigation',
+			'property' => 'background-color',
+
 	),
 ) );
 
 padang_padang_Kirki::add_field( 'padang_padang', array(
 	'type'        => 'color',
 	'settings'    => 'menu_text_color',
-	'label'       => __( 'Text Color', 'my_textdomain' ),
+	'label'       => __( 'Text Color', 'padang_padang' ),
 	'section'     => 'menu_appearance',
-	'default'     => '#333333',
+	'default'     => '#fff',
 	'priority'    => 10,
-	'choices'     => array(
-		'alpha' => true,
+	'output' => array(
+		array(
+			'element' => '.main-navigation li a',
+		),
 	),
 ) );
+
+padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'        => 'color',
+	'settings'    => 'menu_text_hover_color',
+	'label'       => __( 'Text Hover Color', 'padang_padang' ),
+	'section'     => 'menu_appearance',
+	'default'     => '#666',
+	'priority'    => 10,
+	'output' => array(
+		array(
+			'element' 	=> '.main-navigation li a:hover',
+		),
+	),
+) );
+
+padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'        => 'color',
+	'settings'    => 'menu_text_hover_background_color',
+	'label'       => __( 'Text Hover Color', 'padang_padang' ),
+	'section'     => 'menu_appearance',
+	'default'     => '#fff',
+	'priority'    => 10,
+	'output' => array(
+		array(
+			'element' 	=> '.main-navigation li a:hover',
+		),
+	),
+) );
+
+
 
 
 
@@ -168,14 +264,26 @@ padang_padang_Kirki::add_section( 'image_appearance', array(
 	'capability' => 'edit_theme_options',
 ) );
 
+
 padang_padang_Kirki::add_field( 'padang_padang', array(
 	'type'        => 'color',
 	'settings'    => 'caption_background_color',
-	'label'       => __( 'Caption Background Color', 'my_textdomain' ),
+	'label'       => __( 'Caption Background Color', 'padang_padang' ),
 	'section'     => 'image_appearance',
 	'default'     => 'rgba( 0,0,0,.8 )',
 	'priority'    => 10,
 	'choices'     => array(
 		'alpha' => true,
 	),
+) );
+
+
+padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'        => 'toggle',
+	'settings'    => 'image_stroke',
+	'label'       => __( 'Turn on Inset border', 'padang_padang' ),
+	'section'     => 'image_appearance',
+	'default'     => '0',
+	'priority'    => 10,
+	
 ) );

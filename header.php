@@ -16,6 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
+<?php get_template_part( 'inc/customizer-styles' ); ?>
 </head>
 
 <body <?php body_class(); ?>>
@@ -32,12 +33,16 @@
 			</div>
 
 			<div id="client-search">
+				<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>
 
-				<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-					<label>
-						<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
-					</label>
-				</form>
+					<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+						<label>
+							<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
+						</label>
+					</form>
+					
+				<?php endif; ?>
+
 
 				<div id="client">
 					<a class="blue-btn" href="">Client Area</a>
@@ -65,7 +70,7 @@
 
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation" style="background-color:<?php echo get_theme_mod( 'menu_background_color', '' ); ?>">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'padang-padang' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
