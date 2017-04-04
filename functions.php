@@ -66,7 +66,7 @@ function padang_padang_setup() {
 	) ) );
 
 	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
+	// add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
 add_action( 'after_setup_theme', 'padang_padang_setup' );
@@ -99,15 +99,13 @@ function padang_padang_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'padang_padang_widgets_init' );
+// add_action( 'widgets_init', 'padang_padang_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
 function padang_padang_scripts() {
 	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri() );
-
-	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lato|Open+Sans|Julius+Sans+One' );
 
 	wp_enqueue_script( 'padang-padang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

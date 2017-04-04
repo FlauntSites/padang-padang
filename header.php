@@ -25,12 +25,15 @@
 
 
 		<div class="meta-header">
+			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
 
-			<div class="social">
-				<a class="social-icon" href="<?php the_field( 'fsc_facebook_url', 'options' ); ?>"><i class="fa fa-facebook"></i></a>
-				<a class="social-icon" href="<?php the_field( 'fsc_twitter_url', 'options' ); ?>"><i class="fa fa-twitter"></i></a>
-				<a class="social-icon" href="<?php the_field( 'fsc_instagram_url', 'options' ); ?>"><i class="fa fa-instagram"></i></a>
-			</div>
+				<div class="social">
+					<a class="social-icon" href="<?php the_field( 'fsc_facebook_url', 'options' ); ?>"><i class="fa fa-facebook"></i></a>
+					<a class="social-icon" href="<?php the_field( 'fsc_twitter_url', 'options' ); ?>"><i class="fa fa-twitter"></i></a>
+					<a class="social-icon" href="<?php the_field( 'fsc_instagram_url', 'options' ); ?>"><i class="fa fa-instagram"></i></a>
+				</div>
+			<?php endif; ?>
+			
 
 			<div id="client-search">
 				<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>
@@ -43,10 +46,13 @@
 					
 				<?php endif; ?>
 
+				<?php if ( true == get_theme_mod( 'header_client_area', true ) ) : ?>
 
-				<div id="client">
-					<a class="blue-btn" href="">Client Area</a>
-				</div>
+					<div id="client">
+						<a class="btn" href="">Client Area</a>
+					</div>
+
+				<?php endif; ?>
 
 			</div>
 		</div>

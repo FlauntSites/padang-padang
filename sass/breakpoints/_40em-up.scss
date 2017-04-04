@@ -41,7 +41,6 @@ HEADER STYLES
     	float: left;
     	background-repeat: no-repeat;
 		margin-right: 1em;
-		color: #444;
 	}
 
 	.fa{
@@ -128,6 +127,8 @@ NAVIGATION STYLES
 		li {
 			float: left;
 			position: relative;
+			padding: .2em 0; 
+
 
 				&.current-menu-item {
 					color: #fff;
