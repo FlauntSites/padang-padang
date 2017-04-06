@@ -21,8 +21,12 @@ BASE (MOBILE) SIZE
 <?php endif; ?>
 
 
-    .site-navigation, .main-navigation, a.btn{
+    .site-navigation, .main-navigation, a.btn {
         background-color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
+    }
+
+    input{
+        border: 1px solid <?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
     }
 
     .site-navigation, .main-navigation, a.btn:hover{

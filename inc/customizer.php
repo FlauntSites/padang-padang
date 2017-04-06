@@ -112,7 +112,6 @@ padang_padang_Kirki::add_section( 'header_options', array(
 	'title'      => esc_attr__( 'Header Options', 'padang_padang' ),
 	'priority'   => 1,
 	'capability' => 'edit_theme_options',
-	'panel'		=> 'panel_id',
 ) );
 
 	/**
@@ -142,7 +141,7 @@ padang_padang_Kirki::add_section( 'header_options', array(
 	) );
 
 	/**
-	* Toggles Search On and Off.
+	* Toggles Client Area On and Off.
 	*/
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'toggle',
@@ -155,17 +154,16 @@ padang_padang_Kirki::add_section( 'header_options', array(
 	) );
 
 	/**
-	* Client Area for photographers that have a proofing site.
+	* Client Area Link for photographers that have a proofing site.
 	*/
 	padang_padang_Kirki::add_field( 'padang_padang', array(
-	'type'     => 'text',
-	'settings' => 'client_area',
-	'label'    => __( 'Client Area', 'padang_padang' ),
-	'description' => esc_attr__( 'If you have a proofing site, you can add the link to it here.', 'padang_padang' ),
-	'section'  => 'header_options',
-	'default'  => esc_attr__( 'http://zenfolio.com', 'padang_padang' ),
-	'priority' => 10,
-) );
+		'type'     => 'text',
+		'settings' => 'client_area_link',
+		'label'    => __( 'Client Area', 'padang_padang' ),
+		'description' => esc_attr__( 'If you have a proofing site, you can add the link to it here. ex: http://zenfolio.com/yourname or http://yourname.zenfolio.com', 'padang_padang' ),
+		'section'  => 'header_options',
+		'priority' => 10,
+	) );
 
 
 

@@ -3,9 +3,10 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-	border-radius: 20px;
-	line-height: 1;
-	padding: .5em 1.5em;
+	border-radius: 2em;
+    padding: .1em 1em; 
+	display: block;
+    text-align: center;
 
 	&:hover {
 	}

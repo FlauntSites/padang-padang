@@ -805,6 +805,12 @@
 		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
+	"\/single-clients.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/single-clients.php",
+		"oF": 0
+		},
 	"\/single-services.php": {
 		"ft": 8192,
 		"oA": 2,
