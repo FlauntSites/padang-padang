@@ -28,9 +28,12 @@
 			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
 
 				<div class="social">
-					<a class="social-icon" href="<?php the_field( 'fsc_facebook_url', 'options' ); ?>"><i class="fa fa-facebook"></i></a>
-					<a class="social-icon" href="<?php the_field( 'fsc_twitter_url', 'options' ); ?>"><i class="fa fa-twitter"></i></a>
-					<a class="social-icon" href="<?php the_field( 'fsc_instagram_url', 'options' ); ?>"><i class="fa fa-instagram"></i></a>
+					<?php fsc_social_icons( 'facebook' ); ?>
+					<?php fsc_social_icons( 'twitter' ); ?>
+					<?php fsc_social_icons( 'instagram' ); ?>
+					<?php fsc_social_icons( 'pinterest' ); ?>
+					<?php fsc_social_icons( 'google-plus' ); ?>
+
 				</div>
 			<?php endif; ?>
 			
@@ -49,7 +52,7 @@
 				<?php if ( true == get_theme_mod( 'header_client_area', true ) ) : ?>
 
 					<div id="client">
-						<a class="btn" href="">Client Area</a>
+						<a class="btn" href="<?php echo get_theme_mod( 'client_area_link' ); ?>">Client Area</a>
 					</div>
 
 				<?php endif; ?>

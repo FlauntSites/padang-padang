@@ -209,3 +209,47 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 		<?php endif; 
 }
 
+
+function fsc_social_icons( $social_network ){
+		$social_network 	= 	$social_network;
+		$social_url 		= 	get_field( 'fsc_' . $social_network . '_url' , 'options' );
+		$social_css 		= 	'fa fa-' . $social_network;
+
+		if( !empty( $social_url ) ): { ?>
+			<a class="social-icon" href="<?php echo $social_url ?>"><i class="<?php echo $social_css ?>"></i></a>
+			<?php }
+		endif;
+}
+
+
+
+function client_related_blog_posts( ){
+
+	// The Query
+	$the_query = new WP_Query( 
+		array( 
+			'post_type' 		=> 'post',
+			'posts_per_page'    => 1,
+	 )); {?>
+
+		<?php if ( $the_query->have_posts() ) : ?>
+
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+					<div> 
+						<h2><?php the_title(); ?></h2> 
+						<?php the_post_thumbnail(); ?>
+					</div> 
+					
+			<?php endwhile; ?>
+			<!-- end of the loop -->
+
+			<!-- pagination here -->
+
+			<?php wp_reset_postdata(); ?>
+
+		<?php else: ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif;  
+		}
+}
