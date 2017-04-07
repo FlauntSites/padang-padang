@@ -223,12 +223,44 @@ function fsc_social_icons( $social_network ){
 
 
 
-function client_related_blog_posts( ){
+function fsc_client_related_blog_posts( ){
 
 	// The Query
 	$the_query = new WP_Query( 
 		array( 
 			'post_type' 		=> 'post',
+			'posts_per_page'    => 2,
+	 )); {?>
+
+		<?php if ( $the_query->have_posts() ) : ?>
+
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+					<div> 
+						<h2><?php the_title(); ?></h2> 
+						<?php the_post_thumbnail(); ?>
+					</div> 
+					
+			<?php endwhile; ?>
+			<!-- end of the loop -->
+
+			<!-- pagination here -->
+
+			<?php wp_reset_postdata(); ?>
+
+		<?php else: ?>
+			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+		<?php endif;  
+		}
+}
+
+
+function fsc_client_review( ){
+
+	// The Query
+	$the_query = new WP_Query( 
+		array( 
+			'post_type' 		=> 'reviews',
 			'posts_per_page'    => 1,
 	 )); {?>
 
@@ -238,6 +270,8 @@ function client_related_blog_posts( ){
 
 					<div> 
 						<h2><?php the_title(); ?></h2> 
+						<p><?php the_field( 'fsc_review_quote' ); ?></p>
+						<p><?php the_field( 'fsc_stars' ); ?></p>
 						<?php the_post_thumbnail(); ?>
 					</div> 
 					
