@@ -30,8 +30,7 @@
 		z-index: 100;
 		background-color: rgba(0, 0, 0, 0.5);
 		height:100vh;
-		transition: all .6s ease-out;
-		opacity: 0;
+		display:none;
 
 
 		ul {
@@ -105,7 +104,7 @@
 /* Small menu. */
 button.menu-toggle,
 .main-navigation.toggled ul {
-	opacity: 1;
+	display:block;
 }
 
 

@@ -15,6 +15,10 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part('slideshow'); ?>
+			
+			<div class="service-cta-mobile">
+				<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
+			</div>
 
 			<header class="article-header">
 				<h1 class="page-title"><?php the_title(); ?></h1>

@@ -210,7 +210,7 @@ SERVICES STYLES
 	border-bottom: 1px solid #ddd;
 }
 
-.service-cta{
+.service-cta, .service-cta-mobile{
 	margin-top: 2em;
 	border-bottom: 1px solid #ddd;
 	padding-bottom: 3.5em
@@ -346,7 +346,8 @@ CTA STYLES
 
 
 .onehundredcenter{
-	width: 100%;
+	width: 90%;
 	text-align: center;
 	display: block;
+	margin: 0 auto;
 }

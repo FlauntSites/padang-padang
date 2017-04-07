@@ -259,7 +259,8 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	'output' => array(
 			'element' 	=> array(
 				'.main-navigation li a',
-				'button.menu-toggle'
+				'button.menu-toggle',
+				'.btn',
 			),
 	),
 ) );

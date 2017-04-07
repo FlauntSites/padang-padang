@@ -1108,7 +1108,8 @@ input[type="submit"] {
   border-radius: 2em;
   padding: .1em 1em;
   display: block;
-  text-align: center; }
+  text-align: center;
+  text-decoration: none; }
 
 input[type="text"],
 input[type="email"],
@@ -1200,8 +1201,7 @@ a {
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.5);
     height: 100vh;
-    transition: all .6s ease-out;
-    opacity: 0; }
+    display: none; }
     .main-navigation ul ul {
       box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
       float: left;
@@ -1236,7 +1236,7 @@ a {
 /* Small menu. */
 button.menu-toggle,
 .main-navigation.toggled ul {
-  opacity: 1; }
+  display: block; }
 
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
@@ -1465,7 +1465,7 @@ SERVICES STYLES
   margin-bottom: 2.5em;
   border-bottom: 1px solid #ddd; }
 
-.service-cta {
+.service-cta, .service-cta-mobile {
   margin-top: 2em;
   border-bottom: 1px solid #ddd;
   padding-bottom: 3.5em; }
@@ -1564,9 +1564,10 @@ CTA STYLES
   opacity: 0; }
 
 .onehundredcenter {
-  width: 100%;
+  width: 90%;
   text-align: center;
-  display: block; }
+  display: block;
+  margin: 0 auto; }
 
 /*--------------------
 TABLET & SMALLER LAPTOPS
@@ -1643,14 +1644,13 @@ NAVIGATION STYLES
       text-align: center;
       list-style: none;
       margin: 0;
-      opacity: initial;
       width: inherit;
       position: inherit;
       z-index: inherit;
       background-color: inherit;
       height: inherit;
       transition: inherit;
-      opacity: inherit; }
+      display: inherit; }
       .main-navigation ul ul {
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
         float: left;
@@ -1736,6 +1736,8 @@ FOOTER STYLES
   /*********************
 SERVICES
 *********************/
+  .service-cta-mobile {
+    display: none; }
   /*********************
 ARCHIVE STYLES
 *********************/

@@ -38,7 +38,7 @@ BASE (MOBILE) SIZE
         color:<?php echo get_theme_mod( 'link_hover_color', '' ); ?>;
     }
 
-    .main-navigation li a{
+    .main-navigation li a, .btn{
         color:<?php echo get_theme_mod( 'menu_text_color', '' ); ?>;
     }
 
