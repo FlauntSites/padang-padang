@@ -1,18 +1,38 @@
 .main-navigation {
+	width:100%;
 	clear: both;
 	display: block;
 	float: left;
-	width: 100%;
-	background-color: $color__background-accent;
 	font-family: $font__heading;
 	margin-bottom: 3em;
+	position: relative;
+
+	.fa-bars{
+		margin-right: .25em;
+	}
+	button.menu-toggle{
+		width:100%;
+		text-align: center;
+		color:#fff;
+		border:none;
+		border-radius: 0;
+		padding: .4em 0;
+    	font-weight: bold;
+	}
+
 
 	ul {
-		display: none;
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		display: inline-block;
+		width: 100%;
+		position: absolute;
+		z-index: 100;
+		background-color: rgba(0, 0, 0, 0.5);
+		height:100vh;
+		transition: all .6s ease-out;
+		opacity: 0;
+
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -56,16 +76,23 @@
 	li {
 		float: left;
 		position: relative;
+		width:100%;
 
 		&:hover > a,
 		&.focus > a {
 		}
 	}
+	
+	li:last-child a{
+	border-top: 1px solid rgba( 255,255,255,.1 );	
+	}	
 
 	a {
 		display: block;
 		text-decoration: none;
-		
+		text-align:center;
+		padding: .75em;
+    	border-top: 1px solid rgba( 255,255,255,.1 );
 	}
 
 	.current_page_item > a,
@@ -76,12 +103,10 @@
 }
 
 /* Small menu. */
-.menu-toggle,
+button.menu-toggle,
 .main-navigation.toggled ul {
-	display: block;
+	opacity: 1;
 }
-
-
 
 
 .comment-navigation,

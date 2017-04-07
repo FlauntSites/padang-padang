@@ -21,7 +21,7 @@ get_header(); ?>
 			
 				</div>
 				<div class="small-12 medium-4 columns">
-					<?php client_related_blog_posts(); ?>
+					<?php fsc_client_related_blog_posts(); ?>
 					<a class="btn" href="<?php the_field( 'fsc_proofing_link' ); ?>">Purchae Prints</a>
 				</div>
 		</aside>
@@ -37,7 +37,7 @@ get_header(); ?>
 			</section>
 
 			<aside class="entry-content small-12 medium-4 columns">
-				<?php the_field( 'fsc_client_story_text' ); ?>
+				<?php fsc_client_review(); ?>
 			</aside>
 
 			<footer class="article-footer">

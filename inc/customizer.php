@@ -192,7 +192,6 @@ padang_padang_Kirki::add_section( 'typography', array(
 			// 'variant'        => '400',
 			'font-size'      => '16px',
 			// 'line-height'    => '1.5',
-			// 'letter-spacing' => '0',
 			// 'color'          => '#333333',
 		),
 		'output' => array(
@@ -220,7 +219,6 @@ padang_padang_Kirki::add_section( 'typography', array(
 			// 'variant'        => '400',
 			'font-size'      => '16px',
 			// 'line-height'    => '1.5',
-			// 'letter-spacing' => '0',
 			// 'color'          => '#333333',
 		),
 		'output' => array(
@@ -254,12 +252,15 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	'section'     => 'menu_appearance',
 	'priority'    => 10,
 	'default'     => array(
-		'font-family'    => 'Julius Sans One',
-		'font-size'      => '16px',
+		'font-family'   => 'Julius Sans One',
+		'font-size'     => '22px',
+		'color'			=> '#fff'
 	),
 	'output' => array(
-			'element' 	=> '.main-navigation li a',
-			'preoperty' => 'font',
+			'element' 	=> array(
+				'.main-navigation li a',
+				'button.menu-toggle'
+			),
 	),
 ) );
 
@@ -276,35 +277,6 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 		),
 	),
 ) );
-
-// padang_padang_Kirki::add_field( 'padang_padang', array(
-// 	'type'        => 'color',
-// 	'settings'    => 'menu_text_hover_color',
-// 	'label'       => __( 'Text Hover Color', 'padang_padang' ),
-// 	'section'     => 'menu_appearance',
-// 	'default'     => '#666',
-// 	'priority'    => 10,
-// 	'output' => array(
-// 		array(
-// 			'element' 	=> '.main-navigation li a:hover',
-// 		),
-// 	),
-// ) );
-
-// padang_padang_Kirki::add_field( 'padang_padang', array(
-// 	'type'        => 'color',
-// 	'settings'    => 'menu_text_hover_background_color',
-// 	'label'       => __( 'Background Hover Color', 'padang_padang' ),
-// 	'section'     => 'menu_appearance',
-// 	'default'     => '#fff',
-// 	'priority'    => 10,
-// 	'output' => array(
-// 		array(
-// 			'element' 	=> '.main-navigation li:hover',
-// 		),
-// 	),
-// ) );
-
 
 
 /**

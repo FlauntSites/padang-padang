@@ -21,7 +21,7 @@ BASE (MOBILE) SIZE
 <?php endif; ?>
 
 
-    .site-navigation, .main-navigation, a.btn {
+    button.menu-toggle, a.btn {
         background-color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
     }
 
@@ -29,9 +29,6 @@ BASE (MOBILE) SIZE
         border: 1px solid <?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
     }
 
-    .site-navigation, .main-navigation, a.btn:hover{
-        background-color:<?php echo get_theme_mod( 'link_hover_color', '' ); ?>;
-    }
 
     .social-icon, .swiper-button-prev, .swiper-button-next{
         color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
@@ -41,11 +38,19 @@ BASE (MOBILE) SIZE
         color:<?php echo get_theme_mod( 'link_hover_color', '' ); ?>;
     }
 
+    .main-navigation li a{
+        color:<?php echo get_theme_mod( 'menu_text_color', '' ); ?>;
+    }
+
+
 /*--------------------
 TABLET & SMALLER LAPTOPS
 --------------------*/
 @media screen and (min-width: 40em) {
 
+    .main-navigation {
+        background-color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
+    }
 
     .main-navigation li a{
         color:<?php echo get_theme_mod( 'menu_text_color', '' ); ?>;
