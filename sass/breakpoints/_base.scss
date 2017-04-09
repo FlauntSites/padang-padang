@@ -22,13 +22,16 @@ and will be used across all viewports.
 /*********************
 HEADER STYLES
 *********************/
-#social-header{
-	display: none;
-}
+.meta-header{
+		display: none;
 
-#client-search{
-	display: none;
-}
+	.social-header{
+	}
+
+	.client-search{
+
+	}
+}	
 
 .site-branding{
     width:100%;

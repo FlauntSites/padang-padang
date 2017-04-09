@@ -23,7 +23,10 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'padang-padang' ); ?></a>
 
-
+		<div class="service-cta-mobile">
+			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
+		</div>
+		
 		<div class="meta-header">
 			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
 
@@ -38,7 +41,7 @@
 			<?php endif; ?>
 			
 
-			<div id="client-search">
+			<div class="client-search">
 				<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>
 
 					<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">

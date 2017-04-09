@@ -28,6 +28,8 @@ HEADER STYLES
 .meta-header{
 	float:left;
 	width:100%;
+	display: block;
+	margin-bottom: 2em;
 
 	.social{
 		float: left;
@@ -51,21 +53,7 @@ HEADER STYLES
 
 
 
-
-.header {}
-
-	.logo {
-	}
-
-	.page-id-8780 #Stage_animated-logo_2{
-		display: inherit;
-	}
-
-	.page-id-8780 .svg-logo{
-		display: none;
-	}
-
-#client-search{
+.client-search{
 	display: inherit;
 	float: right;
 	margin: 8px 20px 0 0;
@@ -174,7 +162,7 @@ button.menu-toggle {
 		display: inline-block;
 		text-decoration: none;
 		text-align:center;
-		padding: .75em;
+		padding: .25em 1em;
     	border-top:inherit;
 	}
 

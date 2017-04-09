@@ -5,7 +5,7 @@ Bitbucket Theme URI: https://bitbucket.org/FlauntYourSite/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.1.1
+Version: 0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1338,10 +1338,7 @@ and will be used across all viewports.
 /*********************
 HEADER STYLES
 *********************/
-#social-header {
-  display: none; }
-
-#client-search {
+.meta-header {
   display: none; }
 
 .site-branding {
@@ -1597,7 +1594,9 @@ HEADER STYLES
 *********************/
   .meta-header {
     float: left;
-    width: 100%; }
+    width: 100%;
+    display: block;
+    margin-bottom: 2em; }
     .meta-header .social {
       float: left;
       width: 200px;
@@ -1608,23 +1607,19 @@ HEADER STYLES
       float: left;
       background-repeat: no-repeat;
       margin-right: 1em; }
-  .page-id-8780 #Stage_animated-logo_2 {
-    display: inherit; }
-  .page-id-8780 .svg-logo {
-    display: none; }
-  #client-search {
+  .client-search {
     display: inherit;
     float: right;
     margin: 8px 20px 0 0; }
-    #client-search #client {
+    .client-search #client {
       float: left;
       border-radius: 25px; }
-      #client-search #client a {
+      .client-search #client a {
         line-height: 28px;
         font-size: 1em;
         color: #fff;
         text-decoration: none; }
-    #client-search #search {
+    .client-search #search {
       float: left;
       margin-right: 10px; }
   /*********************
@@ -1677,7 +1672,7 @@ NAVIGATION STYLES
       display: inline-block;
       text-decoration: none;
       text-align: center;
-      padding: .75em;
+      padding: .25em 1em;
       border-top: inherit; }
   /*********************
 SIDEBARS & ASIDES

@@ -253,7 +253,7 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	'priority'    => 10,
 	'default'     => array(
 		'font-family'   => 'Julius Sans One',
-		'font-size'     => '22px',
+		'font-size'     => '18px',
 		'color'			=> '#fff'
 	),
 	'output' => array(
