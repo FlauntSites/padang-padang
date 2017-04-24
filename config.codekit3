@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "25504",
 "files": {
+	"\/.vscode\/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/.vscode\/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"\/404.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -159,6 +167,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/inc\/template-tags.php",
+		"oF": 0
+		},
+	"\/inc\/widgets.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/inc\/widgets.php",
 		"oF": 0
 		},
 	"\/index.php": {
@@ -793,16 +807,28 @@
 		"oAP": "\/search.php",
 		"oF": 0
 		},
+	"\/sidebar-clients-top.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/sidebar-clients-top.php",
+		"oF": 0
+		},
+	"\/sidebar-clients.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/sidebar-clients.php",
+		"oF": 0
+		},
+	"\/sidebar-services-old.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/sidebar-services-old.php",
+		"oF": 0
+		},
 	"\/sidebar-services.php": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/sidebar-services.php",
-		"oF": 0
-		},
-	"\/sidebar.php": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/sidebar.php",
 		"oF": 0
 		},
 	"\/single-clients.php": {

@@ -6,7 +6,7 @@
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
               <?php foreach( $images as $image ): ?>
-                <img class="swiper-slide" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <?php echo wp_get_attachment_image( $image['ID'], 'oversized', false, array( 'alt' => $image['alt'], 'class' => 'swiper-slide' ) );  ?>
               <?php endforeach; ?>
     </div>
 

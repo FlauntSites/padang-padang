@@ -5,7 +5,7 @@ Bitbucket Theme URI: https://bitbucket.org/FlauntYourSite/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.2
+Version: 0.2.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1301,9 +1301,11 @@ button.menu-toggle,
 .site-footer {
   clear: both;
   width: 100%;
-  background-color: #444; }
+  background-color: #222; }
   .site-footer p {
-    color: #fff; }
+    color: #fff;
+    margin: 1em;
+    font-size: 80%; }
   .site-footer .copyright {
     float: left;
     margin-left: 1em; }
@@ -1424,7 +1426,10 @@ FOOTER STYLES
 .footer {
   position: relative;
   z-index: 2;
-  width: 100%; }
+  width: 100%;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
   .footer .inner-footer {
     padding-left: 2%;
     padding-right: 2%;
@@ -1485,9 +1490,13 @@ SERVICES STYLES
 h3.service-footer-cap {
   margin-top: 0; }
 
+/*********************
+SLIDESHOW STYLES
+*********************/
 .swiper-container {
   width: 100%;
-  height: auto; }
+  height: auto;
+  margin-bottom: 2em; }
 
 /*********************
 BADGES
@@ -1516,22 +1525,20 @@ BADGES
 REVIEWS STYLES
 *********************/
 .review-small {
-  margin-bottom: 2em; }
-
-.fa-star, .fa-star-half-o, .fa-star-o {
-  color: #333; }
-
-.quote-small {
-  font-size: 120%;
-  width: 100%; }
-
-.stars {
-  font-size: 80%; }
-
-.handwrite {
-  font-family: 'Nothing You Could Do', cursive;
-  font-size: 190%;
-  margin: .5em 0 0; }
+  margin-bottom: 2em;
+  float: left; }
+  .review-small .fa-star, .review-small .fa-star-half-o, .review-small .fa-star-o {
+    color: #333; }
+  .review-small .quote-small {
+    font-size: 140%;
+    width: 100%; }
+  .review-small .stars {
+    font-size: 80%; }
+  .review-small .handwrite {
+    margin: 0;
+    opacity: .4;
+    float: left;
+    width: 100%; }
 
 /*********************
 CTA STYLES
@@ -1565,6 +1572,15 @@ CTA STYLES
   text-align: center;
   display: block;
   margin: 0 auto; }
+
+/*********************
+SIDEBAR STYLES
+*********************/
+.round-thumb {
+  border-radius: 100px;
+  float: left;
+  margin-right: 1em;
+  width: 50%; }
 
 /*--------------------
 TABLET & SMALLER LAPTOPS
@@ -1703,12 +1719,37 @@ SIDEBARS & ASIDES
   /* search widget */
   /* text widget */
   /*********************
+WIDGET STYLES
+*********************/
+  .widget-contain {
+    width: 14em; }
+    .widget-contain ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .widget-contain ul li {
+        margin: 0;
+        padding: 0; }
+  /*********************
 FOOTER STYLES
 *********************/
   .footer {
-    position: relative;
-    z-index: 2;
-    width: 100%; }
+    margin: 0 auto;
+    display: table;
+    text-align: center; }
+    .footer ul.footer-widget-area {
+      display: inline-block;
+      margin: 0;
+      padding: 0; }
+      .footer ul.footer-widget-area li.footer-widget {
+        float: left;
+        display: inline;
+        width: inherit;
+        text-align: left;
+        margin: 0 1em; }
+        .footer ul.footer-widget-area li.footer-widget h2 {
+          color: #ddd;
+          border-bottom: 1px solid #ddd; }
     .footer #inner-footer {
       padding-left: 2%;
       padding-right: 2%;
@@ -1814,7 +1855,10 @@ Stylesheet: Super Large Monitor Stylesheet
 You can add some advanced styles here if you like. This kicks in
 on larger screens.
 
-******************************************************************/ }
+******************************************************************/
+  .row {
+    max-width: 80rem;
+    margin-left: auto; } }
 
 /*--------------------
 RETINA (2x RESOLUTION DEVICES)

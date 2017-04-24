@@ -1,17 +1,13 @@
-	<div class="row">
-		<div class="small-12 medium-4 columns"></div>
+<?php if ( is_active_sidebar( 'footer' ) ) : ?>
 
-		<div class="small-12 medium-4 columns">
+	<footer class="footer">
 
-                    <?php
-						$description = get_bloginfo( 'description', 'display' );
-					if ( $description || is_customize_preview() ) : ?>
-						<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-					<?php
-					endif; ?>
+		<ul class="footer-widget-area">
 
-		</div>
-        
-		<div class="small-12 medium-4 columns"></div>
+			<?php dynamic_sidebar( 'footer' ); ?>
+		
+		</ul>
 
-	</div>
+	</footer>	
+
+<?php endif; ?>

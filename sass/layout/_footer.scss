@@ -2,8 +2,11 @@
 	clear: both;
 	width: $size__site-main;
 	background-color: $color__background-accent;
+
     p{
         color:$color__text-reverse;
+        margin: 1em;
+        font-size: 80%;
     }
 
     .copyright{

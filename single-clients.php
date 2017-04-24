@@ -15,37 +15,54 @@ get_header(); ?>
 		<aside>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<div class="small-12 medium-8 columns">
+				<?php if ( is_active_sidebar( 'client_top_sidebar' ) ) { ?>
 
-					<?php get_template_part('slideshow'); ?>
-			
-				</div>
-				<div class="small-12 medium-4 columns">
-					<?php fsc_client_related_blog_posts(); ?>
-					<a class="btn" href="<?php the_field( 'fsc_proofing_link' ); ?>">Purchae Prints</a>
-				</div>
+					<section class="entry-content small-12 medium-8 columns">
+					
+					<?php }else{ ?>
+
+					<section class="entry-content small-12 columns">
+
+				<?php } ?>
+
+						<?php get_template_part('slideshow'); ?>
+
+					</section>
+
+			<?php get_template_part( 'sidebar-clients-top' ); ?>
+
+
+
+
 		</aside>
 		<div class="clear"></div>
 		
 		<article class="entry-content">
+
 			<header class="article-header">
 				<h1 class="page-title"><?php the_title(); ?></h1>
 			</header>
 
-			<section class="entry-content small-12 medium-8 columns">
-				<?php the_field( 'fsc_client_story_text' ); ?>
-			</section>
+				<?php if ( is_active_sidebar( 'client_sidebar' ) ) { ?>
 
-			<aside class="entry-content small-12 medium-4 columns">
-				<?php fsc_client_review(); ?>
-			</aside>
+					<section class="entry-content small-12 medium-8 columns">
+					
+					<?php }else{ ?>
 
-			<footer class="article-footer">
+					<section class="entry-content small-12 columns">
 
-			</footer>
+				<?php } ?>
+
+						<?php the_field( 'fsc_client_story_text' ); ?>
+
+					</section>
+
+			<?php get_template_part( 'sidebar-clients' ); ?>
+
+			<footer class="article-footer"></footer>
+
 		</article>
 
-		<?php get_template_part( '' ); ?>
 
 		 
 		 <?php endwhile; ?>

@@ -71,35 +71,6 @@ function padang_padang_setup() {
 endif;
 add_action( 'after_setup_theme', 'padang_padang_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function padang_padang_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'padang_padang_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'padang_padang_content_width', 0 );
-
-/**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function padang_padang_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'padang-padang' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'padang-padang' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-// add_action( 'widgets_init', 'padang_padang_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
@@ -117,6 +88,7 @@ function padang_padang_scripts() {
 	
 	wp_enqueue_style( 'swiper-slider-styles', get_template_directory_uri() . '/inc/swiper/swiper.css', array(), ''  );
 
+	wp_enqueue_script( 'fs-sharebar', get_template_directory_uri() . '/js/sharebar.js', array(), ''  );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -159,6 +131,11 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Recommend the Kirki plugin
+ */
+require get_template_directory() . '/inc/widgets.php';
 
 
 
@@ -221,38 +198,6 @@ function fsc_social_icons( $social_network ){
 		endif;
 }
 
-
-
-function fsc_client_related_blog_posts( ){
-
-	// The Query
-	$the_query = new WP_Query( 
-		array( 
-			'post_type' 		=> 'post',
-			'posts_per_page'    => 2,
-	 )); {?>
-
-		<?php if ( $the_query->have_posts() ) : ?>
-
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-					<div> 
-						<h2><?php the_title(); ?></h2> 
-						<?php the_post_thumbnail(); ?>
-					</div> 
-					
-			<?php endwhile; ?>
-			<!-- end of the loop -->
-
-			<!-- pagination here -->
-
-			<?php wp_reset_postdata(); ?>
-
-		<?php else: ?>
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-		<?php endif;  
-		}
-}
 
 
 function fsc_client_review( ){

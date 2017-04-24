@@ -7,11 +7,11 @@
  * @package Padang_Padang
  */
 
-if ( ! is_active_sidebar( 'services_sidebar' ) ) {
+if ( ! is_active_sidebar( 'client_sidebar' ) ) {
 	return;
 }
 ?>
 
 <aside id="secondary" class="widget-area small-12 medium-4 columns" role="complementary">
-	<?php dynamic_sidebar( 'services_sidebar' ); ?>
+	<?php dynamic_sidebar( 'client_sidebar' ); ?>
 </aside><!-- #secondary -->

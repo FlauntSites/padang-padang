@@ -14,14 +14,21 @@ BASE (MOBILE) SIZE
 
 
 <?php if ( true == get_theme_mod( 'image_stroke', true ) ) : ?>
-    #content img{
+    img.size-medium_large, img.size-large, img.size-oversized, .swiper-slide{
         outline:1px solid #fff;
         outline-offset: -10px;
     }
 <?php endif; ?>
 
+    body{
+         color:<?php echo get_theme_mod( 'text_color', '' ); ?>; 
+    }  
 
-    button.menu-toggle, a.btn {
+    .page-title{
+        border-bottom: 1px solid <?php echo get_theme_mod( 'text_color', '' ); ?>;
+    }
+
+    button.menu-toggle, a.btn, .footer {
         background-color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
     }
 
@@ -30,16 +37,24 @@ BASE (MOBILE) SIZE
     }
 
 
-    .social-icon, .swiper-button-prev, .swiper-button-next{
+    a, .social-icon, .swiper-button-prev, .swiper-button-next{
         color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
     }
 
-    .social-icon:hover, .swiper-button-prev:hover, .swiper-button-next:hover{
+    a:hover, .social-icon:hover, .swiper-button-prev:hover, .swiper-button-next:hover{
         color:<?php echo get_theme_mod( 'link_hover_color', '' ); ?>;
     }
 
     .main-navigation li a, .btn{
         color:<?php echo get_theme_mod( 'menu_text_color', '' ); ?>;
+    }
+
+    .footer-widget-area, .footer-widget-area a{
+        color:<?php echo get_theme_mod( 'footer_widget_text_color', '' ); ?>;
+    }
+
+    .footer-widget-area a:hover{
+        opacity: 0.75;
     }
 
 
@@ -48,23 +63,32 @@ TABLET & SMALLER LAPTOPS
 --------------------*/
 @media screen and (min-width: 40em) {
 
-    .main-navigation {
-        background-color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
-    }
+    <?php if ( true == get_theme_mod( 'menu_background', true ) ) : ?>
+
+        .main-navigation {
+            background-color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
+        }
+
+        .main-navigation li:hover, .main-navigation li.current-menu-item{
+            background-color:<?php echo get_theme_mod( 'link_hover_color', '' ); ?>;
+            color:<?php echo get_theme_mod( 'menu_text_hover_color', '' ); ?>;
+        }        
+
+        /*.main-navigation li a:hover, .main-navigation li a.current-menu-item{
+            color:<?php echo get_theme_mod( 'menu_text_hover_color', '' ); ?>;
+        }*/
+
+    <?php endif; ?>
+
+
 
     .main-navigation li a{
         color:<?php echo get_theme_mod( 'menu_text_color', '' ); ?>;
     }
 
-    .main-navigation li a:hover, .main-navigation li.current-menu-item{
-        color:<?php echo get_theme_mod( 'link_hover_color', '' ); ?>;
-    }
-    
-    .main-navigation li:hover, .main-navigation li.current-menu-item{
-        background-color:<?php echo get_theme_mod( 'menu_text_hover_background_color', '' ); ?>;
-    }
-
-
+    /*.main-navigation li a:hover, .main-navigation li.current-menu-item{
+        color:<?php echo get_theme_mod( 'menu_text_hover_color', '' ); ?>;
+    }*/
 
 } // end of media query
 

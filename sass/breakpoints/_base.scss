@@ -150,6 +150,9 @@ FOOTER STYLES
 	position: relative;
 	z-index: 2;
 	width: 100%;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
 
 	.inner-footer{
 		padding-left: 2%;
@@ -243,11 +246,14 @@ h3.service-footer-cap{
 }
 
 
-
+/*********************
+SLIDESHOW STYLES
+*********************/
 
 .swiper-container {
     width: 100%;
     height: auto;
+	margin-bottom: 2em;
 }
 
 
@@ -289,25 +295,30 @@ REVIEWS STYLES
 
 .review-small{
 	margin-bottom: 2em;
-}
+	float: left;
 
-.fa-star, .fa-star-half-o, .fa-star-o{
-	color:#333;
-}
 
-.quote-small{
-	font-size: 120%;
-  width: 100%;
-}
+	.fa-star, .fa-star-half-o, .fa-star-o{
+		color:#333;
+	}
 
-.stars{
-	font-size: 80%;
-}
+	.quote-small{
+		font-size: 140%;
+		width: 100%;
+	}
 
-.handwrite{
-	font-family: 'Nothing You Could Do', cursive;
-	font-size: 190%;
-	margin: .5em 0 0;
+	.stars{
+		font-size: 80%;
+	}
+
+	.handwrite{
+		margin: 0;
+		opacity: .4;
+		float: left;
+		width: 100%;
+
+	}
+
 }
 
 
@@ -353,4 +364,17 @@ CTA STYLES
 	text-align: center;
 	display: block;
 	margin: 0 auto;
+}
+
+
+
+/*********************
+SIDEBAR STYLES
+*********************/
+
+.round-thumb{
+	border-radius: 100px;
+	float: left;
+    margin-right: 1em;
+    width: 50%;
 }
