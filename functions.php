@@ -88,7 +88,6 @@ function padang_padang_scripts() {
 	
 	wp_enqueue_style( 'swiper-slider-styles', get_template_directory_uri() . '/inc/swiper/swiper.css', array(), ''  );
 
-	wp_enqueue_script( 'fs-sharebar', get_template_directory_uri() . '/js/sharebar.js', array(), ''  );
 
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
