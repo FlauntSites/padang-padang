@@ -14,18 +14,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<h1 class="entry-title"><?php the_field( 'fsc_about_section_title' ); ?></h1>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'padang-padang' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<div class="small-12 medium-5 columns">
+			<?php fsc_figure( 'fsc_about_photo', 'medium-large', '', 'hover-caption'); ?>
+		</div>
+
+		<div class="small-12 medium-7 columns">
+			<?php the_field( 'fsc_about_text' ); ?>
+			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
+		</div>
+
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

@@ -1498,6 +1498,28 @@ SLIDESHOW STYLES
   height: auto;
   margin-bottom: 2em; }
 
+.swiper-button-prev, .swiper-button-next {
+  background-image: none !important;
+  width: initial !important;
+  opacity: .5; }
+
+.swiper-button-prev {
+  left: 20px !important; }
+  .swiper-button-prev:before {
+    font-family: FontAwesome;
+    content: "\f137";
+    font-size: 300%; }
+
+.swiper-button-next {
+  right: 20px !important; }
+  .swiper-button-next:before {
+    font-family: FontAwesome;
+    content: "\f138";
+    font-size: 300%; }
+
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: none; }
+
 /*********************
 BADGES
 *********************/
@@ -1770,6 +1792,9 @@ FOOTER STYLES
 			*/ }
   /* end .footer-links */
   /*********************
+HOME STYLES
+*********************/
+  /*********************
 SERVICES
 *********************/
   .service-cta-mobile {
@@ -2023,6 +2048,9 @@ embed,
 iframe,
 object {
   max-width: 100%; }
+
+figure {
+  position: relative; }
 
 /*--------------------------------------------------------------
 ## Captions

@@ -24,7 +24,7 @@ BASE (MOBILE) SIZE
          color:<?php echo get_theme_mod( 'text_color', '' ); ?>; 
     }  
 
-    .page-title{
+    .page-title, .entry-title{
         border-bottom: 1px solid <?php echo get_theme_mod( 'text_color', '' ); ?>;
     }
 

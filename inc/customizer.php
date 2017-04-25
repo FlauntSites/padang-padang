@@ -232,7 +232,7 @@ padang_padang_Kirki::add_section( 'typography', array(
 		'section'     => 'typography',
 		'priority'    => 10,
 		'default'     => array(
-			'font-family'    => 'Roboto',
+			'font-family'    => 'Lato',
 			// 'variant'        => '400',
 			'font-size'      => '16px',
 			// 'line-height'    => '1.5',
