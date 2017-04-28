@@ -43,7 +43,7 @@ add_action( 'customize_preview_init', 'padang_padang_customize_preview_js' );
  */
 function kirki_demo_configuration_sample_styling( $config ) {
 	return wp_parse_args( array(
-		'logo_image'   => 'http://flauntyoursite.com/flaunt-identity/flaunt-logo-dashboard-widget.png',
+		'logo_image'   => get_template_directory_uri() . '/images/header.png',
 		'description'  => esc_attr__( 'The theme description.', 'kirki' ),
 		'color_accent' => '#0091EA',
 		'color_back'   => '#FFFFFF',
@@ -90,7 +90,7 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 		'settings'    => 'text_color',
 		'label'       => __( 'Text Color', 'padang_padang' ),
 		'section'     => 'site_colors',
-		'default'     => '#ddd',
+		'default'     => '#999',
 		'priority'    => 10,
 	) );	
 
@@ -105,8 +105,8 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'color',
-		'settings'    => 'link_hover_color',
-		'label'       => __( 'Link Hover Color', 'padang_padang' ),
+		'settings'    => 'site-accent_hover_color',
+		'label'       => __( 'Site Accent Hover Color', 'padang_padang' ),
 		'section'     => 'site_colors',
 		'default'     => '#ccc',
 		'priority'    => 10,
@@ -207,13 +207,13 @@ padang_padang_Kirki::add_section( 'typography', array(
 		'default'     => array(
 			'font-family'    => 'Julius Sans One',
 			// 'variant'        => '400',
-			'font-size'      => '16px',
+			'font-size'      => '18px',
 			// 'line-height'    => '1.5',
 			// 'color'          => '#333333',
 		),
 		'output' => array(
 			array(
-				'element' => array( 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', '.h1', '.h2', '.h3', '.h4', '.h5', '.h6' ),
+				'element' => array( 'h1', '.h1', 'h2', '.h2' ),
 			),
 		),
 	) );

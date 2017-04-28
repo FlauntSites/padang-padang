@@ -218,7 +218,6 @@ SERVICES STYLES
 
 .service-cta, .service-cta-mobile{
 	margin-top: 2em;
-	border-bottom: 1px solid #ddd;
 	padding-bottom: 3.5em
 }
 
@@ -269,7 +268,7 @@ SLIDESHOW STYLES
 	&:before {
 		font-family: FontAwesome;
 		content: "\f137";
-		font-size: 300%;
+		font-size: 200%;
 	}
 }
 
@@ -279,7 +278,7 @@ SLIDESHOW STYLES
 	&:before {
 		font-family: FontAwesome;
 		content: "\f138";
-		font-size: 300%;
+		font-size:200%;
 	}
 }	
 
@@ -324,6 +323,37 @@ BADGES
 REVIEWS STYLES
 *********************/
 
+.reviews{
+	float: left;
+}
+
+.quote-l, .quote-r{
+	font-size: 200%;
+    line-height: 50%;
+	position: absolute;
+}	
+
+.quote-l{
+    margin-left: -.5em;
+    margin-top: .25em;
+}
+
+.quote-r{
+
+    margin-right: -.5em;
+    margin-top: .25em;
+}
+
+.handwrite{
+	margin: 0;
+	opacity: .6;
+	text-align: right;
+	width: 100%;
+}
+
+
+/**** REVIEW WIDGET ****/
+
 .review-small{
 	margin-bottom: 2em;
 	float: left;
@@ -340,14 +370,6 @@ REVIEWS STYLES
 
 	.stars{
 		font-size: 80%;
-	}
-
-	.handwrite{
-		margin: 0;
-		opacity: .4;
-		float: left;
-		width: 100%;
-
 	}
 
 }
@@ -407,5 +429,17 @@ SIDEBAR STYLES
 	border-radius: 100px;
 	float: left;
     margin-right: 1em;
-    width: 50%;
+    width: 33%;
 }
+
+.related{
+	margin: 0 0 1em 0;
+}
+
+.sidebar-title a{
+	text-decoration: none;
+}
+
+
+
+

@@ -5,7 +5,7 @@ Bitbucket Theme URI: https://bitbucket.org/FlauntYourSite/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.2.51
+Version: 0.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1469,7 +1469,6 @@ SERVICES STYLES
 
 .service-cta, .service-cta-mobile {
   margin-top: 2em;
-  border-bottom: 1px solid #ddd;
   padding-bottom: 3.5em; }
 
 .service-thumb img {
@@ -1508,14 +1507,14 @@ SLIDESHOW STYLES
   .swiper-button-prev:before {
     font-family: FontAwesome;
     content: "\f137";
-    font-size: 300%; }
+    font-size: 200%; }
 
 .swiper-button-next {
   right: 20px !important; }
   .swiper-button-next:before {
     font-family: FontAwesome;
     content: "\f138";
-    font-size: 300%; }
+    font-size: 200%; }
 
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
   background-image: none; }
@@ -1546,6 +1545,29 @@ BADGES
 /*********************
 REVIEWS STYLES
 *********************/
+.reviews {
+  float: left; }
+
+.quote-l, .quote-r {
+  font-size: 200%;
+  line-height: 50%;
+  position: absolute; }
+
+.quote-l {
+  margin-left: -.5em;
+  margin-top: .25em; }
+
+.quote-r {
+  margin-right: -.5em;
+  margin-top: .25em; }
+
+.handwrite {
+  margin: 0;
+  opacity: .6;
+  text-align: right;
+  width: 100%; }
+
+/**** REVIEW WIDGET ****/
 .review-small {
   margin-bottom: 2em;
   float: left; }
@@ -1556,11 +1578,6 @@ REVIEWS STYLES
     width: 100%; }
   .review-small .stars {
     font-size: 80%; }
-  .review-small .handwrite {
-    margin: 0;
-    opacity: .4;
-    float: left;
-    width: 100%; }
 
 /*********************
 CTA STYLES
@@ -1602,7 +1619,13 @@ SIDEBAR STYLES
   border-radius: 100px;
   float: left;
   margin-right: 1em;
-  width: 50%; }
+  width: 33%; }
+
+.related {
+  margin: 0 0 1em 0; }
+
+.sidebar-title a {
+  text-decoration: none; }
 
 /*--------------------
 TABLET & SMALLER LAPTOPS
@@ -2002,6 +2025,7 @@ the original dimensions and you are good to go.
   display: table;
   table-layout: fixed; }
 
+.clear,
 .clear:after,
 .entry-content:after,
 .comment-content:after,

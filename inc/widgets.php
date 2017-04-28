@@ -87,7 +87,7 @@ class FS_Reviews extends WP_Widget {
 
           <?php if ( $the_query->have_posts() ) : ?>
 		  
-		  	<h2><a href="/reviews">Raves + Reviews</a></h2>
+		  	<h3 class="sidebar-title"><a href="/reviews">Raves + Reviews</a></h3>
 
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -99,10 +99,7 @@ class FS_Reviews extends WP_Widget {
 				</div>
 
 				<div class="clear"></div>
-
-				<div>
-					<p class="handwrite">~<?php the_title(); ?></p>
-				</div>
+				<p class="handwrite">~<?php the_title(); ?></p>
 
             </div>
 
@@ -199,23 +196,16 @@ class FS_Client_Posts extends WP_Widget {
 
           <?php if ( $client_posts->have_posts() ) : ?>
 		  
-		  	<h3>Related Blog Posts</h3>
+		  	<h3 class="sidebar-title">Related Blog Posts</h3>
 
             <?php while ( $client_posts->have_posts() ) : $client_posts->the_post(); ?>
 
-			<div class="review-small">
+			<div class="related">
 
-
-
-            </div>
-
-
-			<div class="review-small">
-
-				<h3><?php the_title(); ?></h3>
+				<h4><a href="<?php the_permalink(); ?> "><?php the_title(); ?></a></h3>
 
 				<div>
-					<img class="round-thumb" itemprop="image" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>">
+					<a href="<?php the_permalink(); ?> "><img class="round-thumb" itemprop="image" src="<?php the_post_thumbnail_url( 'thumbnail' ); ?>"></a>
 					<p><?php the_excerpt(); ?></p>
 				</div>
 
@@ -348,8 +338,8 @@ class FS_Proofing_Button extends WP_Widget {
 	public function widget( $args, $instance ) { ?>
 
 
-		<div class="small-12 medium-4 columns">
-			<a class="btn" href="<?php the_field( 'fsc_proofing_link' ); ?>">Purchase Prints</a>
+		<div>
+			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_proofing_link' ); ?>">Purchase Prints</a>
 		</div>
 
 

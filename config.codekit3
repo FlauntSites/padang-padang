@@ -23,6 +23,12 @@
 		"oAP": "\/404.php",
 		"oF": 0
 		},
+	"\/archive-reviews.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/archive-reviews.php",
+		"oF": 0
+		},
 	"\/archive.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -64,6 +70,14 @@
 		"oA": 2,
 		"oAP": "\/header.php",
 		"oF": 0
+		},
+	"\/images\/header.png": {
+		"ft": 32768,
+		"iS": 1762302,
+		"oA": 0,
+		"oAP": "\/images\/header.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/inc\/custom-header.php": {
 		"ft": 8192,
