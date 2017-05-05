@@ -442,4 +442,24 @@ SIDEBAR STYLES
 
 
 
+/*********************
+WIDGET STYLES
+*********************/
+
+.widget-contain{
+
+	ul{
+		list-style: none;
+		margin:0;
+		padding: 0;
+		text-align: left; 
+
+		li{
+			margin: 0;
+			padding:0;
+		}
+	}
+
+}
+
 
