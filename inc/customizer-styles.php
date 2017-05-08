@@ -65,6 +65,10 @@ BASE (MOBILE) SIZE
         opacity: 0.75;
     }
 
+    .logo{
+        width: <?php echo get_theme_mod( 'fsc_logo_width', '' ); ?>px;
+    }
+
 
 /*--------------------
 TABLET & SMALLER LAPTOPS

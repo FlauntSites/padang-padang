@@ -131,6 +131,32 @@ padang_padang_Kirki::add_section( 'header_options', array(
 	'capability' => 'edit_theme_options',
 ) );
 
+	// padang_padang_Kirki::add_field( 'padang_padang', array(
+	// 	'type'        => 'image',
+	// 	'settings'    => 'fs_logo',
+	// 	'option_type' => 'option',
+	// 	'option_name' => 'fsc_logo',
+	// 	'label'       => __( 'Logo', 'my_textdomain' ),
+	// 	'description' => __( 'Add or edit your logo here', 'my_textdomain' ),
+	// 	'section'     => 'header_options',
+	// 	'default'     => '',
+	// 	'priority'    => 10,
+	// ) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'slider',
+		'settings'    => 'fsc_logo_width',
+		'label'       => esc_attr__( 'Adjust the size of your logo here', 'my_textdomain' ),
+		'section'     => 'header_options',
+		'default'     => 200,
+		'choices'     => array(
+			'min'  => '100',
+			'max'  => '300',
+			'step' => '1',
+		),
+	) );
+
+
 	/**
 	* Toggles Social On and Off.
 	*/
