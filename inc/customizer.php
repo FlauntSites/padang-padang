@@ -114,12 +114,62 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'color',
+		'settings'    => 'button_text_color',
+		'label'       => __( 'Button Text Color', 'padang_padang' ),
+		'section'     => 'site_colors',
+		'default'     => '#ccc',
+		'priority'    => 10,
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'color',
+		'settings'    => 'button_hover_text_color',
+		'label'       => __( 'Button Hover Text Color', 'padang_padang' ),
+		'section'     => 'site_colors',
+		'default'     => '#ccc',
+		'priority'    => 10,
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'color',
 		'settings'    => 'footer_widget_text_color',
 		'label'       => __( 'Footer Widget Text Color', 'padang_padang' ),
 		'section'     => 'site_colors',
 		'default'     => '#ccc',
 		'priority'    => 10,
 	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'color',
+		'settings'    => 'menu_text_color',
+		'label'       => __( 'Menu Text Color', 'padang_padang' ),
+		'section'     => 'site_colors',
+		'default'     => '#fff',
+		'priority'    => 10,
+		'output' => array(
+			array(
+				'element' => '.main-navigation li a',
+			),
+		),
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'color',
+		'settings'    => 'menu_text_hover_color',
+		'label'       => __( 'Menu Text Hover Color', 'padang_padang' ),
+		'section'     => 'site_colors',
+		'default'     => '#fff',
+		'priority'    => 10,
+		'output' => array(
+			array(
+				'element' => '.main-navigation li a:hover',
+			),
+		),
+	) );
+
+
+
+
 
 
 /**
@@ -208,6 +258,18 @@ padang_padang_Kirki::add_section( 'header_options', array(
 		'priority' => 10,
 	) );
 
+	/**
+	* Toggles Menu Background On and Off.
+	*/
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'toggle',
+		'settings'    => 'menu_background',
+		'label'       => esc_attr__( 'Menu Background On/Off', 'padang_padang' ),
+		'description' => esc_attr__( 'Turns Menu Background on and off', 'padang_padang' ),
+		'section'     => 'header_options',
+		'default'     => '1',
+		'priority'    => 10,
+	) );
 
 
 /**
@@ -220,13 +282,36 @@ padang_padang_Kirki::add_section( 'typography', array(
 ) );
 
 	/**
+	* Add the Menu Typography control
+	*/
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'menu_font',
+		'label'       => esc_attr__( 'Menu Typography', 'padang_padang' ),
+		'description' => esc_attr__( 'Select the typography options for your menu.', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'   => 'Julius Sans One',
+			'font-size'     => '18px',
+		),
+		'output' => array(
+				'element' 	=> array(
+					'.main-navigation li a',
+					'button.menu-toggle',
+					'.btn',
+				),
+		),
+	) );
+
+	/**
 	* Add the Headers Typography control
 	*/
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'typography',
 		'settings'    => 'headers_typography',
-		'label'       => esc_attr__( 'Headers Typography', 'padang_padang' ),
-		'description' => esc_attr__( 'Select the typography options for your headers.', 'padang_padang' ),
+		'label'       => esc_attr__( 'Headings Typography', 'padang_padang' ),
+		'description' => esc_attr__( 'Select the typography options for your headings.', 'padang_padang' ),
 		'help'        => esc_attr__( 'The typography options you set here will override the Body Typography options for all headers on your site (post titles, widget titles etc).', 'padang_padang' ),
 		'section'     => 'typography',
 		'priority'    => 10,
@@ -296,81 +381,6 @@ padang_padang_Kirki::add_section( 'typography', array(
 	) );
 
 
-
-/**
- * Add the Menu Appearance section
- */
-padang_padang_Kirki::add_section( 'menu_appearance', array(
-	'title'      => esc_attr__( 'Menu Appearance', 'padang_padang' ),
-	'priority'   => 3,
-	'capability' => 'edit_theme_options',
-) );
-
-
-	/**
-	* Add the Menu Typography control
-	*/
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'typography',
-		'settings'    => 'menu_font',
-		'label'       => esc_attr__( 'Headers Typography', 'padang_padang' ),
-		'description' => esc_attr__( 'Select the typography options for your headers.', 'padang_padang' ),
-		'section'     => 'menu_appearance',
-		'priority'    => 10,
-		'default'     => array(
-			'font-family'   => 'Julius Sans One',
-			'font-size'     => '18px',
-		),
-		'output' => array(
-				'element' 	=> array(
-					'.main-navigation li a',
-					'button.menu-toggle',
-					'.btn',
-				),
-		),
-	) );
-
-	/**
-	* Toggles Menu Background On and Off.
-	*/
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'toggle',
-		'settings'    => 'menu_background',
-		'label'       => esc_attr__( 'Menu Background On/Off', 'padang_padang' ),
-		'description' => esc_attr__( 'Turns Menu Background on and off', 'padang_padang' ),
-		'section'     => 'menu_appearance',
-		'default'     => '1',
-		'priority'    => 10,
-	) );
-
-
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'color',
-		'settings'    => 'menu_text_color',
-		'label'       => __( 'Menu Text Color', 'padang_padang' ),
-		'section'     => 'menu_appearance',
-		'default'     => '#fff',
-		'priority'    => 10,
-		'output' => array(
-			array(
-				'element' => '.main-navigation li a',
-			),
-		),
-	) );
-
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'color',
-		'settings'    => 'menu_text_hover_color',
-		'label'       => __( 'Menu Text Hover Color', 'padang_padang' ),
-		'section'     => 'menu_appearance',
-		'default'     => '#fff',
-		'priority'    => 10,
-		'output' => array(
-			array(
-				'element' => '.main-navigation li a:hover',
-			),
-		),
-	) );
 
 
 /**
