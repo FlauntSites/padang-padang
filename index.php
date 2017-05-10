@@ -20,37 +20,60 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-
-			<?php
-			endif;
-
 			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			while ( have_posts() ) : the_post(); ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-			endwhile;
+					<div class="small-12 medium-5 columns">
+						
+						<a href="<?php the_permalink() ?>">
+							<figure class="post-thumb">
+								<?php the_post_thumbnail( 'medium-large' ); ?>
+								<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+									<figcaption class="post-thumb-caption">
+											<?php echo $caption; ?><span> [Read more...]</span>
+										<?php endif; ?>
+									</figcaption>
+							</figure>
+						</a>
 
-			the_posts_navigation();
+					</div>
+						<?php if ( has_post_thumbnail() ) { ?>
 
-		else :
+							<div class="small-12 medium-7 columns">	
 
-			get_template_part( 'template-parts/content', 'none' );
+						<?php } else { ?>
 
-		endif; ?>
+							<div class="small-12 columns">	
+
+						<?php }?>
+
+						<header class="entry-header">
+							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+						</header>
+
+						<section>
+							<?php the_excerpt(); ?>
+						</section>
+
+						<footer>
+							<a href="<?php the_permalink(); ?>" class="btn">Read More...</a>
+						</footer>
+					</div>
+
+					<div class="clear"></div>
+
+				</article>	
+
+			<?php endwhile; // End of the loop.
+
+			fsc_page_navi();
+
+		 endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

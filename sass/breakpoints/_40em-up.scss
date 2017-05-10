@@ -305,7 +305,7 @@ SIDEBARS & ASIDES
 WIDGET STYLES
 *********************/
 
-.widget-contain .menu-primary-menu-container{
+.widget-contain {
 	width:14em;
 
 	ul{
@@ -343,9 +343,9 @@ FOOTER STYLES
 		li.footer-widget{
 			float: left;
 			display:inline;
-			width:inherit;
+			width:24%;
 			text-align: left;
-			margin: 0 1em;
+			margin: 0 1%;
 
 			h2{
 				color:#ddd;
