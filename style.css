@@ -5,7 +5,7 @@ Bitbucket Theme URI: https://bitbucket.org/FlauntYourSite/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.3.8
+Version: 0.3.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1527,7 +1527,7 @@ BADGES
   margin: 0 auto; }
 
 .badge {
-  width: 30%;
+  width: 47%;
   margin-right: 3%;
   float: left; }
 
@@ -1630,12 +1630,12 @@ SIDEBAR STYLES
 /*********************
 WIDGET STYLES
 *********************/
-.widget-contain .menu-primary-menu-container ul {
+.widget-contain ul, .widget-contain .menu-primary-menu-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: left; }
-  .widget-contain .menu-primary-menu-container ul li {
+  .widget-contain ul li, .widget-contain .menu-primary-menu-container ul li {
     margin: 0;
     padding: 0; }
 

@@ -81,7 +81,34 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 		'output' => array(
 				'element'  => 'body',
 				'property' => 'background-color',
+		),
+	) );
 
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'color',
+		'settings'    => 'menu_text_color',
+		'label'       => __( 'Menu Text Color', 'padang_padang' ),
+		'section'     => 'site_colors',
+		'default'     => '#fff',
+		'priority'    => 10,
+		'output' => array(
+			array(
+				'element' => '.main-navigation li a',
+			),
+		),
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'color',
+		'settings'    => 'menu_text_hover_color',
+		'label'       => __( 'Menu Text Hover Color', 'padang_padang' ),
+		'section'     => 'site_colors',
+		'default'     => '#fff',
+		'priority'    => 10,
+		'output' => array(
+			array(
+				'element' => '.main-navigation li a:hover',
+			),
 		),
 	) );
 
@@ -139,33 +166,7 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 		'priority'    => 10,
 	) );
 
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'color',
-		'settings'    => 'menu_text_color',
-		'label'       => __( 'Menu Text Color', 'padang_padang' ),
-		'section'     => 'site_colors',
-		'default'     => '#fff',
-		'priority'    => 10,
-		'output' => array(
-			array(
-				'element' => '.main-navigation li a',
-			),
-		),
-	) );
 
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'color',
-		'settings'    => 'menu_text_hover_color',
-		'label'       => __( 'Menu Text Hover Color', 'padang_padang' ),
-		'section'     => 'site_colors',
-		'default'     => '#fff',
-		'priority'    => 10,
-		'output' => array(
-			array(
-				'element' => '.main-navigation li a:hover',
-			),
-		),
-	) );
 
 
 

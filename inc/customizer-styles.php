@@ -41,7 +41,7 @@ BASE (MOBILE) SIZE
     }
 
 
-    a, .social-icon, .swiper-button-prev, .swiper-button-next{
+    a, a:visited, .social-icon, .swiper-button-prev, .swiper-button-next{
         color:<?php echo get_theme_mod( 'site_accent_color', '' ); ?>;
     }
 

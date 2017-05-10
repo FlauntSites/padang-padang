@@ -369,3 +369,84 @@ add_action( 'widgets_init', function(){
 	register_widget( 'FS_Proofing_Button' );
 });
 				
+
+
+
+
+class FS_Badges extends WP_Widget {
+
+	/**
+	 * Sets up the widgets name etc
+	 */
+	public function __construct() {
+		$widget_ops = array( 
+			'classname' => 'fs_badges',
+			'description' => 'Displays your badges with links to the posts.',
+		);
+		parent::__construct( 'fs_badges', 'FS Badges', $widget_ops );
+	}
+
+	/**
+	 * Outputs the content of the widget
+	 *
+	 * @param array $args
+	 * @param array $instance
+	 */
+	public function widget( $args, $instance ) {
+
+
+    $the_query = new WP_Query(
+        array (
+          'post_count'  => 4,
+          'post_type'   => 'badges',
+          'orderby'     => 'rand',
+         )
+     );
+
+     ?>
+
+          <?php if ( $the_query->have_posts() ) : ?>
+			<?php echo $args['before_widget'] ?>
+
+		  	<h2>As featured in...</h2>
+
+			<div class="badge-group">
+
+				<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+					<div class="badge"><a href="<?php the_field( 'fsc_badge_link' ); ?>"><?php the_post_thumbnail(''); ?></a></div>
+
+				<?php endwhile; ?>
+
+				<?php wp_reset_postdata(); ?>
+
+				<?php else : ?>
+					<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+				<?php endif; ?>
+			</div>
+			<?php echo $args['after_widget'] ?>
+	<?php }
+
+	/**
+	 * Outputs the options form on admin
+	 *
+	 * @param array $instance The widget options
+	 */
+	public function form( $instance ) {
+		// outputs the options form on admin
+	}
+
+	/**
+	 * Processing widget options on save
+	 *
+	 * @param array $new_instance The new options
+	 * @param array $old_instance The previous options
+	 */
+	public function update( $new_instance, $old_instance ) {
+		// processes widget options to be saved
+	}
+}
+
+add_action( 'widgets_init', function(){
+	register_widget( 'FS_Badges' );
+});

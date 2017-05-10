@@ -298,7 +298,7 @@ BADGES
 }
 
 .badge{
-	width: 30%;
+	width: 47%;
 	margin-right: 3%;
 	float: left;
 }
@@ -316,6 +316,7 @@ BADGES
 	color:#fff;
 	font-weight: bold;
 }
+
 
 
 
@@ -446,7 +447,7 @@ SIDEBAR STYLES
 WIDGET STYLES
 *********************/
 
-.widget-contain .menu-primary-menu-container{
+.widget-contain, .widget-contain .menu-primary-menu-container{
 
 	ul{
 		list-style: none;
