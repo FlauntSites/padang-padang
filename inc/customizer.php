@@ -325,7 +325,7 @@ padang_padang_Kirki::add_section( 'typography', array(
 		),
 		'output' => array(
 			array(
-				'element' => array( 'h1', '.h1', 'h2', '.h2' ),
+				'element' => array( 'h1', '.h1', 'h2', '.h2', 'h3', '.h3', 'h4', '.h4', 'h5', '.h5', 'h6', '.h6' ),
 			),
 		),
 	) );
