@@ -416,3 +416,28 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	'priority'    => 10,
 	
 ) );
+
+
+
+
+/**
+ * Add the Image Appearance section
+ */
+padang_padang_Kirki::add_section( 'custom_css', array(
+	'title'      => esc_attr__( 'Custom CSS', 'padang_padang' ),
+	'priority'   => 4,
+	'capability' => 'edit_theme_options',
+) );
+
+padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'        => 'code',
+	'settings'    => 'custom_css',
+	'label'       => __( 'Custom CSS', 'my_textdomain' ),
+	'section'     => 'custom_css',
+	'priority'    => 10,
+	'choices'     => array(
+		'language' => 'css',
+		'theme'    => 'monokai',
+		'height'   => 250,
+	),
+) );

@@ -137,6 +137,11 @@ RETINA (2x RESOLUTION DEVICES)
 } // end of media query
 
 
+/*--------------------
+CUSTOM CSS FROM CUSTOMIZER
+--------------------*/
+
+<?php echo get_theme_mod( 'custom_css' ); ?>
 
 </style>
 
