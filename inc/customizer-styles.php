@@ -49,8 +49,13 @@ BASE (MOBILE) SIZE
         color:<?php echo get_theme_mod( 'site-accent_hover_color', '' ); ?>;
     }
 
-    .main-navigation li a, .btn{
+    .main-navigation li a, .btn, .btn:visited, button, input[type="button"], input[type="reset"], input[type="submit"]{
         color:<?php echo get_theme_mod( 'menu_text_color', '' ); ?>;
+    }
+
+    .main-navigation li a:hover, .main-navigation li a:visited, .btn:hover, button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
+        color:<?php echo get_theme_mod( 'menu_text_hover_color', '' ); ?>;
+        background-color:<?php echo get_theme_mod( 'site-accent_hover_color', '' ); ?>;
     }
 
     .footer-widget-area, .footer-widget-area a, .footer ul.footer-widget-area li.footer-widget h2 {
@@ -68,6 +73,7 @@ BASE (MOBILE) SIZE
     .logo{
         width: <?php echo get_theme_mod( 'fsc_logo_width', '' ); ?>px;
     }
+
 
 
 /*--------------------

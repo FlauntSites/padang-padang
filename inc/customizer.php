@@ -87,7 +87,7 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'color',
 		'settings'    => 'menu_text_color',
-		'label'       => __( 'Menu Text Color', 'padang_padang' ),
+		'label'       => __( 'Menu & Button Text Color', 'padang_padang' ),
 		'section'     => 'site_colors',
 		'default'     => '#fff',
 		'priority'    => 10,
@@ -101,15 +101,10 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'color',
 		'settings'    => 'menu_text_hover_color',
-		'label'       => __( 'Menu Text Hover Color', 'padang_padang' ),
+		'label'       => __( 'Menu & Button Text Hover Color', 'padang_padang' ),
 		'section'     => 'site_colors',
 		'default'     => '#fff',
 		'priority'    => 10,
-		'output' => array(
-			array(
-				'element' => '.main-navigation li a:hover',
-			),
-		),
 	) );
 
 	padang_padang_Kirki::add_field( 'padang_padang', array(
@@ -134,24 +129,6 @@ padang_padang_Kirki::add_section( 'site_colors', array(
 		'type'        => 'color',
 		'settings'    => 'site-accent_hover_color',
 		'label'       => __( 'Site Accent Hover Color', 'padang_padang' ),
-		'section'     => 'site_colors',
-		'default'     => '#ccc',
-		'priority'    => 10,
-	) );
-
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'color',
-		'settings'    => 'button_text_color',
-		'label'       => __( 'Button Text Color', 'padang_padang' ),
-		'section'     => 'site_colors',
-		'default'     => '#ccc',
-		'priority'    => 10,
-	) );
-
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'color',
-		'settings'    => 'button_hover_text_color',
-		'label'       => __( 'Button Hover Text Color', 'padang_padang' ),
 		'section'     => 'site_colors',
 		'default'     => '#ccc',
 		'priority'    => 10,
@@ -301,9 +278,14 @@ padang_padang_Kirki::add_section( 'typography', array(
 					'.main-navigation li a',
 					'button.menu-toggle',
 					'.btn',
+					'button', 
+					'input[type="button"]', 
+					'input[type="reset"]', 
+					'input[type="submit"]',
 				),
 		),
 	) );
+
 
 	/**
 	* Add the Headers Typography control

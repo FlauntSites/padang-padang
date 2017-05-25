@@ -5,7 +5,7 @@ Bitbucket Theme URI: https://bitbucket.org/FlauntYourSite/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.4.2
+Version: 0.4.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1109,7 +1109,8 @@ input[type="submit"] {
   padding: .1em 1em;
   display: block;
   text-align: center;
-  text-decoration: none; }
+  text-decoration: none;
+  width: 100%; }
 
 input[type="text"],
 input[type="email"],
@@ -1127,7 +1128,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  color: #666;
+  color: #ccc;
   border-radius: 2em;
   padding: .1em .5em; }
   input[type="text"]:focus,
@@ -1146,7 +1147,7 @@ textarea {
   input[type="datetime-local"]:focus,
   input[type="color"]:focus,
   textarea:focus {
-    color: #111; }
+    color: #999; }
 
 select {
   border: 1px solid #ccc; }
@@ -1267,7 +1268,15 @@ button.menu-toggle,
   display: block; }
 
 .hentry {
-  margin: 0 0 1.5em; }
+  margin: 0 0 2em; }
+
+.hentry:after {
+  border-bottom: 1px solid #eee;
+  width: 80%;
+  display: block;
+  content: "";
+  margin: 0 auto;
+  margin-top: 2em; }
 
 .byline,
 .updated:not(.published) {
@@ -1638,6 +1647,23 @@ WIDGET STYLES
   .widget-contain ul li, .widget-contain .menu-primary-menu-container ul li {
     margin: 0;
     padding: 0; }
+
+.cta-widget {
+  display: inline-block;
+  width: 100%; }
+
+/*********************
+ COMMENTS
+*********************/
+.comment {
+  list-style: none;
+  margin-bottom: 2em; }
+
+.comment-metadata {
+  display: none; }
+
+.comment-content p {
+  margin: 0; }
 
 /*--------------------
 TABLET & SMALLER LAPTOPS
@@ -2087,7 +2113,8 @@ object {
   max-width: 100%; }
 
 figure {
-  position: relative; }
+  position: relative;
+  line-height: 0; }
 
 /*--------------------------------------------------------------
 ## Captions

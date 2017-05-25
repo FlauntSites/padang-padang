@@ -277,11 +277,11 @@ class FS_Call_To_Action extends WP_Widget {
 	 */
 	public function widget( $args, $instance ) { ?>
 
-
-	<div class="service-cta">
-		<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
+	<div class="cta-widget">
+		<div class="service-cta">
+			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
+		</div>
 	</div>
-
 
 	<?php }
 
