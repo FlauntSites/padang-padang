@@ -186,17 +186,6 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 }
 
 
-function fsc_social_icons( $social_network ){
-		$social_network 	= 	$social_network;
-		$social_url 		= 	get_field( 'fsc_' . $social_network . '_url' , 'options' );
-		$social_css 		= 	'fa fa-' . $social_network;
-
-		if( !empty( $social_url ) ): { ?>
-			<a class="social-icon" href="<?php echo $social_url ?>"><i class="<?php echo $social_css ?>"></i></a>
-			<?php }
-		endif;
-}
-
 
 
 function fsc_client_review( ){
