@@ -132,7 +132,7 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Recommend the Kirki plugin
+ * Include the Widget locations
  */
 require get_template_directory() . '/inc/widgets.php';
 
