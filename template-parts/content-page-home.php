@@ -30,10 +30,6 @@
 
 	</div><!-- .entry-content -->
 
-
-	<?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
-
-
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php

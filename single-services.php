@@ -70,6 +70,7 @@ get_header(); ?>
 			</article>
 		 
 		 <?php endwhile; ?>
+		 <?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

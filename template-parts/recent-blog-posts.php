@@ -19,7 +19,11 @@
             <article>
                 <!-- the loop -->
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                    <?php the_post_thumbnail( 'thumbnail' ); ?>
+                
+                    <a href="<?php the_permalink(); ?>">
+                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                    </a>
+
                 <?php endwhile; ?>
                 <!-- end of the loop -->
             </article>
