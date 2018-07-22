@@ -25,8 +25,10 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+			<?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 
 <?php
 
