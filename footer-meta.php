@@ -1,12 +1,12 @@
-<?php if ( is_active_sidebar( 'footer' ) ) : ?>
+
+<?php if ( true == is_active_sidebar( 'footer1' ) || is_active_sidebar( 'footer2' ) || is_active_sidebar( 'footer3' ) || is_active_sidebar( 'footer4' ) ) : ?>
 
 	<footer class="footer">
 
-		<ul class="footer-widget-area">
-
-			<?php dynamic_sidebar( 'footer' ); ?>
-		
-		</ul>
+			<?php dynamic_sidebar( 'footer1' ); ?>
+			<?php dynamic_sidebar( 'footer2' ); ?>
+			<?php dynamic_sidebar( 'footer3' ); ?>
+			<?php dynamic_sidebar( 'footer4' ); ?>
 
 	</footer>	
 

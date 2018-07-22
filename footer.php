@@ -29,9 +29,9 @@
 
 					if ( is_front_page() ){
 
-						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com.com/">Flaunt Sites</a>' ); 
+						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com/">Flaunt Sites</a>' ); 
 				}else{
-						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com.com/" rel="nofollow">Flaunt Sites</a>' );
+						printf( esc_html__( 'Website Proudly Provided by: %s.', 'padang-padang' ), '<a href="https://flauntsites.com/" rel="nofollow">Flaunt Sites</a>' );
 
 				}?>
 			</p>
