@@ -6,15 +6,6 @@
 	margin: 0 0 2em;
 }
 
-.hentry:after {
-    border-bottom: 1px solid #eee;
-    width: 80%;
-    display: block;
-    content: "";
-    margin: 0 auto;
-    margin-top: 2em;
-}
-
 .byline,
 .updated:not(.published){
 	display: none;

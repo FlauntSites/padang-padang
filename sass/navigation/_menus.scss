@@ -10,6 +10,7 @@
 	.fa-bars{
 		margin-right: .25em;
 	}
+
 	button.menu-toggle{
 		width:100%;
 		text-align: center;
@@ -24,11 +25,9 @@
 	ul {
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
 		width: 100%;
 		position: absolute;
 		z-index: 100;
-		background-color: rgba(0, 0, 0, 0.5);
 		height:100vh;
 		display:none;
 
