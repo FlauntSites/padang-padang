@@ -26,37 +26,20 @@ HEADER STYLES
 *********************/
 
 .meta-header{
-	float:left;
-	width:100%;
-	display: block;
-	margin-bottom: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1em;
 
-	.social{
-		float: left;
-		width: 200px;
-		margin: 0 0 0 20px;
-		top: 8px;
-		position: relative;
+	.social-header{
+
 	}
-
-	.social-icon{
-    	float: left;
-    	background-repeat: no-repeat;
-		margin-right: 1em;
-	}
-
-	.fa{
-
-		}
 
 }
 
 
 
 .client-search{
-	display: inherit;
-	float: right;
-	margin: 8px 20px 0 0;
 
 	#client{
 		float: left;
@@ -79,6 +62,20 @@ HEADER STYLES
 
 
 
+.logo{
+	-webkit-transition: .4s;
+    transition: .4s;
+
+	&:hover, &:focus {
+		-webkit-filter: opacity(80%); 
+		filter: opacity(80%);
+		outline: 0;
+		border: none;	
+	}
+
+}
+
+
 /*********************
 NAVIGATION STYLES
 *********************/
@@ -87,28 +84,22 @@ button.menu-toggle {
 	display: none;
 }
 
-.menu-primary-menu-container{
-	margin: 0 auto;
-	display: table;
-	text-align: center;	
-}
-
 .main-navigation {
 	width:100%;
 	clear: both;
-	font-family: $font__heading;
 
 	ul {
 		text-align: center;
 		list-style: none;
-		margin: 0;
+		margin: 0 auto;
 		width: inherit;
 		position: inherit;
 		z-index: inherit;
-		background-color:inherit;
-		height:inherit;
+		height: inherit;
 		transition: inherit;
-		display: inherit;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -174,6 +165,17 @@ button.menu-toggle {
 	}
 }
 
+
+/*********************
+STRUCTURE STYLES
+*********************/
+
+
+.content-area{
+	width: 80%;
+	max-width:1024px;
+	margin: 0 auto;
+}
 
 
 /*********************
@@ -331,36 +333,24 @@ FOOTER STYLES
 *********************/
 
 .footer{
-	margin: 0 auto;
-    display: table;
-    text-align: center;
-	
-	ul.footer-widget-area{
-		display:inline-block;
-		margin:0;
-		padding:0;
+	display: flex;
+	justify-content: space-between;
+	background-color: #999;	
+	padding:0 10%;
 		
-		li.footer-widget{
-			float: left;
-			display:inline;
-			width:24%;
-			text-align: left;
-			margin: 0 1%;
+		.footer-widget{
+			width:23%;
 
-			h2{
+
+			h3{
 				color:#ddd;
 				border-bottom:1px solid #ddd;
 			}
-			
-		}
+
 	}
 
 	#inner-footer{
-		padding-left: 2%;
-		padding-right: 2%;
-		background-color: #444;
-		position: relative;
-		z-index: 2;
+
 	}
 
 	.copyright{
@@ -393,11 +383,33 @@ FOOTER STYLES
 
 
 
+
+/*********************
+CTA STYLES
+*********************/
+
+.cta-footer{
+	display: flex;
+	flex-wrap: wrap;
+
+	.cta{
+		width:32%
+	}
+}
+
+
+
+
+
 /*********************
 HOME STYLES
 *********************/ 
 
-
+.home-about{
+	display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
 
 /*********************
 SERVICES
@@ -413,10 +425,22 @@ ARCHIVE STYLES
 *********************/
 
 
-.archive-excerpt{
-	position: relative;
+.archive-excerpt-container{
+	display: flex;
+	justify-content: space-between;	
+	width:100%;
 }
 
+.post-thumb-container{
+	margin: 0 1em .5em 0;
+	margin-bottom: 0;
+	display: block;
+	width:40%;
+}
+
+.archive-excerpt-text{
+	flex:1;
+}
 
 
 .service-thumb{
@@ -441,6 +465,7 @@ ARCHIVE STYLES
 .post-thumb, .service-thumb, .gallery-item{
 	position: relative;
 	line-height: 0;
+	margin: 0;
 }
 
 .post-thumb img{
@@ -461,35 +486,17 @@ ARCHIVE STYLES
 	margin: 0;
 }
 
-.post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption, figcaption {
-	font-size: 80%;
-	width: 100%;
-	line-height: 1.1em;
-	color:#fff;
-	position: absolute;
-	bottom: 0;
-	padding: .25em .75em;
-	background-color: rgba(0, 0, 0, .5);
-	opacity: 0;
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
-	-webkit-transition: opacity .25s ease-in-out;
-}
+
 
 p.gallery-item-text{
 	font-size: 100%;
 }
 
 
-.post-thumb:hover .post-thumb-caption, .service-thumb:hover .service-thumb-caption, .wp-caption:hover p.wp-caption-text, .gallery-item:hover .wp-caption-text.gallery-caption, figure:hover figcaption {
-		opacity: 1;
-		display: inherit;
 
-		a{
-			color: #fff;
-		}
-		a:hover{
-			color: #000;
-		}
 
-}
+
+
+
+
+

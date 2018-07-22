@@ -8,26 +8,31 @@
 
 ?>
 
-<?php get_template_part( 'slideshow' ); ?>
 
+
+<?php get_template_part( 'slideshow' ); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_field( 'fsc_about_section_title' ); ?></h1>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="home-about">
 
-		<div class="small-12 medium-5 columns">
+		<div>
 			<?php fsc_figure( 'fsc_about_photo', 'medium-large', '', 'hover-caption'); ?>
 		</div>
 
-		<div class="small-12 medium-7 columns">
+		<div>
 			<?php the_field( 'fsc_about_text' ); ?>
 			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
 		</div>
 
 	</div><!-- .entry-content -->
+
+
+	<?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
+
 
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">

@@ -12,12 +12,10 @@ and will be used across all viewports.
 ******************************************************************/
 
 .logo{
-	width: 300px;
-	margin: 20px auto 0;
 	display: block;
 	background-repeat: no-repeat;
-}
 
+}
 
 /*********************
 HEADER STYLES
@@ -26,6 +24,7 @@ HEADER STYLES
 		display: none;
 
 	.social-header{
+
 	}
 
 	.client-search{
@@ -35,18 +34,27 @@ HEADER STYLES
 
 .site-branding{
     width:100%;
-    margin: 2em 0;
-    font-family: $font__heading;
+    margin: 1em 0;
+	font-family: $font__heading;
+	font-size: 200%;
+	display:flex;
+	justify-content:center;
 
-    .site-title{
-        margin: 0 auto;
-        text-align: center;
+	a{
+		text-decoration: none;
+	}
 
-        a{
-            font-size: 200%;
-            text-decoration: none
-        }
-    }
+}
+
+
+/*********************
+STRUCTURE STYLES
+*********************/
+
+
+.content-area{
+	width: 95%;
+	margin: 0 auto;	
 }
 
 
@@ -59,14 +67,17 @@ ARCHIVE STYLES
 	position: relative;
 }
 
+
 .post-thumb{
 	position: relative;
+	margin: 0;
 }
 
 .post-thumb img{
 	margin-bottom: 0;
 	display: block;
 }
+
 
 /******************************************************************
 PAGE NAVI STYLES
@@ -77,53 +88,63 @@ PAGE NAVI STYLES
 	margin: 1.5em 0;
 }
 	.pagination{
-    text-align: center;
+    	text-align: center;
 
     ul {
-      display: inline-block;
-      background-color: #eee;
-      white-space: nowrap;
-      padding: 0;
-      clear: both;
-      border-radius: 3px;
+		display: inline-block;
+		white-space: nowrap;
+		padding: 0;
+		clear: both;
+		border-radius: 5px;
+		margin: 0;
     }
 
     li {
-      padding: 0;
-      margin: 0;
-      float: left;
-      display: inline;
-      overflow: hidden;
-      border-right: 1px solid #333;
-    }
+		background-color: #eee;
+      	padding: 0;
+		margin: 0;
+		float: left;
+		display: inline;
+		overflow: hidden;
+		border-right: 1px solid #ddd;
+
+		&:last-child{
+			border-right: none;
+		}
+
+		.current{
+			cursor: default;
+			color: #333;
+			background-color: #fff;
+	
+			&:hover, &:focus {
+				color: #333;
+				background-color: #fff;
+			}
+		}
+
+	}
 
     a, span {
-      margin: 0;
-      text-decoration: none;
-      padding: 0;
-      line-height: 1em;
-      font-size: 1em;
-      font-weight: normal;
-      padding: 0.75em;
-      min-width: 1em;
-      display: block;
-      color: #333;
+		margin: 0;
+		text-decoration: none;
+		padding: 0;
+		line-height: 1em;
+		font-size: 1em;
+		font-weight: normal;
+		padding: 0.75em;
+		min-width: 1em;
+		display: block;
+		color: #333;
 
       &:hover, &:focus {
-      	background-color: #333;
+      	background-color: #ccc;
       	color: #eee;
-      }
+	  }
+	  
     }
 
-    .current{
-    	cursor: default;
-    	color: #333;
 
-    	&:hover, &:focus {
-    		background-color: #eee;
-    		color: #333;
-    	}
-    }
 
   } /* end .bones_page_navi */
 
@@ -146,21 +167,36 @@ PAGE NAVI STYLES
 FOOTER STYLES
 *********************/
 
-.footer {
+.footer{
 	position: relative;
 	z-index: 2;
-	width: 100%;
-	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+	padding:0 2.5%;
+	
+	.footer-widget{
+		width:100%;
+		text-align: left;
+
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.search-form{
+			width: 100%;
+		}
+			
+	}
 
 	.inner-footer{
-		padding-left: 2%;
-		padding-right: 2%;
+		padding-left: 2.5%;
+		padding-right: 2.5%;
 		background-color: #333;
 		position: relative;
 		z-index: 2;
-		width: 100%;
 	}
 
 	.footer-credit{
@@ -252,7 +288,7 @@ SLIDESHOW STYLES
 .swiper-container {
     width: 100%;
     height: auto;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 
 
@@ -380,32 +416,35 @@ REVIEWS STYLES
 CTA STYLES
 *********************/
 
-.table{
-	display: table;
+.cta-footer{
+	padding: 1em 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;	
+
+	.cta{
+		width:100%;
+		background-color: #333;
+		border-radius: 15px;
+		margin-bottom: 2em;
+		padding: 0 1.5em;
+		text-align: left;
+	}
+
+	.cta-title{
+		color:#fff;
+		margin: 0;
+		border-bottom: 1px solid #fff;
+		font-weight: bold;
+	}
+
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
 }
-
-.table-row{
-	display: table-row;
-}
-
-.table-col{
-	display: table-cell;
-}
-
-.cta{
-	background-color: #333;
-	border-radius: 15px;
-	padding: 1em;
-}
-
-.cta-title{
-	color:#fff;
-	margin: 0;
-	border-bottom: 1px solid #fff;
-	font-weight: bold;
-}
-
-
 
 .post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption {
 	position: absolute;
@@ -485,4 +524,93 @@ WIDGET STYLES
 
 .comment-content p{
 	margin: 0;
+}
+
+
+
+
+/******************************
+CAPTION AND SHAREBAR STYLES
+*******************************/
+
+
+
+.fs-drawer{
+	position: absolute;
+	display: flex;
+	justify-content:space-between;
+	align-items:center;
+	width:100%;
+	bottom: 0;
+	opacity: 0;
+	padding: .5em;
+	background-color: rgba(0, 0, 0, .5);
+	transition: opacity .25s ease-in-out;
+	-moz-transition: opacity .25s ease-in-out;
+	-webkit-transition: opacity .25s ease-in-out;	
+}
+
+
+
+figure{
+	color:#fff;
+}
+
+/* old styles to add back to figcaption in if needed.
+.post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption,
+*/
+figure:hover .fs-drawer{
+	opacity: 1;
+	
+	a{
+		color: #fff;
+	}
+	a:hover{
+		color: red;
+	}
+}
+
+figcaption {
+	line-height: 1;
+	
+	}
+
+	/* old styles to add back to figcaption in if needed.
+	.post-thumb:hover .post-thumb-caption, .service-thumb:hover .service-thumb-caption, .wp-caption:hover p.wp-caption-text, .gallery-item:hover .wp-caption-text.gallery-caption, figure:hover figcaption {
+	*/
+
+	
+.fs-sharebar{
+
+}
+
+a.social-icon{
+	text-decoration: none;
+}
+
+svg.fs-icons{
+	width:1.5em;
+	height:1.5em;
+	margin: 0 0 -.1em 0;
+	padding:0;
+}
+
+
+
+
+
+.recent-blog-posts{
+	margin-top: 3em;
+
+	article{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		justify-content: space-between;
+		grid-gap: 20px;
+
+		img{
+			width:100%;
+		}
+	}
+
 }

@@ -41,13 +41,22 @@ template {
 	display: none;
 }
 
+p{
+	margin-top: 0;
+}
+
 a {
 	background-color: transparent;
 }
 
 a:active,
-a:hover {
+a:hover,
+a:focus {
 	outline: 0;
+	border: none;
+	-moz-outline-style: none;
+	-webkit-transition: .4s;
+    transition: .4s;
 }
 
 abbr[title] {
