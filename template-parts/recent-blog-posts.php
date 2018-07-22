@@ -1,4 +1,6 @@
-	<section class="recent-blog-posts">
+<?php if ( true == get_theme_mod( 'footer_recent_posts', true ) ) : ?>
+
+    <section class="recent-blog-posts">
 
         <header class="entry-header">
             <h2>Recent Blog Posts</h1>
@@ -19,7 +21,7 @@
             <article>
                 <!-- the loop -->
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                
+
                     <a href="<?php the_permalink(); ?>">
                         <?php the_post_thumbnail( 'thumbnail' ); ?>
                     </a>
@@ -35,4 +37,6 @@
             <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
         <?php endif; ?>
 
-	</section>
+    </section>
+    
+<?php endif; ?>
