@@ -9,12 +9,14 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row">
-		<main id="main" class="site-main small-12 small-centered" role="main">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 		<?php
 		while ( have_posts() ) : the_post();
 
 			get_template_part( 'template-parts/content', get_post_format() );
+
+			get_template_part( 'footer-cta' );
 
 			the_post_navigation();
 
@@ -29,5 +31,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_template_part( 'footer-cta' );
-get_footer();
+<?php get_footer(); ?>

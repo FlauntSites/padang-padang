@@ -25,44 +25,42 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> aria-label="<?php the_title(); ?>">
 
-					<div class="small-12 medium-5 columns">
-						
-						<a href="<?php the_permalink() ?>">
-							<figure class="post-thumb">
-								<?php the_post_thumbnail( 'medium-large' ); ?>
-								<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-									<figcaption class="post-thumb-caption">
-											<?php echo $caption; ?><span> [Read more...]</span>
-										<?php endif; ?>
-									</figcaption>
-							</figure>
-						</a>
+					<header class="entry-header">
+						<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					</header>
 
-					</div>
-						<?php if ( has_post_thumbnail() ) { ?>
+					<div class="archive-excerpt-container">
 
-							<div class="small-12 medium-7 columns">	
 
-						<?php } else { ?>
+						<?php if (has_post_thumbnail() ): ?>
+							<div class="post-thumb-container">
 
-							<div class="small-12 columns">	
+								<a href="<?php the_permalink() ?>">
+									<figure class="post-thumb">
+										<?php the_post_thumbnail( 'medium-large' ); ?>
+										<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+											<figcaption class="post-thumb-caption">
+													<?php echo $caption; ?><span> [Read more...]</span>
+												<?php endif; ?>
+											</figcaption>
+									</figure>
+								</a>
+								
+							</div>						
+						<?php endif; ?>
 
-						<?php }?>
 
-						<header class="entry-header">
-							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-						</header>
+						<div class="archive-excerpt-text">
 
-						<section>
-							<?php the_excerpt(); ?>
-						</section>
+							<section>
+								<?php the_excerpt(); ?>
+							</section>
 
-						<footer>
 							<a href="<?php the_permalink(); ?>" class="btn">Read More...</a>
-						</footer>
-					</div>
 
-					<div class="clear"></div>
+						</div>
+
+					</div>
 
 				</article>	
 
