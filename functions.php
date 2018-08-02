@@ -66,7 +66,8 @@ function padang_padang_setup() {
 	) ) );
 
 	// Add theme support for selective refresh for widgets.
-	// add_theme_support( 'customize-selective-refresh-widgets' );
+	add_theme_support( 'acf-custom-fields' );
+
 }
 endif;
 add_action( 'after_setup_theme', 'padang_padang_setup' );
@@ -76,7 +77,7 @@ add_action( 'after_setup_theme', 'padang_padang_setup' );
  * Enqueue scripts and styles.
  */
 function padang_padang_scripts() {
-	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri(), '20180801', '' );
 
 	wp_enqueue_script( 'padang-padang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
