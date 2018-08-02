@@ -4,7 +4,7 @@ Padang Padang
 ## Description: 
 Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
 ## Version: 
-0.4.9
+0.5.2
 ## Contributors
 @bahia0019
 
@@ -21,6 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 
 ## [Unreleased]
+
+## [0.5.2] - 2018-08-01
+### Changed 
+-Added CSS versioning.
 
 ## [0.5.1] - 2018-08-01
 ### Changed 
