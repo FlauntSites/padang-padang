@@ -13,7 +13,6 @@ padang_padang_Kirki::add_section( 'typography', array(
 	* Add the Menu Typography control
 	*/
 	padang_padang_Kirki::add_field( 'padang_padang', array(
-		array(
 			'type'        => 'typography',
 			'settings'    => 'menu_font',
 			'label'       => esc_attr__( 'Menu Typography', 'padang_padang' ),
@@ -35,13 +34,7 @@ padang_padang_Kirki::add_section( 'typography', array(
 						'input[type="submit"]',
 					),
 			),
-		),
 	) );
-
-
-
-
-
 
 	/**
 	* Add the Headers Typography control
