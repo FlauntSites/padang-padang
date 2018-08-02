@@ -34,6 +34,11 @@ BASE (MOBILE) SIZE
         width: <?php echo $logo_width[ 'fsc_logo_width' ]; ?>px;
     }
 
+    .main-navigation li, .main-navigation li a, .main-navigation li a:visited{
+        color:<?php echo get_theme_mod( 'site_accent_text_color', '#fff' ); ?>;
+        background:<?php echo get_theme_mod( 'site_accent_color', '#333' ); ?>;
+    }
+
     .page-title, .page-title a, .entry-title, .entry-title a, .sidebar-title, .sidebar-title a{
         color:<?php echo get_theme_mod( 'heading_color', '#666' ); ?>;
     }

@@ -22,6 +22,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.5.1] - 2018-08-01
+### Changed 
+-Added background color to Mobile Menu LI elements based on accent color.
+-Removed padding from Mobile Menu UL. 
+
+## [0.5.0] - 2018-08-01
+### Changed 
+-Fixed an issue with default fonts causing issues with the Customizer styles.
+
 ## [0.4.9] - 2018-07-22
 ### Changed 
 -Updated Readme.md to new format.
