@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.4.9
+Version: 0.5.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -286,7 +286,6 @@ textarea {
 }
 
 h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a {
-  font-family: "Julius Sans One";
   text-decoration: none;
   margin-bottom: 0;
 }
@@ -1550,7 +1549,6 @@ a:hover, a:active {
   clear: both;
   display: block;
   float: left;
-  font-family: "Julius Sans One";
   margin-bottom: 3em;
   position: relative;
 }
@@ -1757,7 +1755,6 @@ HEADER STYLES
 .site-branding {
   width: 100%;
   margin: 1em 0;
-  font-family: "Julius Sans One";
   font-size: 200%;
   display: flex;
   justify-content: center;
