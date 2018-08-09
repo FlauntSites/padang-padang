@@ -86,7 +86,7 @@
 
 					$image 		= get_option( 'fsc_options', '' );
 					$image 		= $image[ 'fsc_logo' ];
-					$id 		= $image[ 'id' ]; 
+					$id 		= $image; 
 					$logo_alt 	= get_bloginfo( 'name' );
 					
 					if (isset ( $image ) ){ 
