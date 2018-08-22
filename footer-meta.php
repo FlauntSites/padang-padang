@@ -3,11 +3,22 @@
 
 	<footer class="footer">
 
+		<div class="footer-widget">
 			<?php dynamic_sidebar( 'footer1' ); ?>
-			<?php dynamic_sidebar( 'footer2' ); ?>
-			<?php dynamic_sidebar( 'footer3' ); ?>
-			<?php dynamic_sidebar( 'footer4' ); ?>
+		</div>
 
+		<div class="footer-widget">
+			<?php dynamic_sidebar( 'footer2' ); ?>
+		</div>
+
+		<div class="footer-widget">
+			<?php dynamic_sidebar( 'footer3' ); ?>
+		</div>
+		
+		<div class="footer-widget">
+			<?php dynamic_sidebar( 'footer4' ); ?>
+		</div>
+		
 	</footer>	
 
 <?php endif; ?>

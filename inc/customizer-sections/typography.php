@@ -23,8 +23,9 @@ padang_padang_Kirki::add_section( 'typography', array(
 				'font-family'   => 'Julius Sans One',
 				'font-size'     => '18px',
 			),
-			'output' => array(
-					'element' 	=> array(
+			'output'      => array(
+				array(
+					'element' => array(
 						'.main-navigation li a',
 						'button.menu-toggle',
 						'.btn',
@@ -33,6 +34,7 @@ padang_padang_Kirki::add_section( 'typography', array(
 						'input[type="reset"]', 
 						'input[type="submit"]',
 					),
+				),
 			),
 	) );
 
