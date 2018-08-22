@@ -465,7 +465,6 @@ ARCHIVE STYLES
 .post-thumb, .service-thumb, .gallery-item{
 	position: relative;
 	line-height: 0;
-	margin: 0;
 }
 
 .post-thumb img{
@@ -495,8 +494,52 @@ p.gallery-item-text{
 
 
 
+/************************
+FIGURE & SHAREBAR STYLES
+************************/
+
+// .fs-drawer-mobile-more{
+// 	display: none;
+// }
+
+// figure:hover .fs-drawer{
+// 	opacity: 1;
+// }
+
+// .fs-drawer{
+// 	flex-direction: row;
+// 	align-items: bottom;
+// 	justify-content:space-between;
+
+// 	figcaption{
+// 		padding-bottom: initial;
+// 		margin-bottom: inherit;
+// 		border-bottom: none;
+// 		border-right: 1px solid #ddd;
+// 	}
+// 	.fs-sharebar{
+// 		width: auto;
+// 	}
+// }
 
 
 
+
+
+/*********************
+SLIDESHOW STYLES
+*********************/
+
+.swiper-button-prev{
+	background-image: url('images/circle-left.svg');
+	width:4em;
+	height: 4em;
+}
+
+.swiper-button-next{
+	background-image: url('images/circle-right.svg');
+	width:4em;
+	height: 4em;
+}
 
 

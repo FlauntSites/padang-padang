@@ -19,6 +19,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.5.4] - 2018-08-22
+### Changed 
+-Fixed Swiper Slider footer call not initiating slideshow.
+-Added new icons for Prev and Next arrows.
+-Fixed text color in Widgets area to be Accent Text Color. 
+-Added divs in the footer to give Widgets defined columns.
+-Added margin to Services Thumbnails.
 
 ## [0.5.3] - 2018-08-09
 ### Changed 

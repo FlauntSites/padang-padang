@@ -292,35 +292,8 @@ SLIDESHOW STYLES
 
 
 .swiper-button-prev, .swiper-button-next{
-	background-image: none!important;
-	width: initial!important;
-	opacity: .5;
-}
-
-.swiper-button-prev{
-	left:20px!important;
-
-	&:before {
-		font-family: FontAwesome;
-		content: "\f137";
-		font-size: 200%;
-	}
-}
-
-.swiper-button-next{
-	right:20px!important;
-
-	&:before {
-		font-family: FontAwesome;
-		content: "\f138";
-		font-size:200%;
-	}
-}	
-
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev{
 	background-image: none;
 }
-
 
 
 /*********************
@@ -532,55 +505,61 @@ WIDGET STYLES
 CAPTION AND SHAREBAR STYLES
 *******************************/
 
+// .fs-drawer-mobile-more {
+//     width: 30px;
+//     height: 30px;
+//     position: absolute;
+//     bottom: 1em;
+// 	right: 1em;
+// 	z-index: 100;
+// 	transition: opacity .25s ease-in-out;
+// 	-moz-transition: opacity .25s ease-in-out;
+// 	-webkit-transition: opacity .25s ease-in-out;	
 
+// 	svg.toggled{
+// 		transform:rotate(90deg);
+// 	}
+// }
 
-.fs-drawer{
-	position: absolute;
-	display: flex;
-	justify-content:space-between;
-	align-items:center;
-	width:100%;
-	bottom: 0;
-	opacity: 0;
-	padding: .5em;
-	background-color: rgba(0, 0, 0, .5);
-	transition: opacity .25s ease-in-out;
-	-moz-transition: opacity .25s ease-in-out;
-	-webkit-transition: opacity .25s ease-in-out;	
-}
+// .fs-drawer{
+// 	position: absolute;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: baseline;
+// 	width:100%;
+// 	bottom: 0;
+// 	opacity: 0;
+// 	padding: 1em;
+// 	background-color: rgba(0, 0, 0, .5);
+// 	transition: opacity .25s ease-in-out;
+// 	-moz-transition: opacity .25s ease-in-out;
+// 	-webkit-transition: opacity .25s ease-in-out;	
 
+// 	figcaption{
+// 		line-height: 1;
+// 		padding-bottom: 1em;
+// 		border-bottom: 1px solid #ddd;
+// 		margin-bottom: .5em;
+// 	}
+
+// 	.fs-sharebar{
+// 		display: flex;
+// 		width: inherit;
+// 		align-items: center;
+// 	}
+
+// 	&.toggled{
+// 		opacity:1!important;
+// 	}
+// }
 
 
 figure{
 	color:#fff;
 }
 
-/* old styles to add back to figcaption in if needed.
-.post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption,
-*/
-figure:hover .fs-drawer{
-	opacity: 1;
-	
-	a{
-		color: #fff;
-	}
-	a:hover{
-		color: red;
-	}
-}
-
 figcaption {
-	line-height: 1;
-	
-	}
-
-	/* old styles to add back to figcaption in if needed.
-	.post-thumb:hover .post-thumb-caption, .service-thumb:hover .service-thumb-caption, .wp-caption:hover p.wp-caption-text, .gallery-item:hover .wp-caption-text.gallery-caption, figure:hover figcaption {
-	*/
-
-	
-.fs-sharebar{
-
+	line-height: 1;	
 }
 
 a.social-icon{

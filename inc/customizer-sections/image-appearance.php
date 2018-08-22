@@ -25,6 +25,18 @@ padang_padang_Kirki::add_field( 'padang_padang', array(
 	),
 ) );
 
+padang_padang_Kirki::add_field( 'padang_padang', array(
+	'type'        => 'color',
+	'settings'    => 'caption_text_color',
+	'option_type' => 'option',
+	'option_name' => 'fsc_image_options',
+	'label'       => __( 'Caption Text & Icon Color', 'padang_padang' ),
+	'section'     => 'image_appearance',
+	'default'     => '#fff',
+	'priority'    => 10,
+
+) );
+
 
 padang_padang_Kirki::add_field( 'padang_padang', array(
 	'type'        => 'toggle',
