@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.5.4
+Version: 0.5.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1839,7 +1839,8 @@ PAGE NAVI STYLES
   background-color: #fff;
 }
 
-.pagination a, .pagination span {
+.pagination a,
+.pagination span {
   margin: 0;
   text-decoration: none;
   padding: 0;
@@ -1852,7 +1853,9 @@ PAGE NAVI STYLES
   color: #333;
 }
 
-.pagination a:hover, .pagination a:focus, .pagination span:hover, .pagination span:focus {
+.pagination a:hover, .pagination a:focus,
+.pagination span:hover,
+.pagination span:focus {
   background-color: #ccc;
   color: #eee;
 }
@@ -1904,7 +1907,7 @@ FOOTER STYLES
 }
 
 .footer .footer-credit {
-  padding: .25em 1em;
+  padding: 0.25em 1em;
   background-color: #333;
   color: #333;
   float: left;
@@ -1937,7 +1940,8 @@ SERVICES STYLES
   border-bottom: 1px solid #ddd;
 }
 
-.service-cta, .service-cta-mobile {
+.service-cta,
+.service-cta-mobile {
   margin-top: 2em;
   padding-bottom: 3.5em;
 }
@@ -1945,7 +1949,7 @@ SERVICES STYLES
 .service-thumb img {
   float: left;
   width: 100%;
-  margin: 0 1em .5em 0;
+  margin: 0 1em 0.5em 0;
 }
 
 .center-thumb-text {
@@ -2013,25 +2017,26 @@ REVIEWS STYLES
   float: left;
 }
 
-.quote-l, .quote-r {
+.quote-l,
+.quote-r {
   font-size: 200%;
   line-height: 50%;
   position: absolute;
 }
 
 .quote-l {
-  margin-left: -.5em;
-  margin-top: .25em;
+  margin-left: -0.5em;
+  margin-top: 0.25em;
 }
 
 .quote-r {
-  margin-right: -.5em;
-  margin-top: .25em;
+  margin-right: -0.5em;
+  margin-top: 0.25em;
 }
 
 .handwrite {
   margin: 0;
-  opacity: .6;
+  opacity: 0.6;
   text-align: right;
   width: 100%;
 }
@@ -2042,7 +2047,9 @@ REVIEWS STYLES
   float: left;
 }
 
-.review-small .fa-star, .review-small .fa-star-half-o, .review-small .fa-star-o {
+.review-small .fa-star,
+.review-small .fa-star-half-o,
+.review-small .fa-star-o {
   color: #333;
 }
 
@@ -2087,7 +2094,10 @@ CTA STYLES
   padding: 0;
 }
 
-.post-thumb-caption, .service-thumb-caption, p.wp-caption-text, .wp-caption-text.gallery-caption {
+.post-thumb-caption,
+.service-thumb-caption,
+p.wp-caption-text,
+.wp-caption-text.gallery-caption {
   position: absolute;
   opacity: 0;
 }
@@ -2120,14 +2130,16 @@ SIDEBAR STYLES
 /*********************
 WIDGET STYLES
 *********************/
-.widget-contain ul, .widget-contain .menu-primary-menu-container ul {
+.widget-contain ul,
+.widget-contain .menu-primary-menu-container ul {
   list-style: none;
   margin: 0;
   padding: 0;
   text-align: left;
 }
 
-.widget-contain ul li, .widget-contain .menu-primary-menu-container ul li {
+.widget-contain ul li,
+.widget-contain .menu-primary-menu-container ul li {
   margin: 0;
   padding: 0;
 }
@@ -2171,7 +2183,7 @@ a.social-icon {
 svg.fs-icons {
   width: 1.5em;
   height: 1.5em;
-  margin: 0 0 -.1em 0;
+  margin: 0 0 -0.1em 0;
   padding: 0;
 }
 
@@ -2179,14 +2191,14 @@ svg.fs-icons {
   margin: 4em 0;
 }
 
-.recent-blog-posts article {
+.recent-post-thumbs {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   grid-gap: 20px;
 }
 
-.recent-blog-posts article img {
+.recent-post-thumbs img {
   width: 100%;
 }
 

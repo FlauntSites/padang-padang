@@ -22,7 +22,6 @@ padang_padang_Kirki::add_section( 'header_options', array(
 		'choices'     => array(
 			'save_as' => 'id',
 		),
-
 	) );
 
 	padang_padang_Kirki::add_field( 'padang_padang', array(
