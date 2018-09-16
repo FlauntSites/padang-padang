@@ -1,24 +1,38 @@
-<?php if ( true == get_theme_mod( 'footer_recent_posts', true ) ) : ?>
+<?php
+/**
+ * Display a grid of Recent Blog posts.
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package Padang_Padang
+ */
+
+if ( true === get_theme_mod( 'footer_recent_posts', true ) ) : ?>
 
     <section class="recent-blog-posts">
-
         <header class="entry-header">
             <h2>Recent Blog Posts</h1>
         </header>
 
 
-        <?php $the_query = new WP_Query( 
+        <?php
+            $num_columns = get_theme_mod( 'number_recent_posts_columns', 4 );
+            $num_rows    = get_theme_mod( 'number_recent_posts_rows', 2 );
+            $num_posts   = $num_columns * $num_rows;
 
-            array(
-	            'post_type' => 'post'
+            $the_query = new WP_Query( array(
+                'post_type'      => 'post',
+                'post_status'    => 'publish',
+                'posts_per_page' => $num_posts,
             )
+            );
 
-        ); ?>
+        ?>
 
         <?php if ( $the_query->have_posts() ) : ?>
 
             <!-- pagination here -->
-            <article>
+            <article class="recent-post-thumbs">
                 <!-- the loop -->
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
@@ -38,5 +52,5 @@
         <?php endif; ?>
 
     </section>
-    
+
 <?php endif; ?>
