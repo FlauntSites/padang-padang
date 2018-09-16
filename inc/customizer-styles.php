@@ -105,8 +105,6 @@ svg.fs-icons:hover, svg.fs-icons a:hover{
     opacity: 0.75;
 }
 
-
-
 /*--------------------
 TABLET & SMALLER LAPTOPS
 --------------------*/
@@ -139,6 +137,12 @@ TABLET & SMALLER LAPTOPS
             background:<?php echo get_theme_mod( 'site_accent_hover_color', '#333' ); ?>;
         }
     <?php endif; ?>  
+
+
+
+    .recent-post-thumbs{
+        grid-template-columns: repeat( <?php echo get_theme_mod( 'number_recent_posts_columns', 4 ); ?>, 1fr);
+    }
 
 
 
