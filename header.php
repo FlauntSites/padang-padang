@@ -25,8 +25,6 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'padang-padang' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-
 		<div class="service-cta-mobile">
 			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
 		</div>
@@ -68,36 +66,40 @@
 
 		</div><!-- end Meta Header -->
 
+	<header id="masthead" class="site-header" role="banner">
 
-		<div class="site-branding">
+			<div class="site-branding">
 
-			<a href="<?php echo home_url(); ?>" rel="nofollow">
+				<a href="<?php echo home_url(); ?>" rel="nofollow">
 
-			<?php
+				<?php
 
-				$image    = get_option( 'fsc_options', '' );
-				$logo     = $image['fsc_logo'];
-				$id       = $logo['id'];
-				$logo_alt = get_bloginfo( 'name' );
+					$image    = get_option( 'fsc_options', '' );
+					$logo     = $image['fsc_logo'];
+					$id       = $logo['id'];
+					$logo_alt = get_bloginfo( 'name' );
 
-			if ( isset( $logo ) ) {
+				if ( isset( $logo ) ) {
 
-				echo wp_get_attachment_image( $id, 'medium', false, array(
-					'class' => 'logo',
-					'alt'   => $logo_alt,
-				)
-				);
+					echo wp_get_attachment_image( $id, 'medium', false, array(
+						'class' => 'logo',
+						'alt'   => $logo_alt,
+					)
+					);
 
-			} else {
-				?>
+				} else {
+					?>
 
-				<span class="site-name"><?php bloginfo( 'name' ); ?></span>
+					<span class="site-name"><?php bloginfo( 'name' ); ?></span>
 
-				<?php } ?>
+					<?php } ?>
 
-			</a>
+				</a>
 
-		</div><!-- .site-branding -->
+			</div><!-- .site-branding -->
+
+
+
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i><?php esc_html_e( 'Menu', 'padang-padang' ); ?></button>
