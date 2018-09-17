@@ -29,11 +29,8 @@
 			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
 		</div>
 
-		
 		<div class="meta-header">
-
-			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
-
+			<?php if ( true === get_theme_mod( 'header_social', true ) ) : ?>
 				<div class="social-header">
 
 					<?php fsc_social_icons( 'facebook' ); ?>
@@ -45,38 +42,31 @@
 				</div>
 
 			<?php endif; ?>
-			
 
 
-				<?php if ( true == get_theme_mod( 'header_search', true ) || get_theme_mod( 'header_client_area', true ) ) : ?>
-
+			<?php if ( true === get_theme_mod( 'header_search', true ) || get_theme_mod( 'header_client_area', true ) ) : ?>
 				<div class="client-search">
-					
-					<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>	
-						<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-							<label>
-								<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
-							</label>
-						</form>
-						
-					<?php endif; ?>
 
-					<?php if ( true == get_theme_mod( 'header_client_area', true ) ) : ?>
+				<?php if ( true === get_theme_mod( 'header_search', true ) ) : ?>	
+					<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+						<label>
+							<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
+						</label>
+					</form>
+				<?php endif; ?>
 
-						<div id="client">
-							<a class="btn" href="<?php echo get_theme_mod( 'client_area_link' ); ?>">Client Area</a>
-						</div>
-
-					<?php endif; ?>
+				<?php if ( true === get_theme_mod( 'header_client_area', true ) ) : ?>
+					<div id="client">
+						<a class="btn" href="<?php echo get_theme_mod( 'client_area_link' ); ?>">Client Area</a>
+					</div>
+				<?php endif; ?>
 
 				</div>
-
-				<?php endif; ?>
+			<?php endif; ?>
 
 		</div><!-- end Meta Header -->
 
 	<header id="masthead" class="site-header" role="banner">
-
 
 			<div class="site-branding">
 
@@ -84,22 +74,25 @@
 
 				<?php
 
-					$image 		= get_option( 'fsc_options', '' );
-					$image 		= $image[ 'fsc_logo' ];
-					$id 		= $image; 
-					$logo_alt 	= get_bloginfo( 'name' );
-					
-					if (isset ( $image ) ){ 
-						
-						echo wp_get_attachment_image( $id, 'medium', false, array( 'class' => 'logo', 'alt' => $logo_alt ) );	
+					$image    = get_option( 'fsc_options', '' );
+					$logo     = $image['fsc_logo'];
+					$id       = $logo['id'];
+					$logo_alt = get_bloginfo( 'name' );
 
-					 }else{ ?>
+				if ( isset( $logo ) ) {
 
-						<span class="site-name"><?php bloginfo( 'name' ); ?></span>
-	
+					echo wp_get_attachment_image( $id, 'medium', false, array(
+						'class' => 'logo',
+						'alt'   => $logo_alt,
+					)
+					);
+
+				} else {
+					?>
+
+					<span class="site-name"><?php bloginfo( 'name' ); ?></span>
 
 					<?php } ?>
-	
 
 				</a>
 
