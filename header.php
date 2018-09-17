@@ -25,14 +25,15 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'padang-padang' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-
 		<div class="service-cta-mobile">
 			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
 		</div>
 
+		
 		<div class="meta-header">
-			<?php if ( true === get_theme_mod( 'header_social', true ) ) : ?>
+
+			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
+
 				<div class="social-header">
 
 					<?php fsc_social_icons( 'facebook' ); ?>
@@ -44,60 +45,68 @@
 				</div>
 
 			<?php endif; ?>
+			
 
 
-			<?php if ( true === get_theme_mod( 'header_search', true ) || get_theme_mod( 'header_client_area', true ) ) : ?>
+				<?php if ( true == get_theme_mod( 'header_search', true ) || get_theme_mod( 'header_client_area', true ) ) : ?>
+
 				<div class="client-search">
+					
+					<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>	
+						<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
+							<label>
+								<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
+							</label>
+						</form>
+						
+					<?php endif; ?>
 
-				<?php if ( true === get_theme_mod( 'header_search', true ) ) : ?>	
-					<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-						<label>
-							<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
-						</label>
-					</form>
-				<?php endif; ?>
+					<?php if ( true == get_theme_mod( 'header_client_area', true ) ) : ?>
 
-				<?php if ( true === get_theme_mod( 'header_client_area', true ) ) : ?>
-					<div id="client">
-						<a class="btn" href="<?php echo get_theme_mod( 'client_area_link' ); ?>">Client Area</a>
-					</div>
-				<?php endif; ?>
+						<div id="client">
+							<a class="btn" href="<?php echo get_theme_mod( 'client_area_link' ); ?>">Client Area</a>
+						</div>
+
+					<?php endif; ?>
 
 				</div>
-			<?php endif; ?>
+
+				<?php endif; ?>
 
 		</div><!-- end Meta Header -->
 
+	<header id="masthead" class="site-header" role="banner">
 
-		<div class="site-branding">
 
-			<a href="<?php echo home_url(); ?>" rel="nofollow">
+			<div class="site-branding">
 
-			<?php
+				<a href="<?php echo home_url(); ?>" rel="nofollow">
 
-				$image    = get_option( 'fsc_options', '' );
-				$logo     = $image['fsc_logo'];
-				$id       = $logo['id'];
-				$logo_alt = get_bloginfo( 'name' );
+				<?php
 
-			if ( isset( $logo ) ) {
+					$image 		= get_option( 'fsc_options', '' );
+					$image 		= $image[ 'fsc_logo' ];
+					$id 		= $image; 
+					$logo_alt 	= get_bloginfo( 'name' );
+					
+					if (isset ( $image ) ){ 
+						
+						echo wp_get_attachment_image( $id, 'medium', false, array( 'class' => 'logo', 'alt' => $logo_alt ) );	
 
-				echo wp_get_attachment_image( $id, 'medium', false, array(
-					'class' => 'logo',
-					'alt'   => $logo_alt,
-				)
-				);
+					 }else{ ?>
 
-			} else {
-				?>
+						<span class="site-name"><?php bloginfo( 'name' ); ?></span>
+	
 
-				<span class="site-name"><?php bloginfo( 'name' ); ?></span>
+					<?php } ?>
+	
 
-				<?php } ?>
+				</a>
 
-			</a>
+			</div><!-- .site-branding -->
 
-		</div><!-- .site-branding -->
+
+
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i><?php esc_html_e( 'Menu', 'padang-padang' ); ?></button>

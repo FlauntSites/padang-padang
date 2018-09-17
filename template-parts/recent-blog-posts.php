@@ -37,7 +37,7 @@ if ( true === get_theme_mod( 'footer_recent_posts', true ) ) : ?>
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                     <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail( 'medium_square' ); ?>
+                        <?php the_post_thumbnail( 'thumbnail' ); ?>
                     </a>
 
                 <?php endwhile; ?>

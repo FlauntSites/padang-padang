@@ -6,7 +6,7 @@ Designed to match the power and simplicity of one of Bali’s cleanest barreling
 
 ## Version:
 
-0.5.8
+0.5.5
 
 ## Contributors
 
@@ -20,19 +20,6 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
-
-## [0.5.8] - 2018-09-17
-
-### Changed
-
--Adjusted Site Header div to contain all header divs.
-
-## [0.5.7] - 2018-09-16
-
-### Changed
-
--Removed Defaults from Kirki Typography & Social that were causing PHP errors.
--Fixed Thumbnails in Recent Blog Posts to higher rez.
 
 ## [0.5.6] - 2018-09-16
 
