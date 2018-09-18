@@ -10,10 +10,11 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area row">
-		<main id="main" class="site-main site-main small-12 small-centered" role="main">
+		<main id="main" class="site-main" role="main">
 
 		<?php
-		if ( have_posts() ) : ?>
+		if ( have_posts() ) :
+			?>
 
 			<header class="page-header">
 				<?php
@@ -26,40 +27,57 @@ get_header(); ?>
 			/* Start the Loop */
 			while ( have_posts() ) : the_post(); {?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-					<div class="small-12 medium-4 columns">
-						
-						<?php the_post_thumbnail( 'medium-large' ); ?>
-
-					</div>
-
-					<div class="small-12 medium-8 columns">					
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> aria-label="<?php the_title(); ?>">
 
 					<header class="entry-header">
 						<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					</header>
 
-					<section>
-						<?php the_excerpt(); ?>
-					</section>
-					
-					<footer>
-					</footer>
+					<div class="archive-excerpt-container">
 
-					<div class="clear"></div>
 
-				</article>	
+						<?php if (has_post_thumbnail() ): ?>
+							<div class="post-thumb-container">
+
+								<a href="<?php the_permalink() ?>">
+									<figure class="post-thumb">
+										<?php the_post_thumbnail( 'medium-large' ); ?>
+										<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
+											<figcaption class="post-thumb-caption">
+													<?php echo $caption; ?><span> [Read more...]</span>
+												<?php endif; ?>
+											</figcaption>
+									</figure>
+								</a>
+
+							</div>						
+						<?php endif; ?>
+
+
+						<div class="archive-excerpt-text">
+
+							<section>
+								<?php the_excerpt(); ?>
+							</section>
+
+							<a href="<?php the_permalink(); ?>" class="btn">Read More...</a>
+
+						</div>
+
+					</div>
+
+					</article>		
 
 			<?php } endwhile;
 
-			the_posts_navigation();
+				fsc_page_navi();
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
