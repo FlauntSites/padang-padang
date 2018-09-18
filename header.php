@@ -25,40 +25,39 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'padang-padang' ); ?></a>
 
-		<div class="service-cta-mobile">
-			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
-		</div>
+		<header id="masthead" class="site-header" role="banner">
 
-		
-		<div class="meta-header">
+			<div class="service-cta-mobile">
+				<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
+			</div>
 
-			<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
+			<div class="meta-header">
 
-				<div class="social-header">
+				<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
 
-					<?php fsc_social_icons( 'facebook' ); ?>
-					<?php fsc_social_icons( 'twitter' ); ?>
-					<?php fsc_social_icons( 'instagram' ); ?>
-					<?php fsc_social_icons( 'pinterest' ); ?>
-					<?php fsc_social_icons( 'google-plus' ); ?>
+					<div class="social-header">
 
-				</div>
+						<?php fsc_social_icons( 'facebook' ); ?>
+						<?php fsc_social_icons( 'twitter' ); ?>
+						<?php fsc_social_icons( 'instagram' ); ?>
+						<?php fsc_social_icons( 'pinterest' ); ?>
+						<?php fsc_social_icons( 'google-plus' ); ?>
 
-			<?php endif; ?>
-			
+					</div>
 
+				<?php endif; ?>
 
 				<?php if ( true == get_theme_mod( 'header_search', true ) || get_theme_mod( 'header_client_area', true ) ) : ?>
 
 				<div class="client-search">
-					
+
 					<?php if ( true == get_theme_mod( 'header_search', true ) ) : ?>	
 						<form role="search" id="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 							<label>
 								<input type="search" class="search-field" placeholder="Search …" value="" name="s" title="Search for:" />
 							</label>
 						</form>
-						
+
 					<?php endif; ?>
 
 					<?php if ( true == get_theme_mod( 'header_client_area', true ) ) : ?>
@@ -73,46 +72,40 @@
 
 				<?php endif; ?>
 
-		</div><!-- end Meta Header -->
+			</div><!-- end Meta Header -->
 
-	<header id="masthead" class="site-header" role="banner">
 
 
 			<div class="site-branding">
-
 				<a href="<?php echo home_url(); ?>" rel="nofollow">
 
 				<?php
 
-					$image 		= get_option( 'fsc_options', '' );
-					$image 		= $image[ 'fsc_logo' ];
-					$id 		= $image; 
-					$logo_alt 	= get_bloginfo( 'name' );
-					
-					if (isset ( $image ) ){ 
-						
+				$image    = get_option( 'fsc_options', '' );
+				$image    = $image['fsc_logo'];
+				$id       = $image;
+				$logo_alt = get_bloginfo( 'name' );
+
+				if ( isset( $image ) ) {
+
 						echo wp_get_attachment_image( $id, 'medium', false, array( 'class' => 'logo', 'alt' => $logo_alt ) );	
 
-					 }else{ ?>
+				} else {
+					?>
 
 						<span class="site-name"><?php bloginfo( 'name' ); ?></span>
-	
 
 					<?php } ?>
-	
 
 				</a>
-
 			</div><!-- .site-branding -->
-
-
 
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-bars"></i><?php esc_html_e( 'Menu', 'padang-padang' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
-		
+
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
