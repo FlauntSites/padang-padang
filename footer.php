@@ -49,7 +49,7 @@
 		autoplay: true,
 		effect: "fade",
 		loop:true,
-		autoHeight: true,
+		// autoHeight: true,
 		preloadImages: true,
 		loadPrevNext: true,
 		loadPrevNextAmount: 1,
