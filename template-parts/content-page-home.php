@@ -20,7 +20,7 @@
 	<div class="home-about">
 
 		<div>
-			<?php fsc_figure( 'fsc_about_photo', 'medium-large', '', 'hover-caption'); ?>
+			<?php fsc_figure( 'fsc_about_photo', 'medium_large', '', 'hover-caption'); ?>
 		</div>
 
 		<div>
