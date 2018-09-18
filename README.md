@@ -6,7 +6,7 @@ Designed to match the power and simplicity of one of Bali’s cleanest barreling
 
 ## Version:
 
-0.6.1
+0.6.2
 
 ## Contributors
 
@@ -20,6 +20,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [0.6.2] - 2018-09-18
+
+### Changed
+
+-Fixed Home Page About Picture thumbnail call.
 
 ## [0.6.1] - 2018-09-18
 
