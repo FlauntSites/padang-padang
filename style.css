@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.6.4
+Version: 0.6.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -2526,7 +2526,7 @@ ARCHIVE STYLES
   #reviews-service .service-thumb {
     display: block;
     margin: 0;
-    width: auto;
+    height: 100%;
   }
   .service-footer-thumb img:hover {
     filter: brightness(110%);
