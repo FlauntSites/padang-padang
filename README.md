@@ -6,7 +6,7 @@ Designed to match the power and simplicity of one of Bali’s cleanest barreling
 
 ## Version:
 
-0.6.2
+0.6.4
 
 ## Contributors
 
@@ -20,6 +20,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [0.6.4] - 2018-09-20
+
+### Changed
+
+-Added Scroll to Top button.
+-Added Reviews to Service Pages.
+
+## [0.6.3] - 2018-09-20
+
+### Changed
+
+-Added Titles to Recent Blog Posts.
+-Added background on hover for above.
+-Built function to convert Hex to RGBA, and added opacity level to background for above.
 
 ## [0.6.2] - 2018-09-18
 

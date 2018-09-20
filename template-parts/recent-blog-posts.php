@@ -34,10 +34,36 @@ if ( true === get_theme_mod( 'footer_recent_posts', true ) ) : ?>
             <!-- pagination here -->
             <article class="recent-post-thumbs">
                 <!-- the loop -->
-                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <?php while ( $the_query->have_posts() ) :
+                    $the_query->the_post();
+                    ?>
 
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                    <a class="recent-post-thumb" href="<?php the_permalink(); ?>">
+
+                        <!-- Thumbnail -->
+                        <?php
+                        if ( $num_columns >= 4 ) {
+                            the_post_thumbnail( 'medium_square' );
+                        } elseif ( $num_columns < 4 ) {
+                            the_post_thumbnail( 'medium_large_square' );
+                        }
+                        ?>
+
+                        <div class="recent-post-hover">
+                            <!-- Title -->
+                            <h3>
+                                <?php
+                                if ( $num_columns < 4 ) {
+                                    echo substr( the_title( $before = '', $after = '', false ), 0, 20 ) . '...';
+                                } else {
+                                    echo substr( the_title( $before = '', $after = '', false ), 0, 40 ) . '...';
+                                }
+                                ?>
+                            </h3>
+                            <!-- Add Excerpt here when Gutenberg bug is fixed -->
+                        </div>
+
+
                     </a>
 
                 <?php endwhile; ?>

@@ -30,7 +30,7 @@ padang_padang_Kirki::add_section( 'footer_options', array(
 		'default'  => 4,
 		'choices'  => array(
 			'min'  => '3',
-			'max'  => '8',
+			'max'  => '6',
 			'step' => '1',
 		),
 	) );
@@ -43,7 +43,7 @@ padang_padang_Kirki::add_section( 'footer_options', array(
 		'default'  => 2,
 		'choices'  => array(
 			'min'  => '1',
-			'max'  => '8',
+			'max'  => '6',
 			'step' => '1',
 		),
 	) );

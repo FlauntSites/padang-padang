@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.6.2
+Version: 0.6.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1928,6 +1928,10 @@ FOOTER STYLES
   margin-left: 1em;
 }
 
+.scroll {
+  display: none;
+}
+
 /*********************
 SERVICES STYLES
 *********************/
@@ -1967,6 +1971,22 @@ SERVICES STYLES
 
 h3.service-footer-cap {
   margin-top: 0;
+}
+
+#reviews-service {
+  display: flex;
+  justify-content: center;
+}
+
+#reviews-service .review-text-block {
+  margin: 0 3em;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#reviews-service .service-thumb {
+  display: none;
 }
 
 /*********************
@@ -2204,8 +2224,36 @@ svg.fs-icons {
   grid-gap: 20px;
 }
 
-.recent-post-thumbs img {
+.recent-post-thumbs .recent-post-thumb {
+  color: #fff;
+  position: relative;
+  line-height: 0;
+}
+
+.recent-post-thumbs .recent-post-thumb img {
   width: 100%;
+}
+
+.recent-post-thumbs .recent-post-thumb .recent-post-hover {
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  line-height: initial;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: 1s;
+}
+
+.recent-post-thumbs .recent-post-thumb .recent-post-hover:hover {
+  opacity: 1;
 }
 
 /*--------------------
@@ -2255,8 +2303,8 @@ HEADER STYLES
     margin-right: 10px;
   }
   .logo {
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
   }
   .logo:hover, .logo:focus {
     -webkit-filter: opacity(80%);
@@ -2319,7 +2367,7 @@ NAVIGATION STYLES
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    padding: .25em 1em;
+    padding: 0.25em 1em;
     border-top: inherit;
   }
   /*********************
@@ -2411,6 +2459,16 @@ FOOTER STYLES
 			*/
   }
   /* end .footer-links */
+  .scroll-to-top {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 2%;
+    bottom: 10%;
+    z-index: 10000;
+    cursor: pointer;
+  }
   /*********************
 CTA STYLES
 *********************/
@@ -2444,7 +2502,7 @@ ARCHIVE STYLES
     width: 100%;
   }
   .post-thumb-container {
-    margin: 0 1em .5em 0;
+    margin: 0 1em 0.5em 0;
     margin-bottom: 0;
     display: block;
     width: 40%;
@@ -2455,17 +2513,27 @@ ARCHIVE STYLES
   .service-thumb {
     float: left;
     width: 40%;
-    margin: 0 1em .5em 0;
+    margin: 0 1em 0.5em 0;
     margin-bottom: 0;
     display: block;
   }
   .service-thumb img {
     margin-bottom: 0;
   }
+  #reviews-service {
+    justify-content: space-between;
+  }
+  #reviews-service .service-thumb {
+    display: block;
+    margin: 0;
+    width: auto;
+  }
   .service-footer-thumb img:hover {
     filter: brightness(110%);
   }
-  .post-thumb, .service-thumb, .gallery-item {
+  .post-thumb,
+  .service-thumb,
+  .gallery-item {
     position: relative;
     line-height: 0;
   }
@@ -2476,7 +2544,8 @@ ARCHIVE STYLES
   .entry-content dd {
     margin: 0;
   }
-  .entry-content img.size-full, .entry-content img.size-large {
+  .entry-content img.size-full,
+  .entry-content img.size-large {
     margin-bottom: 0;
     display: block;
   }

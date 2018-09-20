@@ -37,9 +37,19 @@
 			</p>
 
 		</div><!-- .site-info -->
+
+		<?php require get_template_directory() . '/images/arrow.svg'; ?>
+		<script>
+			document.querySelector( '.scroll-to-top' ).addEventListener("click", function () {
+				window.scrollTo({
+				top: 0,
+				behavior: "smooth"
+			});
+		})
+		</script>
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-
 <?php wp_footer(); ?>
 
 <script>

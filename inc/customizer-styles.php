@@ -6,6 +6,23 @@
 */
 ?>
 
+
+<?php 
+/**
+ * Take Accent color, and convert it to RGBA, and add an opacity of .75.
+ */
+$accent        = get_theme_mod( 'site_accent_color' );
+$accent_string = ltrim( $accent, '#' );
+$arr           = str_split( $accent_string, '2' );
+
+foreach ( $arr as $value ) {
+    $new_value = hexdec( $value ) . ', ';
+    $rgb      .= $new_value;
+}
+$accent_opacity = 'rgba(' . $rgb . '.75)';
+?>
+
+
 <style type="text/css">
 
 /*--------------------
@@ -14,7 +31,7 @@ BASE (MOBILE) SIZE
 
 
 <?php if ( true == get_theme_mod( 'image_stroke', true ) ) : ?>
-    img.size-medium_large, img.size-large, img.size-oversized, .swiper-slide{
+    img.size-medium_large, img.size-large, img.size-oversized, .swiper-slide, .service-thumb{
         outline:1px solid #fff;
         outline-offset: -10px;
     }
@@ -105,6 +122,12 @@ svg.fs-icons:hover, svg.fs-icons a:hover{
     opacity: 0.75;
 }
 
+
+#reviews-service{
+    background-color:<?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>;  
+    color:<?php echo get_theme_mod( 'site_accent_text_color', '#fff' ); ?>;
+}
+
 /*--------------------
 TABLET & SMALLER LAPTOPS
 --------------------*/
@@ -143,8 +166,18 @@ TABLET & SMALLER LAPTOPS
     .recent-post-thumbs{
         grid-template-columns: repeat( <?php echo get_theme_mod( 'number_recent_posts_columns', 4 ); ?>, 1fr);
     }
+    .recent-post-hover{
+        background-color:<?php echo $accent_opacity; ?>!important;
+    }
 
 
+    .scroll-to-top circle{
+        fill:<?php echo get_theme_mod( 'site_background_color', '#fff' ); ?>;
+    }
+
+    path.arrow{
+        fill:<?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>!important;
+    }
 
 } // end of media query
 
