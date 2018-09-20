@@ -6,6 +6,23 @@
 */
 ?>
 
+
+<?php 
+/**
+ * Take Accent color, and convert it to RGBA, and add an opacity of .75.
+ */
+$accent        = get_theme_mod( 'site_accent_color' );
+$accent_string = ltrim( $accent, '#' );
+$arr           = str_split( $accent_string, '2' );
+
+foreach ( $arr as $value ) {
+    $new_value = hexdec( $value ) . ', ';
+    $rgb      .= $new_value;
+}
+$accent_opacity = 'rgba(' . $rgb . '.75)';
+?>
+
+
 <style type="text/css">
 
 /*--------------------
@@ -142,6 +159,9 @@ TABLET & SMALLER LAPTOPS
 
     .recent-post-thumbs{
         grid-template-columns: repeat( <?php echo get_theme_mod( 'number_recent_posts_columns', 4 ); ?>, 1fr);
+    }
+    .recent-post-hover{
+        background-color:<?php echo $accent_opacity; ?>!important;
     }
 
 

@@ -551,7 +551,34 @@ svg.fs-icons {
 	justify-content: space-between;
 	grid-gap: 20px;
 
-	img {
-		width: 100%;
+	.recent-post-thumb {
+		color: #fff;
+		position: relative;
+		line-height: 0;
+
+		img {
+			width: 100%;
+		}
+
+		.recent-post-hover {
+			opacity: 0;
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			line-height: initial;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transition: 1s;
+		}
+		.recent-post-hover:hover {
+			opacity: 1;
+		}
 	}
 }
