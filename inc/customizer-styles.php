@@ -31,7 +31,7 @@ BASE (MOBILE) SIZE
 
 
 <?php if ( true == get_theme_mod( 'image_stroke', true ) ) : ?>
-    img.size-medium_large, img.size-large, img.size-oversized, .swiper-slide{
+    img.size-medium_large, img.size-large, img.size-oversized, .swiper-slide, .service-thumb{
         outline:1px solid #fff;
         outline-offset: -10px;
     }
@@ -122,6 +122,12 @@ svg.fs-icons:hover, svg.fs-icons a:hover{
     opacity: 0.75;
 }
 
+
+#reviews-service{
+    background-color:<?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>;  
+    color:<?php echo get_theme_mod( 'site_accent_text_color', '#fff' ); ?>;
+}
+
 /*--------------------
 TABLET & SMALLER LAPTOPS
 --------------------*/
@@ -165,6 +171,13 @@ TABLET & SMALLER LAPTOPS
     }
 
 
+    .scroll-to-top circle{
+        fill:<?php echo get_theme_mod( 'site_background_color', '#fff' ); ?>;
+    }
+
+    path.arrow{
+        fill:<?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>!important;
+    }
 
 } // end of media query
 

@@ -44,6 +44,8 @@ get_header(); ?>
 							<div class="clear"></div>
 						</section>
 
+						<?php get_template_part( 'template-parts/client-reviews' ); ?>
+
 						<section class="service-section" id="areas-served">
 								<?php fsc_figure( 'fsc_areas_served_photo', 'medium_large', 'service-thumb', 'service-thumb-caption') ?> 
 								<h2 class="service-title"><?php the_field( 'fsc_areas_served_title' ); ?></h2>

@@ -16,7 +16,6 @@ come into play. Have fun!
 GENERAL STYLES
 *********************/
 
-
 /*********************
 LAYOUT & GRID STYLES
 *********************/
@@ -25,27 +24,22 @@ LAYOUT & GRID STYLES
 HEADER STYLES
 *********************/
 
-.meta-header{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1em 1em;
+.meta-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 1em;
 
-	.social-header{
-
+	.social-header {
 	}
-
 }
 
-
-
-.client-search{
-
-	#client{
+.client-search {
+	#client {
 		float: left;
-    	border-radius: 25px;
+		border-radius: 25px;
 
-		a{
+		a {
 			line-height: 28px;
 			font-size: 1em;
 			color: #fff;
@@ -53,28 +47,24 @@ HEADER STYLES
 		}
 	}
 
-	#search{
+	#search {
 		float: left;
 		margin-right: 10px;
 	}
-
 }
 
+.logo {
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
 
-
-.logo{
-	-webkit-transition: .4s;
-    transition: .4s;
-
-	&:hover, &:focus {
-		-webkit-filter: opacity(80%); 
+	&:hover,
+	&:focus {
+		-webkit-filter: opacity(80%);
 		filter: opacity(80%);
 		outline: 0;
-		border: none;	
+		border: none;
 	}
-
 }
-
 
 /*********************
 NAVIGATION STYLES
@@ -85,7 +75,7 @@ button.menu-toggle {
 }
 
 .main-navigation {
-	width:100%;
+	width: 100%;
 	clear: both;
 
 	ul {
@@ -143,7 +133,7 @@ button.menu-toggle {
 	li {
 		float: left;
 		position: relative;
-		width:inherit;
+		width: inherit;
 
 		&:hover > a,
 		&.focus > a {
@@ -153,9 +143,9 @@ button.menu-toggle {
 	a {
 		display: inline-block;
 		text-decoration: none;
-		text-align:center;
-		padding: .25em 1em;
-    	border-top:inherit;
+		text-align: center;
+		padding: 0.25em 1em;
+		border-top: inherit;
 	}
 
 	.current_page_item > a,
@@ -165,18 +155,15 @@ button.menu-toggle {
 	}
 }
 
-
 /*********************
 STRUCTURE STYLES
 *********************/
 
-
-.content-area{
+.content-area {
 	width: 80%;
-	max-width:1024px;
+	max-width: 1024px;
 	margin: 0 auto;
 }
-
 
 /*********************
 SIDEBARS & ASIDES
@@ -186,313 +173,376 @@ SIDEBARS & ASIDES
 	margin-top: 2.2em;
 }
 
-	.widgettitle {
-		border-bottom: 2px solid #444;
-		margin-bottom: 0.75em;
-	}
+.widgettitle {
+	border-bottom: 2px solid #444;
+	margin-bottom: 0.75em;
+}
 
-	.widget {
-		padding: 0 10px;
-		margin: 2.2em 0;
+.widget {
+	padding: 0 10px;
+	margin: 2.2em 0;
 
-		ul {
-			li {
-				margin-bottom: 0.75em;
+	ul {
+		li {
+			margin-bottom: 0.75em;
 
-				&:first-child {}
-				&:last-child {}
-				a {}
-				/* deep nesting */
+			&:first-child {
+			}
+			&:last-child {
+			}
+			a {
+			}
+			/* deep nesting */
 
-				ul {
-					margin-top: 0.75em;
-					padding-left: 1em;
-				}
+			ul {
+				margin-top: 0.75em;
+				padding-left: 1em;
 			}
 		}
 	}
+}
 
+/* links widget */
+.widget_links {
+}
+.widget_links ul {
+}
+.widget_links ul li {
+}
+.widget_links ul li a {
+}
 
+/* meta widget */
+.widget_meta {
+}
+.widget_meta ul {
+}
+.widget_meta ul li {
+}
+.widget_meta ul li a {
+}
 
+/* pages widget */
+.widget_pages {
+}
+.widget_pages ul {
+}
+.widget_pages ul li {
+}
+.widget_pages ul li a {
+}
 
+/* recent-posts widget */
+.widget_recent_entries {
+}
+.widget_recent_entries ul {
+}
+.widget_recent_entries ul li {
+}
+.widget_recent_entries ul li a {
+}
 
-	/* links widget */
-	.widget_links {}
-	.widget_links ul {}
-	.widget_links ul li {}
-	.widget_links ul li a {}
+/* archives widget */
+.widget_archive {
+}
+.widget_archive ul {
+}
+.widget_archive ul li {
+}
+.widget_archive ul li a {
+}
+.widget_archive select {
+}
+.widget_archive option {
+}
 
-	/* meta widget */
-	.widget_meta {}
-	.widget_meta ul {}
-	.widget_meta ul li {}
-	.widget_meta ul li a {}
+/* tag-cloud widget */
+.widget_links {
+}
+.widget_links li:after {
+}
+.widget_links li:before {
+}
+.widget_tag_cloud {
+}
+.widget_tag_cloud a {
+}
+.widget_tag_cloud a:after {
+}
+.widget_tag_cloud a:before {
+}
 
-	/* pages widget */
-	.widget_pages {}
-	.widget_pages ul {}
-	.widget_pages ul li {}
-	.widget_pages ul li a {}
+/* calendar widget */
+.widget_calendar {
+}
+#calendar_wrap {
+}
+#calendar_wrap th {
+}
+#calendar_wrap td {
+}
+#wp-calendar tr td {
+}
+#wp-calendar caption {
+}
+#wp-calendar a {
+}
+#wp-calendar #today {
+}
+#wp-calendar #prev {
+}
+#wp-calendar #next {
+}
+#wp-calendar #next a {
+}
+#wp-calendar #prev a {
+}
 
-	/* recent-posts widget */
-	.widget_recent_entries {}
-	.widget_recent_entries ul {}
-	.widget_recent_entries ul li {}
-	.widget_recent_entries ul li a {}
+/* category widget */
+.widget_categories {
+}
+.widget_categories ul {
+}
+.widget_categories ul li {
+}
+.widget_categories ul ul.children {
+}
+.widget_categories a {
+}
+.widget_categories select {
+}
+.widget_categories select#cat {
+}
+.widget_categories select.postform {
+}
+.widget_categories option {
+}
+.widget_categories .level-0 {
+}
+.widget_categories .level-1 {
+}
+.widget_categories .level-2 {
+}
+.widget_categories .level-3 {
+}
 
-	/* archives widget */
-	.widget_archive {}
-	.widget_archive ul {}
-	.widget_archive ul li {}
-	.widget_archive ul li a {}
-	.widget_archive select {}
-	.widget_archive option {}
+/* recent-comments widget */
+.recentcomments {
+}
+#recentcomments {
+}
+#recentcomments li {
+}
+#recentcomments li a {
+}
+.widget_recent_comments {
+}
 
-	/* tag-cloud widget */
-	.widget_links {}
-	.widget_links li:after {}
-	.widget_links li:before {}
-	.widget_tag_cloud {}
-	.widget_tag_cloud a {}
-	.widget_tag_cloud a:after {}
-	.widget_tag_cloud a:before {}
+/* search widget */
+#searchform {
+}
+.widget_search {
+}
+.screen-reader-text {
+}
 
-	/* calendar widget */
-	.widget_calendar {}
-	#calendar_wrap {}
-	#calendar_wrap th {}
-	#calendar_wrap td {}
-	#wp-calendar tr td {}
-	#wp-calendar caption {}
-	#wp-calendar a {}
-	#wp-calendar #today {}
-	#wp-calendar #prev {}
-	#wp-calendar #next {}
-	#wp-calendar #next a {}
-	#wp-calendar #prev a {}
-
-	/* category widget */
-	.widget_categories {}
-	.widget_categories ul {}
-	.widget_categories ul li {}
-	.widget_categories ul ul.children {}
-	.widget_categories a {}
-	.widget_categories select{}
-	.widget_categories select#cat {}
-	.widget_categories select.postform {}
-	.widget_categories option {}
-	.widget_categories .level-0 {}
-	.widget_categories .level-1 {}
-	.widget_categories .level-2 {}
-	.widget_categories .level-3 {}
-
-	/* recent-comments widget */
-	.recentcomments {}
-	#recentcomments {}
-	#recentcomments li {}
-	#recentcomments li a {}
-	.widget_recent_comments {}
-
-	/* search widget */
-	#searchform {}
-	.widget_search {}
-	.screen-reader-text {}
-
-	/* text widget */
-	.textwidget {}
-	.widget_text {}
-	.textwidget p {}
+/* text widget */
+.textwidget {
+}
+.widget_text {
+}
+.textwidget p {
+}
 
 /*********************
 WIDGET STYLES
 *********************/
 
 .widget-contain {
-	width:14em;
+	width: 14em;
 
-	ul{
+	ul {
 		list-style: none;
-		margin:0;
+		margin: 0;
 		padding: 0;
-		text-align: left; 
+		text-align: left;
 
-
-		li{
+		li {
 			margin: 0;
-			padding:0;
+			padding: 0;
 		}
 	}
-
 }
-
-
-
 
 /*********************
 FOOTER STYLES
 *********************/
 
-.footer{
+.footer {
 	display: flex;
 	justify-content: space-between;
-	background-color: #999;	
-	padding:0 10%;
-		
-		.footer-widget{
-			width:23%;
+	background-color: #999;
+	padding: 0 10%;
 
+	.footer-widget {
+		width: 23%;
 
-			h3{
-				color:#ddd;
-				border-bottom:1px solid #ddd;
-			}
-
+		h3 {
+			color: #ddd;
+			border-bottom: 1px solid #ddd;
+		}
 	}
 
-	#inner-footer{
-
+	#inner-footer {
 	}
 
-	.copyright{
+	.copyright {
 		font-size: 13px;
 		float: left;
 	}
 
-	.site-credit{
+	.site-credit {
 		font-size: 13px;
 		float: right;
 	}
-
 }
 
 .footer-links {
 	ul {
 		li {
 			a {
-				&:hover {}
+				&:hover {
+				}
 			}
 			/*
 			be careful with the depth of your menus.
 			it's very rare to have multi-depth menus in
 			the footer.
 			*/
-			ul {}
+			ul {
+			}
 		}
 	}
 } /* end .footer-links */
 
-
-
+.scroll-to-top {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	right: 2%;
+	bottom: 10%;
+	z-index: 10000;
+	cursor: pointer;
+}
 
 /*********************
 CTA STYLES
 *********************/
 
-.cta-footer{
+.cta-footer {
 	display: flex;
 	flex-wrap: wrap;
 
-	.cta{
-		width:32%
+	.cta {
+		width: 32%;
 	}
 }
 
-
-
-
-
 /*********************
 HOME STYLES
-*********************/ 
+*********************/
 
-.home-about{
+.home-about {
 	display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
 }
 
 /*********************
 SERVICES
 *********************/
 
-.service-cta-mobile{
+.service-cta-mobile {
 	display: none;
 }
-
 
 /*********************
 ARCHIVE STYLES
 *********************/
 
-
-.archive-excerpt-container{
+.archive-excerpt-container {
 	display: flex;
-	justify-content: space-between;	
-	width:100%;
+	justify-content: space-between;
+	width: 100%;
 }
 
-.post-thumb-container{
-	margin: 0 1em .5em 0;
+.post-thumb-container {
+	margin: 0 1em 0.5em 0;
 	margin-bottom: 0;
 	display: block;
-	width:40%;
+	width: 40%;
 }
 
-.archive-excerpt-text{
-	flex:1;
+.archive-excerpt-text {
+	flex: 1;
 }
 
-
-.service-thumb{
+.service-thumb {
 	float: left;
 	width: 40%;
-	margin: 0 1em .5em 0;
+	margin: 0 1em 0.5em 0;
 	margin-bottom: 0;
 	display: block;
 
-	img{
+	img {
 		margin-bottom: 0;
 	}
-
 }
 
-.service-footer-thumb img:hover{
+#reviews-service {
+	justify-content: space-between;
+
+	.service-thumb {
+		display: block;
+		margin: 0;
+		width: auto;
+	}
+}
+
+.service-footer-thumb img:hover {
 	filter: brightness(110%);
 }
 
-
-
-.post-thumb, .service-thumb, .gallery-item{
+.post-thumb,
+.service-thumb,
+.gallery-item {
 	position: relative;
 	line-height: 0;
 }
 
-.post-thumb img{
+.post-thumb img {
 	margin-bottom: 0;
 	display: block;
 }
 
-.entry-content dd{
+.entry-content dd {
 	margin: 0;
 }
 
-.entry-content img.size-full, .entry-content img.size-large{
+.entry-content img.size-full,
+.entry-content img.size-large {
 	margin-bottom: 0;
 	display: block;
 }
 
-.entry-content .size-large{
+.entry-content .size-large {
 	margin: 0;
 }
 
-
-
-p.gallery-item-text{
+p.gallery-item-text {
 	font-size: 100%;
 }
-
-
-
 
 /************************
 FIGURE & SHAREBAR STYLES
@@ -522,24 +572,18 @@ FIGURE & SHAREBAR STYLES
 // 	}
 // }
 
-
-
-
-
 /*********************
 SLIDESHOW STYLES
 *********************/
 
-.swiper-button-prev{
-	background-image: url('images/circle-left.svg');
-	width:4em;
+.swiper-button-prev {
+	background-image: url("images/circle-left.svg");
+	width: 4em;
 	height: 4em;
 }
 
-.swiper-button-next{
-	background-image: url('images/circle-right.svg');
-	width:4em;
+.swiper-button-next {
+	background-image: url("images/circle-right.svg");
+	width: 4em;
 	height: 4em;
 }
-
-

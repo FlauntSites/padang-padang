@@ -216,6 +216,10 @@ FOOTER STYLES
 	margin-left: 1em;
 }
 
+.scroll {
+	display: none;
+}
+
 /*********************
 SERVICES STYLES
 *********************/
@@ -256,6 +260,22 @@ SERVICES STYLES
 
 h3.service-footer-cap {
 	margin-top: 0;
+}
+
+#reviews-service {
+	display: flex;
+	justify-content: center;
+
+	.review-text-block {
+		margin: 0 3em;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.service-thumb {
+		display: none;
+	}
 }
 
 /*********************
