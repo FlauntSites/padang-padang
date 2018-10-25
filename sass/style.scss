@@ -4,7 +4,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.6.5
+Version: 0.6.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -87,14 +87,14 @@ BASE (MOBILE) SIZE
 TABLET & SMALLER LAPTOPS
 --------------------*/
 @media screen and (min-width: 40em) {
-	@import "breakpoints/40em-up";
+  @import "breakpoints/40em-up";
 } // end of media query
 
 /*--------------------
 DESKTOP
 --------------------*/
 @media screen and (min-width: 64em) {
-	@import "breakpoints/64em-up";
+  @import "breakpoints/64em-up";
 } // end of media query
 
 /*--------------------
@@ -102,16 +102,16 @@ LARGE VIEWING SIZE
 --------------------*/
 
 @media only screen and (min-width: 90.063em) {
-	@import "breakpoints/90em-up";
+  @import "breakpoints/90em-up";
 } // end of media query
 
 /*--------------------
 RETINA (2x RESOLUTION DEVICES)
 --------------------*/
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-	only screen and (min--moz-device-pixel-ratio: 1.5),
-	only screen and (min-device-pixel-ratio: 1.5) {
-	@import "breakpoints/2x";
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  @import "breakpoints/2x";
 } // end of media query
 
 /*--------------------------------------------------------------
