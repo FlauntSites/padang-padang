@@ -62,7 +62,7 @@ body{
 	background:<?php echo get_theme_mod( 'site_accent_color', '#333' ); ?>;
 }
 
-.page-title, .page-title a, .entry-title, .entry-title a, .sidebar-title, .sidebar-title a{
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, .page-title, .page-title a, .entry-title, .entry-title a, .sidebar-title, .sidebar-title a{
 	color:<?php echo get_theme_mod( 'heading_color', '#666' ); ?>;
 }
 
