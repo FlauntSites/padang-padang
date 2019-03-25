@@ -62,15 +62,3 @@ padang_padang_Kirki::add_section( 'social-links', array(
         'priority'    => 10,
     ) );
 
-
-    padang_padang_Kirki::add_field( 'padang_padang', array(
-        'type'        => 'text',
-        'settings'    => 'fsc_google-plus_url',
-        'option_type' => 'option',
-        'option_name' => 'fsc_options',
-        'label'       => __( 'Google+ URL', 'padang_padang' ),
-        'description' => __( 'Include the http:// or https://', 'padang_padang' ),
-        'section'     => 'social-links',
-        'default'     => '',
-        'priority'    => 10,
-    ) );

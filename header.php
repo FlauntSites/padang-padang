@@ -41,7 +41,6 @@
 						<?php fsc_social_icons( 'twitter' ); ?>
 						<?php fsc_social_icons( 'instagram' ); ?>
 						<?php fsc_social_icons( 'pinterest' ); ?>
-						<?php fsc_social_icons( 'google-plus' ); ?>
 
 					</div>
 
