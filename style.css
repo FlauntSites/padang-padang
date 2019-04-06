@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.7.0
+Version: 0.7.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -297,12 +297,15 @@ p {
   margin-bottom: 1.5em;
 }
 
-dfn, cite, em, i {
+dfn,
+cite,
+em,
+i {
   font-style: italic;
 }
 
 blockquote {
-  margin: 0 1.5em;
+  margin: 0;
 }
 
 address {
@@ -321,18 +324,23 @@ pre {
   padding: 1.6em;
 }
 
-code, kbd, tt, var {
+code,
+kbd,
+tt,
+var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 15px;
   font-size: 0.9375rem;
 }
 
-abbr, acronym {
+abbr,
+acronym {
   border-bottom: 1px dotted #666;
   cursor: help;
 }
 
-mark, ins {
+mark,
+ins {
   background: #fff9c0;
   text-decoration: none;
 }
@@ -1888,6 +1896,10 @@ FOOTER STYLES
   text-align: left;
 }
 
+.footer .footer-widget h3 {
+  margin-bottom: 1em;
+}
+
 .footer .footer-widget ul {
   list-style: none;
   margin: 0;
@@ -2074,17 +2086,13 @@ REVIEWS STYLES
 .review-small {
   margin-bottom: 2em;
   float: left;
+  width: 100%;
 }
 
 .review-small .fa-star,
 .review-small .fa-star-half-o,
 .review-small .fa-star-o {
   color: #333;
-}
-
-.review-small .quote-small {
-  font-size: 140%;
-  width: 100%;
 }
 
 .review-small .stars {
