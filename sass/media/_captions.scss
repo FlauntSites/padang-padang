@@ -1,16 +1,22 @@
 .wp-caption {
-	max-width: 100%;
+  max-width: 100%;
 
-	img[class*="wp-image-"] {
-		@include center-block;
-	}
+  img[class*="wp-image-"] {
+    @include center-block;
+  }
 
-	.wp-caption-text {
-		margin: 0.8075em 0;
-	}
+  .wp-caption-text {
+    margin: 0.8075em 0;
+  }
 }
 
-.wp-caption-text {
-	text-align: center;
-}
+// .wp-caption-text {
+//   text-align: center;
+// }
 
+.wp-caption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption,
+.wp-block-image figcaption {
+  background: none;
+}

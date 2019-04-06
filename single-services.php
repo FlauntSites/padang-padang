@@ -10,11 +10,14 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area row">
-		<main id="main" class="site-main small-12 small-centered" role="main">
+		<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+		<?php
+		while ( have_posts() ) :
+			the_post();
+			?>
 
-			<?php get_template_part('slideshow'); ?>
+			<?php get_template_part( 'slideshow' ); ?>
 			
 			<div class="service-cta-mobile">
 				<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
@@ -28,11 +31,11 @@ get_header(); ?>
 
 				<?php if ( is_active_sidebar( 'services_sidebar' ) ) { ?>
 
-					<section class="entry-content small-12 medium-8 columns">
+					<section class="entry-content">
 					
-					<?php }else{ ?>
+					<?php } else { ?>
 
-					<section class="entry-content small-12 columns">
+					<section class="entry-content">
 
 				<?php } ?>
 
@@ -70,9 +73,10 @@ get_header(); ?>
 				</footer>
 
 			</article>
-		 
-		 <?php endwhile; ?>
-		 <?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
+
+			<?php endwhile; ?>
+			
+			<?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

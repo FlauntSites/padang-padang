@@ -14,6 +14,7 @@
 $accent        = get_theme_mod( 'site_accent_color' );
 $accent_string = ltrim( $accent, '#' );
 $arr           = str_split( $accent_string, '2' );
+$rgb           = '';
 
 foreach ( $arr as $value ) {
 	$new_value = hexdec( $value ) . ', ';

@@ -25,45 +25,45 @@ HEADER STYLES
 *********************/
 
 .meta-header {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	padding: 1em 1em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 1em;
 
-	.social-header {
-	}
+  .social-header {
+  }
 }
 
 .client-search {
-	#client {
-		float: left;
-		border-radius: 25px;
+  #client {
+    float: left;
+    border-radius: 25px;
 
-		a {
-			line-height: 28px;
-			font-size: 1em;
-			color: #fff;
-			text-decoration: none;
-		}
-	}
+    a {
+      line-height: 28px;
+      font-size: 1em;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 
-	#search {
-		float: left;
-		margin-right: 10px;
-	}
+  #search {
+    float: left;
+    margin-right: 10px;
+  }
 }
 
 .logo {
-	-webkit-transition: 0.4s;
-	transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
 
-	&:hover,
-	&:focus {
-		-webkit-filter: opacity(80%);
-		filter: opacity(80%);
-		outline: 0;
-		border: none;
-	}
+  &:hover,
+  &:focus {
+    -webkit-filter: opacity(80%);
+    filter: opacity(80%);
+    outline: 0;
+    border: none;
+  }
 }
 
 /*********************
@@ -71,88 +71,88 @@ NAVIGATION STYLES
 *********************/
 
 button.menu-toggle {
-	display: none;
+  display: none;
 }
 
 .main-navigation {
-	width: 100%;
-	clear: both;
+  width: 100%;
+  clear: both;
 
-	ul {
-		text-align: center;
-		list-style: none;
-		margin: 0 auto;
-		width: inherit;
-		position: inherit;
-		z-index: inherit;
-		height: inherit;
-		transition: inherit;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+  ul {
+    text-align: center;
+    list-style: none;
+    margin: 0 auto;
+    width: inherit;
+    position: inherit;
+    z-index: inherit;
+    height: inherit;
+    transition: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
+    ul {
+      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+      float: left;
+      position: absolute;
+      top: 1.5em;
+      left: -999em;
+      z-index: 99999;
 
-			ul {
-				left: -999em;
-				top: 0;
-			}
+      ul {
+        left: -999em;
+        top: 0;
+      }
 
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
+      li {
+        &:hover > ul,
+        &.focus > ul {
+          left: 100%;
+        }
+      }
 
-			a {
-				width: 200px;
-			}
+      a {
+        width: 200px;
+      }
 
-			:hover > a,
-			.focus > a {
-			}
+      :hover > a,
+      .focus > a {
+      }
 
-			a:hover,
-			a.focus {
-			}
-		}
+      a:hover,
+      a.focus {
+      }
+    }
 
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
-		}
-	}
+    li:hover > ul,
+    li.focus > ul {
+      left: auto;
+    }
+  }
 
-	li {
-		float: left;
-		position: relative;
-		width: inherit;
+  li {
+    float: left;
+    position: relative;
+    width: inherit;
 
-		&:hover > a,
-		&.focus > a {
-		}
-	}
+    &:hover > a,
+    &.focus > a {
+    }
+  }
 
-	a {
-		display: inline-block;
-		text-decoration: none;
-		text-align: center;
-		padding: 0.25em 1em;
-		border-top: inherit;
-	}
+  a {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.25em 1em;
+    border-top: inherit;
+  }
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-	}
+  .current_page_item > a,
+  .current-menu-item > a,
+  .current_page_ancestor > a,
+  .current-menu-ancestor > a {
+  }
 }
 
 /*********************
@@ -160,9 +160,9 @@ STRUCTURE STYLES
 *********************/
 
 .content-area {
-	width: 80%;
-	max-width: 1024px;
-	margin: 0 auto;
+  width: 80%;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 /*********************
@@ -170,36 +170,36 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
-	margin-top: 2.2em;
+  margin-top: 2.2em;
 }
 
 .widgettitle {
-	border-bottom: 2px solid #444;
-	margin-bottom: 0.75em;
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em;
 }
 
 .widget {
-	padding: 0 10px;
-	margin: 2.2em 0;
+  padding: 0 10px;
+  margin: 2.2em 0;
 
-	ul {
-		li {
-			margin-bottom: 0.75em;
+  ul {
+    li {
+      margin-bottom: 0.75em;
 
-			&:first-child {
-			}
-			&:last-child {
-			}
-			a {
-			}
-			/* deep nesting */
+      &:first-child {
+      }
+      &:last-child {
+      }
+      a {
+      }
+      /* deep nesting */
 
-			ul {
-				margin-top: 0.75em;
-				padding-left: 1em;
-			}
-		}
-	}
+      ul {
+        margin-top: 0.75em;
+        padding-left: 1em;
+      }
+    }
+  }
 }
 
 /* links widget */
@@ -359,19 +359,19 @@ WIDGET STYLES
 *********************/
 
 .widget-contain {
-	width: 14em;
+  width: 14em;
 
-	ul {
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		text-align: left;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
 
-		li {
-			margin: 0;
-			padding: 0;
-		}
-	}
+    li {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 /*********************
@@ -379,61 +379,61 @@ FOOTER STYLES
 *********************/
 
 .footer {
-	display: flex;
-	justify-content: space-between;
-	background-color: #999;
-	padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #999;
+  padding: 0 10%;
 
-	.footer-widget {
-		width: 23%;
+  .footer-widget {
+    width: 23%;
 
-		h3 {
-			color: #ddd;
-			border-bottom: 1px solid #ddd;
-		}
-	}
+    h3 {
+      color: #ddd;
+      border-bottom: 1px solid #ddd;
+    }
+  }
 
-	#inner-footer {
-	}
+  #inner-footer {
+  }
 
-	.copyright {
-		font-size: 13px;
-		float: left;
-	}
+  .copyright {
+    font-size: 13px;
+    float: left;
+  }
 
-	.site-credit {
-		font-size: 13px;
-		float: right;
-	}
+  .site-credit {
+    font-size: 13px;
+    float: right;
+  }
 }
 
 .footer-links {
-	ul {
-		li {
-			a {
-				&:hover {
-				}
-			}
-			/*
+  ul {
+    li {
+      a {
+        &:hover {
+        }
+      }
+      /*
 			be careful with the depth of your menus.
 			it's very rare to have multi-depth menus in
 			the footer.
 			*/
-			ul {
-			}
-		}
-	}
+      ul {
+      }
+    }
+  }
 } /* end .footer-links */
 
 .scroll-to-top {
-	display: block;
-	width: 40px;
-	height: 40px;
-	position: fixed;
-	right: 2%;
-	bottom: 10%;
-	z-index: 10000;
-	cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: 2%;
+  bottom: 10%;
+  z-index: 10000;
+  cursor: pointer;
 }
 
 /*********************
@@ -441,12 +441,12 @@ CTA STYLES
 *********************/
 
 .cta-footer {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-	.cta {
-		width: 32%;
-	}
+  .cta {
+    width: 32%;
+  }
 }
 
 /*********************
@@ -454,9 +454,9 @@ HOME STYLES
 *********************/
 
 .home-about {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
 /*********************
@@ -464,7 +464,7 @@ SERVICES
 *********************/
 
 .service-cta-mobile {
-	display: none;
+  display: none;
 }
 
 /*********************
@@ -472,118 +472,117 @@ ARCHIVE STYLES
 *********************/
 
 .archive-excerpt-container {
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .post-thumb-container {
-	margin: 0 1em 0.5em 0;
-	margin-bottom: 0;
-	display: block;
-	width: 40%;
+  margin: 0 1em 0.5em 0;
+  margin-bottom: 0;
+  display: block;
+  width: 40%;
 }
 
 .archive-excerpt-text {
-	flex: 1;
+  flex: 1;
 }
 
 .service-thumb {
-	float: left;
-	width: 40%;
-	margin: 0 1em 0.5em 0;
-	margin-bottom: 0;
-	display: block;
+  float: left;
+  width: 40%;
+  margin: 0 1em 0.5em 0;
+  margin-bottom: 0;
+  display: block;
 
-	img {
-		margin-bottom: 0;
-	}
+  img {
+    margin-bottom: 0;
+  }
 }
 
 #reviews-service {
-	justify-content: space-between;
+  justify-content: space-between;
 
-	.service-thumb {
-		display: block;
-		margin: 0;
-		height: 100%;
-	}
+  .service-thumb {
+    display: block;
+    margin: 0;
+    height: 100%;
+  }
 }
 
 .service-footer-thumb img:hover {
-	filter: brightness(110%);
+  filter: brightness(110%);
 }
 
 .post-thumb,
 .service-thumb,
 .gallery-item {
-	position: relative;
-	line-height: 0;
+  position: relative;
+  line-height: 0;
 }
 
 .post-thumb img {
-	margin-bottom: 0;
-	display: block;
+  margin-bottom: 0;
+  display: block;
 }
 
 .entry-content dd {
-	margin: 0;
+  margin: 0;
 }
 
 .entry-content img.size-full,
 .entry-content img.size-large {
-	margin-bottom: 0;
-	display: block;
+  margin-bottom: 0;
+  display: block;
 }
 
 .entry-content .size-large {
-	margin: 0;
+  margin: 0;
 }
 
 p.gallery-item-text {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 /************************
 FIGURE & SHAREBAR STYLES
 ************************/
 
-// .fs-drawer-mobile-more{
-// 	display: none;
-// }
+.fs-drawer-mobile-more {
+  display: none;
+}
 
-// figure:hover .fs-drawer{
-// 	opacity: 1;
-// }
+figure:hover .fs-drawer {
+  opacity: 1;
+}
 
-// .fs-drawer{
-// 	flex-direction: row;
-// 	align-items: bottom;
-// 	justify-content:space-between;
+.fs-drawer {
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
 
-// 	figcaption{
-// 		padding-bottom: initial;
-// 		margin-bottom: inherit;
-// 		border-bottom: none;
-// 		border-right: 1px solid #ddd;
-// 	}
-// 	.fs-sharebar{
-// 		width: auto;
-// 	}
-// }
+  figcaption {
+    padding-bottom: initial;
+    margin-bottom: inherit;
+    border-bottom: none;
+  }
+  .fs-sharebar {
+    width: auto;
+  }
+}
 
 /*********************
 SLIDESHOW STYLES
 *********************/
 
 .swiper-button-prev {
-	background-image: url("images/circle-left.svg");
-	width: 4em;
-	height: 4em;
+  background-image: url("images/circle-left.svg");
+  width: 4em;
+  height: 4em;
 }
 
 .swiper-button-next {
-	background-image: url("images/circle-right.svg");
-	width: 4em;
-	height: 4em;
+  background-image: url("images/circle-right.svg");
+  width: 4em;
+  height: 4em;
 }
