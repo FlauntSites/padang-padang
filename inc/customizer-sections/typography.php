@@ -98,7 +98,7 @@ padang_padang_Kirki::add_section( 'typography', array(
 		'priority'    => 10,
 		'default'     => array(
 			'font-family' => 'Nothing You Could Do',
-			'font-size'   => '30px',
+			'font-size'   => '16px',
 		),
 		'output'      => array(
 			array(
