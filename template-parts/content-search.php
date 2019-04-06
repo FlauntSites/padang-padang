@@ -12,19 +12,32 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php padang_padang_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+	<div class="archive-excerpt-container">
 
-	<footer class="entry-footer">
-		<?php padang_padang_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+		<?php if (has_post_thumbnail() ): ?>
+			<div class="post-thumb-container">
+
+				<a href="<?php the_permalink() ?>">
+					<figure class="post-thumb">
+						<?php the_post_thumbnail( 'medium-large' ); ?>
+					</figure>
+				</a>
+				
+			</div>						
+		<?php endif; ?>
+
+
+		<div class="archive-excerpt-text">
+
+			<section>
+				<?php the_excerpt(); ?>
+			</section>
+
+			<a href="<?php the_permalink(); ?>" class="btn">Read More...</a>
+
+		</div>
+
+	</div>
 </article><!-- #post-## -->

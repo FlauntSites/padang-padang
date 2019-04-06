@@ -14,14 +14,16 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
 		if ( have_posts() ) :
 
 			/* Start the Loop */
-			while ( have_posts() ) : the_post(); ?>
+			while ( have_posts() ) :
+				the_post();
+				?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> aria-label="<?php the_title(); ?>">
 
@@ -32,20 +34,13 @@ get_header(); ?>
 					<div class="archive-excerpt-container">
 
 
-						<?php if (has_post_thumbnail() ): ?>
+						<?php if ( has_post_thumbnail() ) : ?>
 							<div class="post-thumb-container">
-
-								<a href="<?php the_permalink() ?>">
+								<a href="<?php the_permalink(); ?>">
 									<figure class="post-thumb">
 										<?php the_post_thumbnail( 'medium-large' ); ?>
-										<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-											<figcaption class="post-thumb-caption">
-													<?php echo $caption; ?><span> [Read more...]</span>
-												<?php endif; ?>
-											</figcaption>
 									</figure>
 								</a>
-								
 							</div>						
 						<?php endif; ?>
 
@@ -64,11 +59,13 @@ get_header(); ?>
 
 				</article>	
 
-			<?php endwhile; // End of the loop.
+				<?php
+			endwhile; // End of the loop.
 
 			fsc_page_navi();
 
-		 endif; ?>
+		endif;
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

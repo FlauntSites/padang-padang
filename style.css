@@ -5,7 +5,7 @@ GitHub Theme URI: https://github.com/FlauntSites/padang-padang
 Author: Flaunt Sites
 Author URI: http://flauntsites.com
 Description: Designed to match the power and simplicity of one of Bali’s cleanest barreling waves. Drop in… Race through the tube… Get shot out in glory.
-Version: 0.6.9
+Version: 0.7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: padang-padang
@@ -1914,6 +1914,10 @@ FOOTER STYLES
   width: 100%;
 }
 
+.scroll-to-top {
+  display: none;
+}
+
 /*
 	if you checked out the link above:
 	http://www.alistapart.com/articles/organizing-mobile/
@@ -2119,14 +2123,6 @@ CTA STYLES
   padding: 0;
 }
 
-.post-thumb-caption,
-.service-thumb-caption,
-p.wp-caption-text,
-.wp-caption-text.gallery-caption {
-  position: absolute;
-  opacity: 0;
-}
-
 .onehundredcenter {
   width: 90%;
   text-align: center;
@@ -2193,12 +2189,70 @@ WIDGET STYLES
 /******************************
 CAPTION AND SHAREBAR STYLES
 *******************************/
-figure {
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+  position: relative;
+  bottom: inherit;
+  width: initial;
+  max-height: initial;
+  overflow: initial;
+  padding: initial;
+  text-align: initial;
+  font-size: initial;
+  background: initial;
+}
+
+.fs-drawer-mobile-more {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  z-index: 100;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+
+.fs-drawer-mobile-more svg.toggled {
+  transform: rotate(90deg);
+}
+
+.fs-drawer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  width: 100%;
+  bottom: 0;
+  opacity: 0;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+
+.fs-drawer figcaption {
+  line-height: 1;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 0.5em;
   color: #fff;
 }
 
-figcaption {
-  line-height: 1;
+.fs-drawer .fs-sharebar {
+  display: flex;
+  width: inherit;
+  align-items: center;
+}
+
+.fs-drawer.toggled {
+  opacity: 1 !important;
+}
+
+figure {
+  color: #fff;
 }
 
 a.social-icon {
@@ -2557,6 +2611,25 @@ ARCHIVE STYLES
   /************************
 FIGURE & SHAREBAR STYLES
 ************************/
+  .fs-drawer-mobile-more {
+    display: none;
+  }
+  figure:hover .fs-drawer {
+    opacity: 1;
+  }
+  .fs-drawer {
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .fs-drawer figcaption {
+    padding-bottom: initial;
+    margin-bottom: inherit;
+    border-bottom: none;
+  }
+  .fs-drawer .fs-sharebar {
+    width: auto;
+  }
   /*********************
 SLIDESHOW STYLES
 *********************/
@@ -2815,8 +2888,11 @@ figure {
   margin: 0.8075em 0;
 }
 
-.wp-caption-text {
-  text-align: center;
+.wp-caption,
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption,
+.wp-block-image figcaption {
+  background: none;
 }
 
 /*--------------------------------------------------------------

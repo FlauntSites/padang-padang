@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area row">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -42,11 +42,6 @@ get_header(); ?>
 								<a href="<?php the_permalink() ?>">
 									<figure class="post-thumb">
 										<?php the_post_thumbnail( 'medium-large' ); ?>
-										<?php if ( $caption = get_post( get_post_thumbnail_id() )->post_excerpt ) : ?>
-											<figcaption class="post-thumb-caption">
-													<?php echo $caption; ?><span> [Read more...]</span>
-												<?php endif; ?>
-											</figcaption>
 									</figure>
 								</a>
 
