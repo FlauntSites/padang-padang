@@ -561,13 +561,22 @@ figure:hover .fs-drawer {
   align-items: baseline;
   justify-content: space-between;
 
-  figcaption {
-    padding-bottom: initial;
-    margin-bottom: inherit;
-    border-bottom: none;
-  }
   .fs-sharebar {
     width: auto;
+  }
+}
+
+figure {
+  color: #fff;
+  position: relative;
+  figcaption {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    line-height: initial;
+    padding: 0.5em;
+    width: 100%;
   }
 }
 

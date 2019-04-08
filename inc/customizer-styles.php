@@ -37,6 +37,10 @@ BASE (MOBILE) SIZE
 	}
 <?php endif; ?>
 
+figcaption{
+	<?php $caption_background = get_option( 'fsc_image_options'); ?>
+	background-color: <?php echo $caption_background[ caption_background_color ]; ?>;
+}
 
 .fs-sharebar{
 	color:<?php echo get_theme_mod( 'caption_text_color', '#fff'  ); ?>; 

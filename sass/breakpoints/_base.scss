@@ -538,14 +538,6 @@ CAPTION AND SHAREBAR STYLES
   -moz-transition: opacity 0.25s ease-in-out;
   -webkit-transition: opacity 0.25s ease-in-out;
 
-  figcaption {
-    line-height: 1;
-    padding-bottom: 1em;
-    border-bottom: 1px solid #ddd;
-    margin-bottom: 0.5em;
-    color: #fff;
-  }
-
   .fs-sharebar {
     display: flex;
     width: inherit;
@@ -559,6 +551,10 @@ CAPTION AND SHAREBAR STYLES
 
 figure {
   color: #fff;
+
+  figcaption {
+    display: none;
+  }
 }
 
 a.social-icon {
