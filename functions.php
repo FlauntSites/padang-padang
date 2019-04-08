@@ -156,7 +156,7 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 			
 					<?php echo wp_get_attachment_image( $image['ID'], $size, false, array( 'alt' => $image['alt'] ) );  ?>
 
-					<figcaption class="<?php echo $captionclass; ?>" style="background-color:<?php echo get_theme_mod( 'caption_background_color', '#000' ); ?>">
+					<figcaption class="<?php echo $captionclass; ?>">
 
 						<?php echo $image[ 'caption' ]; ?>
 
