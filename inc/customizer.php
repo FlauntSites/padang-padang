@@ -72,7 +72,7 @@ require get_template_directory() . '/inc/customizer-sections/header-options.php'
 require get_template_directory() . '/inc/customizer-sections/colors.php';
 require get_template_directory() . '/inc/customizer-sections/typography.php';
 require get_template_directory() . '/inc/customizer-sections/image-appearance.php';
-// require get_template_directory() . '/inc/customizer-sections/social-links.php';
+require get_template_directory() . '/inc/customizer-sections/social-links.php';
 require get_template_directory() . '/inc/customizer-sections/footer-area.php';
 if ( is_super_admin() ) {
 	require get_template_directory() . '/inc/customizer-sections/custom-js.php';
