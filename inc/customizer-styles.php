@@ -71,6 +71,10 @@ body{
 	color:<?php echo get_theme_mod( 'heading_color', '#666' ); ?>;
 }
 
+.recent-post-hover h3 {
+	color: #fff;
+}
+
 .page-title, .entry-title, .sidebar-title{
 	border-bottom: 1px solid <?php echo get_theme_mod( 'heading_color', '#666' ); ?>;
 }
