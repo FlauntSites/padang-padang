@@ -33,11 +33,18 @@
 
 			<div class="meta-header">
 
-				<?php
-				if ( true === get_theme_mod( 'header_social', true ) ) {
-					require_once 'wp-content/plugins/flaunt-sites-core/public/partials/flaunt-sites-core-public-social-header.php';
-				}
-				?>
+				<?php if ( true == get_theme_mod( 'header_social', true ) ) : ?>
+
+					<div class="social-header">
+
+						<?php fsc_social_icons( 'facebook' ); ?>
+						<?php fsc_social_icons( 'twitter' ); ?>
+						<?php fsc_social_icons( 'instagram' ); ?>
+						<?php fsc_social_icons( 'pinterest' ); ?>
+
+					</div>
+
+				<?php endif; ?>
 
 				<?php if ( true == get_theme_mod( 'header_search', true ) || get_theme_mod( 'header_client_area', true ) ) : ?>
 

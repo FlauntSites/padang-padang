@@ -6,7 +6,7 @@ Designed to match the power and simplicity of one of Bali’s cleanest barreling
 
 ## Version:
 
-0.7.3
+0.7.2
 
 ## Contributors
 
@@ -21,25 +21,25 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## [0.7.3] - 2019-06-23
+## [0.7.3] - 2019-11-13
 
 ### Changed
 
--Fixed gaps between Gallery blocks to be consistent with images.
+-Changed blog grid hover text from H3 color to #fff.
 
-## [0.7.2] - 2019-04-08
+## [0.7.2] - 2018-04-08
 
 ### Changed
 
 -Fixed Figcation display, and Figcaption background color output from Customizer.
 
-## [0.7.1] - 2019-04-05
+## [0.7.1] - 2018-04-05
 
 ### Changed
 
 -Fixed widget styles for Reviews.
 
-## [0.7.0] - 2019-04-05
+## [0.7.0] - 2018-04-05
 
 ### Changed
 
@@ -47,7 +47,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 -Added thumbnails to search archive.
 -Code standard housekeeping.
 
-## [0.6.9] - 2019-03-24
+## [0.6.9] - 2018-03-24
 
 ### Changed
 
