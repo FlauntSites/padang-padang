@@ -79,11 +79,11 @@ add_action( 'after_setup_theme', 'padang_padang_setup' );
  * Enqueue scripts and styles.
  */
 function padang_padang_scripts() {
-	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri(), array(), date( 'Ymd' ) );
+	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri(), array(), date( 'Ymd  H:i:s' ) );
 
-	wp_enqueue_script( 'padang-padang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), date( 'Ymd' ), true );
+	wp_enqueue_script( 'padang-padang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), date( 'Ymd  H:i:s' ), true );
 
-	wp_enqueue_script( 'padang-padang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), date( 'Ymd' ), true );
+	wp_enqueue_script( 'padang-padang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), date( 'Ymd  H:i:s' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
