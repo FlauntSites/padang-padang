@@ -39,7 +39,7 @@ BASE (MOBILE) SIZE
 
 figcaption{
 	<?php $caption_background = get_option( 'fsc_image_options'); ?>
-	background-color: <?php echo $caption_background[ caption_background_color ]; ?>;
+	background-color: <?php echo $caption_background[ 'caption_background_color' ]; ?>;
 }
 
 .fs-sharebar{
@@ -91,7 +91,7 @@ svg.fs-icons, svg.fs-icons a{
 	fill:<?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>;
 }
 
-input {
+input, textarea {
 	border: 1px solid <?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>;
 }
 
@@ -135,6 +135,12 @@ svg.fs-icons:hover, svg.fs-icons a:hover{
 	background-color:<?php echo get_theme_mod( 'site_accent_color', '#999' ); ?>;  
 	color:<?php echo get_theme_mod( 'site_accent_text_color', '#fff' ); ?>;
 }
+
+.cta-form img{
+	-webkit-filter: brightness(<?php echo get_theme_mod( 'footer_contact_form_image_tint', '100' ); ?>);
+	filter: brightness(<?php echo get_theme_mod( 'footer_contact_form_image_tint', '100' ); ?>);
+}
+
 
 /*--------------------
 TABLET & SMALLER LAPTOPS

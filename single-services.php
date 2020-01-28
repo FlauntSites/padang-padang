@@ -76,7 +76,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 			
-			<?php get_template_part( 'template-parts/recent-blog-posts' ); ?>
+			<?php get_template_part( 'template-parts/footer-cta' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
