@@ -27,8 +27,9 @@ get_header(); ?>
 
 			<?php
 			if ( is_front_page() ) {
-				get_template_part( 'template-parts/footer-cta' );
+				get_template_part( 'template-parts/footer-contact' );
 			}
+			get_template_part( 'template-parts/footer-cta' );
 			?>
 
 		</main><!-- #main -->
