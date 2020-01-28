@@ -79,12 +79,11 @@ add_action( 'after_setup_theme', 'padang_padang_setup' );
  * Enqueue scripts and styles.
  */
 function padang_padang_scripts() {
-	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri(), '20180801', '' );
+	wp_enqueue_style( 'padang-padang-style', get_stylesheet_uri(), array(), date( 'Ymd' ) );
 
-	wp_enqueue_script( 'padang-padang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'padang-padang-navigation', get_template_directory_uri() . '/js/navigation.js', array(), date( 'Ymd' ), true );
 
-	wp_enqueue_script( 'padang-padang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
+	wp_enqueue_script( 'padang-padang-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), date( 'Ymd' ), true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -137,7 +136,7 @@ require get_template_directory() . '/inc/widgets.php';
 
 
 
-function fsc_figure( $image, $size, $imageclass, $captionclass ){
+function fsc_figure( $image, $size, $imageclass, $captionclass ) {
 
 	/**
 	* Let plugins pre-filter the image meta to be able to fix inconsistencies in the stored data.
@@ -148,19 +147,19 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 	* @param string    	$captionclass 	The Figcaption class you want to use (ex: 'caption-blue') 
 	*/
 
-		$image = get_field( $image );
-		$size = $size;
-		$thumb = $image['sizes'][ $size ];
+	$image = get_field( $image );
+	$size  = $size;
+	$thumb = $image['sizes'][ $size ];
 
-		if( !empty($image) ):  ?>
+	if ( ! empty( $image ) ) : ?>
 
 			<figure class="<?php echo $imageclass; ?>">
-			
+
 					<?php echo wp_get_attachment_image( $image['ID'], $size, false, array( 'alt' => $image['alt'] ) );  ?>
 
 					<figcaption class="<?php echo $captionclass; ?>">
 
-						<?php echo $image[ 'caption' ]; ?>
+						<?php echo $image['caption']; ?>
 
 					</figcaption>
 
@@ -181,44 +180,6 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ){
 
 		<?php endif; 
 }
-
-
-
-
-function fsc_client_review( ){
-
-	// The Query
-	$the_query = new WP_Query( 
-		array( 
-			'post_type' 		=> 'reviews',
-			'posts_per_page'    => 1,
-	 )); {?>
-
-		<?php if ( $the_query->have_posts() ) : ?>
-
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-					<div> 
-						<h2><?php the_title(); ?></h2> 
-						<p><?php the_field( 'fsc_review_quote' ); ?></p>
-						<p><?php the_field( 'fsc_stars' ); ?></p>
-						<?php the_post_thumbnail(); ?>
-					</div> 
-					
-			<?php endwhile; ?>
-			<!-- end of the loop -->
-
-			<!-- pagination here -->
-
-			<?php wp_reset_postdata(); ?>
-
-		<?php else: ?>
-			<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-		<?php endif;  
-		}
-}
-
-
 
 
 /*********************

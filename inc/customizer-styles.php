@@ -137,8 +137,8 @@ svg.fs-icons:hover, svg.fs-icons a:hover{
 }
 
 .cta-form img{
-	-webkit-filter: brightness(<?php echo get_theme_mod( 'footer_contact_form_image_tint', '100' ); ?>);
-	filter: brightness(<?php echo get_theme_mod( 'footer_contact_form_image_tint', '100' ); ?>);
+	-webkit-filter: brightness(<?php echo get_theme_mod( 'footer_contact_form_image_tint', '1' ); ?>);
+	filter: brightness(<?php echo get_theme_mod( 'footer_contact_form_image_tint', '1' ); ?>);
 }
 
 
