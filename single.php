@@ -16,7 +16,7 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			get_template_part( 'footer-cta' );
+			get_template_part( 'blog-cta' );
 
 			the_post_navigation();
 

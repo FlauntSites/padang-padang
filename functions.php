@@ -68,6 +68,8 @@ function padang_padang_setup() {
 	// Add theme support for selective refresh for widgets.
 	add_theme_support( 'acf-custom-fields' );
 
+	add_theme_support( 'responsive-embeds' );
+
 }
 endif;
 add_action( 'after_setup_theme', 'padang_padang_setup' );
@@ -231,15 +233,15 @@ function fsc_page_navi() {
     return;
   echo '<nav class="pagination">';
   echo paginate_links( array(
-    'base'         => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
-    'format'       => '',
-    'current'      => max( 1, get_query_var('paged') ),
-    'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '&larr;',
-    'next_text'    => '&rarr;',
-    'type'         => 'list',
-    'end_size'     => 3,
-    'mid_size'     => 3
+    'base'      => str_replace( $bignum, '%#%', esc_url( get_pagenum_link($bignum) ) ),
+    'format'    => '',
+    'current'   => max( 1, get_query_var('paged') ),
+    'total'     => $wp_query->max_num_pages,
+    'prev_text' => '&larr;',
+    'next_text' => '&rarr;',
+    'type'      => 'list',
+    'end_size'  => 3,
+    'mid_size'  => 3
   ) );
   echo '</nav>';
 } /* end page navi */
