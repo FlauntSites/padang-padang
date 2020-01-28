@@ -28,6 +28,7 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
+		<?php get_template_part( 'footer-cta' ); ?> 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

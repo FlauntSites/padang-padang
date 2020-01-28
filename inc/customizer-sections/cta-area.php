@@ -72,7 +72,7 @@ padang_padang_Kirki::add_section( 'cta_options', array(
 		'settings' => 'footer_contact_form_image_tint',
 		'label'    => esc_attr__( 'Image Brightness', 'padang_padang' ),
 		'section'  => 'cta_options',
-		'default'  => 1,
+		'default'  => '1',
 		'choices'  => array(
 			'min'  => '0',
 			'max'  => '1',
