@@ -2,7 +2,7 @@
 
 
 function cta_form() {
-	if ( 1 == get_theme_mod( 'footer_contact_form', true ) ) {
+	if ( true == get_theme_mod( 'footer_contact_form' ) ) {
 		$forms      = GFAPI::get_forms();
 		$form_index = get_theme_mod( 'footer_contact_form_name' );
 
@@ -20,7 +20,7 @@ function cta_image() {
 }?>
 
 <?php
-if ( 1 == get_theme_mod( 'footer_contact_form' ) ) { ?>
+if ( true == get_theme_mod( 'footer_contact_form' ) ) { ?>
 	<div class="cta-form">
 		<h2>Say Hello!</h2>
 		<?php cta_form(); ?>

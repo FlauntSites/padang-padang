@@ -50,7 +50,7 @@ padang_padang_Kirki::add_section( 'cta_options', array(
 			[
 				'setting'  => 'footer_contact_form',
 				'operator' => '=',
-				'value'    => 1,
+				'value'    => true,
 			],
 		],
 	] );
