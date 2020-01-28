@@ -20,11 +20,11 @@ function cta_image() {
 }?>
 
 <?php
-if ( '1' == get_theme_mod( 'footer_contact_form' ) ) { ?>
+if ( 1 == get_theme_mod( 'footer_contact_form' ) ) { ?>
 	<div class="cta-form">
 		<h2>Say Hello!</h2>
 		<?php cta_form(); ?>
-		<?php echo wp_get_attachment_image( cta_image(), 'large'); ?>
+		<?php echo wp_get_attachment_image( cta_image(), 'large' ); ?>
 	</div>
 	<?php
 }
