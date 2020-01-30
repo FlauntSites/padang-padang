@@ -577,10 +577,9 @@ figure {
     color: #fff;
     position: relative;
     figcaption {
-        display: flex;
+        display: flex !important;
         position: absolute;
         bottom: 0;
-        display: flex;
         line-height: initial;
         padding: 0.5em;
         width: 100%;

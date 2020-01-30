@@ -2338,7 +2338,7 @@ figure {
 }
 
 figure figcaption {
-  display: none;
+  display: none !important;
 }
 
 a.social-icon {
@@ -2770,12 +2770,11 @@ FIGURE & SHAREBAR STYLES
     position: relative;
   }
   figure figcaption {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     position: absolute;
     bottom: 0;
-    display: flex;
     line-height: initial;
     padding: 0.5em;
     width: 100%;
