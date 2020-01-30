@@ -6,7 +6,7 @@ Designed to match the power and simplicity of one of Bali’s cleanest barreling
 
 ## Version:
 
-0.8.0
+0.8.1
 
 ## Contributors
 
@@ -20,6 +20,12 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [0.8.1] - 2020-01-30
+
+### Changed
+
+-Adjustment to Images and Captions in Gutenberg blocks.
 
 ## [0.8.0] - 2020-01-28
 
