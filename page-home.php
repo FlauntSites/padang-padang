@@ -20,7 +20,11 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page-home' );
+				if ( '' !== get_the_content() ) {
+					get_template_part( 'template-parts/content', 'page' );
+				} else {
+					get_template_part( 'template-parts/content', 'page-home' );
+				}
 
 			endwhile; // End of the loop.
 			?>

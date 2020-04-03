@@ -33,28 +33,6 @@ add_action( 'customize_preview_init', 'padang_padang_customize_preview_js' );
 
 
 /**
- * Configuration sample for the Kirki Customizer.
- * The function's argument is an array of existing config values
- * The function returns the array with the addition of our own arguments
- * and then that result is used in the kirki/config filter
- *
- * @param $config the configuration array
- *
- * @return array
- */
-function kirki_demo_configuration_sample_styling( $config ) {
-	return wp_parse_args( array(
-		'logo_image'   => get_template_directory_uri() . '/images/header.png',
-		'description'  => esc_attr__( 'The theme description.', 'kirki' ),
-		'color_accent' => '#0091EA',
-		'color_back'   => '#FFFFFF',
-	), $config );
-}
-add_filter( 'kirki/config', 'kirki_demo_configuration_sample_styling' );
-
-
-
-/**
  * Add the theme configuration
  */
 padang_padang_Kirki::add_config( 'padang_padang', array(
@@ -77,3 +55,22 @@ require get_template_directory() . '/inc/customizer-sections/cta-area.php';
 if ( is_super_admin() ) {
 	require get_template_directory() . '/inc/customizer-sections/custom-js.php';
 }
+
+
+add_action( 'customize_controls_print_styles', function() {
+	?>
+	<style>
+	#customize-controls .customize-info .accordion-section-title{
+		height:200px;
+		background-image:url('<?php echo get_template_directory_uri() . '/screenshot.png'; ?>');
+		background-size:cover;
+	}
+	.preview-notice{
+		display:none;
+	}
+	#customize-controls .customize-info{
+		margin-bottom:0;
+	}
+	</style>
+	<?php
+} );
