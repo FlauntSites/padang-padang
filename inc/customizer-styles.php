@@ -57,9 +57,9 @@ body{
 	background-color:<?php echo get_theme_mod( 'site_background_color', '#fff' ); ?>
 }  
 
+
 .logo{
-	<?php $logo_width = get_option( 'fsc_options', '200' ); ?>
-	width: <?php echo $logo_width[ 'fsc_logo_width' ]; ?>px;
+	width: <?php echo get_theme_mod( 'padang_padang_logo_width', '200' );  ?>px;
 }
 
 .main-navigation li, .main-navigation li a, .main-navigation li a:visited{

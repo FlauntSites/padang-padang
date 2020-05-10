@@ -18,8 +18,16 @@ function padang_padang_customize_register( $wp_customize ) {
 	$wp_customize->remove_section( 'colors' );
 	$wp_customize->remove_section( 'header_image' );
 	$wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'widgets' );
-
+	$wp_customize->remove_section( 'title_tagline' );
+	$wp_customize->remove_section( 'static_front_page' );
+	// Move CSS to Site Styles panel.
+	$wp_customize->remove_section( 'custom_css' );
+	$wp_customize->add_section( 'custom_css',
+		array(
+			'title' => 'Custom CSS',
+			'panel' => 'site_styles',
+		)
+	);
 }
 add_action( 'customize_register', 'padang_padang_customize_register' );
 
@@ -45,12 +53,10 @@ padang_padang_Kirki::add_config( 'padang_padang', array(
 /**
  * Call the individual sections.
  */
-
+require get_template_directory() . '/inc/customizer-sections/business-identity.php';
 require get_template_directory() . '/inc/customizer-sections/header-options.php';
-require get_template_directory() . '/inc/customizer-sections/colors.php';
-require get_template_directory() . '/inc/customizer-sections/typography.php';
+require get_template_directory() . '/inc/customizer-sections/site-styles.php';
 require get_template_directory() . '/inc/customizer-sections/image-appearance.php';
-require get_template_directory() . '/inc/customizer-sections/social-links.php';
 require get_template_directory() . '/inc/customizer-sections/cta-area.php';
 if ( is_super_admin() ) {
 	require get_template_directory() . '/inc/customizer-sections/custom-js.php';

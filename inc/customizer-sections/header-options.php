@@ -4,41 +4,9 @@
  * Add the Header Options section
  */
 padang_padang_Kirki::add_section( 'header_options', array(
-	'title'      => esc_attr__( 'Header Options', 'padang_padang' ),
-	'priority'   => 1,
-	'capability' => 'edit_theme_options',
+	'title'    => esc_attr__( 'Header Options', 'padang_padang' ),
+	'icon'     => 'dashicons-menu',
 ) );
-
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'image',
-		'settings'    => 'fsc_logo',
-		'option_type' => 'option',
-		'option_name' => 'fsc_options',
-		'label'       => __( 'Logo', 'padang_padang' ),
-		'description' => __( 'Add or edit your logo here', 'padang_padang' ),
-		'section'     => 'header_options',
-		'default'     => '',
-		'priority'    => 10,
-		'choices'     => array(
-			'save_as' => 'id',
-		),
-	) );
-
-	padang_padang_Kirki::add_field( 'padang_padang', array(
-		'type'        => 'slider',
-		'settings'    => 'fsc_logo_width',
-		'option_type' => 'option',
-		'option_name' => 'fsc_options',
-		'label'       => esc_attr__( 'Adjust the size of your logo here', 'padang_padang' ),
-		'section'     => 'header_options',
-		'default'     => 200,
-		'choices'     => array(
-			'min'  => '100',
-			'max'  => '300',
-			'step' => '1',
-		),
-	) );
-
 
 	/**
 	* Toggles Social On and Off.

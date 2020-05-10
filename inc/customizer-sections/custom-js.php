@@ -5,8 +5,8 @@
 
 padang_padang_Kirki::add_section( 'custom_js', array(
 	'title'      => esc_attr__( 'Custom JS', 'padang_padang' ),
-	'priority'   => 5,
 	'capability' => 'edit_theme_options',
+	'icon'       => 'dashicons-editor-code',
 ) );
 
 padang_padang_Kirki::add_field( 'padang_padang', array(
