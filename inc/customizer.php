@@ -18,8 +18,16 @@ function padang_padang_customize_register( $wp_customize ) {
 	$wp_customize->remove_section( 'colors' );
 	$wp_customize->remove_section( 'header_image' );
 	$wp_customize->remove_section( 'background_image' );
-	$wp_customize->remove_section( 'widgets' );
-
+	$wp_customize->remove_section( 'title_tagline' );
+	$wp_customize->remove_section( 'static_front_page' );
+	// Move CSS to Site Styles panel.
+	$wp_customize->remove_section( 'custom_css' );
+	$wp_customize->add_section( 'custom_css',
+		array(
+			'title' => 'Custom CSS',
+			'panel' => 'site_styles',
+		)
+	);
 }
 add_action( 'customize_register', 'padang_padang_customize_register' );
 
@@ -30,28 +38,6 @@ function padang_padang_customize_preview_js() {
 	wp_enqueue_script( 'padang_padang_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20190404', true );
 }
 add_action( 'customize_preview_init', 'padang_padang_customize_preview_js' );
-
-
-/**
- * Configuration sample for the Kirki Customizer.
- * The function's argument is an array of existing config values
- * The function returns the array with the addition of our own arguments
- * and then that result is used in the kirki/config filter
- *
- * @param $config the configuration array
- *
- * @return array
- */
-function kirki_demo_configuration_sample_styling( $config ) {
-	return wp_parse_args( array(
-		'logo_image'   => get_template_directory_uri() . '/images/header.png',
-		'description'  => esc_attr__( 'The theme description.', 'kirki' ),
-		'color_accent' => '#0091EA',
-		'color_back'   => '#FFFFFF',
-	), $config );
-}
-add_filter( 'kirki/config', 'kirki_demo_configuration_sample_styling' );
-
 
 
 /**
@@ -67,13 +53,30 @@ padang_padang_Kirki::add_config( 'padang_padang', array(
 /**
  * Call the individual sections.
  */
-
+require get_template_directory() . '/inc/customizer-sections/business-identity.php';
 require get_template_directory() . '/inc/customizer-sections/header-options.php';
-require get_template_directory() . '/inc/customizer-sections/colors.php';
-require get_template_directory() . '/inc/customizer-sections/typography.php';
+require get_template_directory() . '/inc/customizer-sections/site-styles.php';
 require get_template_directory() . '/inc/customizer-sections/image-appearance.php';
-require get_template_directory() . '/inc/customizer-sections/social-links.php';
 require get_template_directory() . '/inc/customizer-sections/cta-area.php';
 if ( is_super_admin() ) {
 	require get_template_directory() . '/inc/customizer-sections/custom-js.php';
 }
+
+
+add_action( 'customize_controls_print_styles', function() {
+	?>
+	<style>
+	#customize-controls .customize-info .accordion-section-title{
+		height:200px;
+		background-image:url('<?php echo get_template_directory_uri() . '/screenshot.png'; ?>');
+		background-size:cover;
+	}
+	.preview-notice{
+		display:none;
+	}
+	#customize-controls .customize-info{
+		margin-bottom:0;
+	}
+	</style>
+	<?php
+} );

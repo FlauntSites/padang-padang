@@ -153,6 +153,7 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ) {
 
 	if ( ! empty( $image ) ) : ?>
 
+
 			<figure class="<?php echo $imageclass; ?>">
 
 					<?php echo wp_get_attachment_image( $image['ID'], $size, false, array( 'alt' => $image['alt'] ) );  ?>
@@ -171,10 +172,8 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ) {
 				"@type": "ImageObject",
 				"author": "<?php the_author(); ?>",
 				"contentUrl": "<?php echo $thumb; ?>",
-				"datePublished": "<?php echo $image[ 'created_timestamp' ]; ?>",
 				"description": "<?php echo $image[ 'alt' ]; ?>",
 				"name": "<?php echo $image[ 'title' ]; ?>",
-				"copyright": "<?php echo $image[ 'copyright' ]; ?>"
 				}
 			</script>
 
@@ -186,7 +185,7 @@ function fsc_figure( $image, $size, $imageclass, $captionclass ) {
 PAGE NAVI
 *********************/
 
-// Numeric Page Navi (built into the theme by default)
+// Numeric Page Navi
 function fsc_page_navi() {
   global $wp_query;
   $bignum = 999999999;

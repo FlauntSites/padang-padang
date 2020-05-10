@@ -6,8 +6,8 @@
  */
 padang_padang_Kirki::add_section( 'image_appearance', array(
 	'title'      => esc_attr__( 'Image Appearance', 'padang_padang' ),
-	'priority'   => 4,
 	'capability' => 'edit_theme_options',
+	'icon'       => 'dashicons-images-alt2',
 ) );
 
 
