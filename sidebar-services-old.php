@@ -1,9 +1,5 @@
 <aside class="service-sidebar small-12 medium-4 columns">
 
-  <div class="service-cta">
-    <a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
-  </div>
-
   <div class="service-section">
     <h2><a href="/reviews">Raves + Reviews</a></h2>
 

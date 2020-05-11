@@ -23,11 +23,6 @@
 			<?php fsc_figure( 'fsc_about_photo', 'medium_large', '', ''); ?>
 		</div>
 
-		<div>
-			<?php the_field( 'fsc_about_text' ); ?>
-			<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
-		</div>
-
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

@@ -18,10 +18,6 @@ get_header(); ?>
 			?>
 
 			<?php get_template_part( 'slideshow' ); ?>
-			
-			<div class="service-cta-mobile">
-				<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
-			</div>
 
 			<article>
 
@@ -65,9 +61,6 @@ get_header(); ?>
 						</section>
 
 				</section>
-
-				<?php get_template_part( 'sidebar-services' ); ?>
-
 
 				<footer class="article-footer">
 				</footer>

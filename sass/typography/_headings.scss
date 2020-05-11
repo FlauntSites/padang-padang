@@ -1,13 +1,33 @@
-.page-title, .page-title a, .entry-title, .entry-title a, .sidebar-title, .sidebar-title a{
-	margin-bottom: 2em;
-    padding-bottom: .25em;
+.page-title,
+.page-title a,
+.entry-title,
+.entry-title a,
+.sidebar-title,
+.sidebar-title a {
+    margin-bottom: 2em;
+    padding-bottom: 0.25em;
 }
 
-.page-title,.entry-title,.sidebar-title{
-	border-bottom: 1px solid;
+h1,
+h1 a,
+.page-title,
+.entry-title,
+.sidebar-title {
+    border-bottom: 1px solid;
 }
 
-h1, h1 a, h2, h2 a, h3, h3 a, h4, h4 a, h5, h5 a, h6, h6 a,  {
-	text-decoration: none;
-	margin-bottom: 0;
+h1,
+h1 a,
+h2,
+h2 a,
+h3,
+h3 a,
+h4,
+h4 a,
+h5,
+h5 a,
+h6,
+h6 a {
+    text-decoration: none;
+    margin-bottom: 0;
 }
