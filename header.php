@@ -27,10 +27,6 @@
 
 		<header id="masthead" class="site-header" role="banner">
 
-			<div class="service-cta-mobile">
-				<a class="btn onehundredcenter" href="<?php the_field( 'fsc_cta_link', 'options' ); ?>"><?php the_field( 'fsc_cta_button_text', 'options' ); ?></a>
-			</div>
-
 			<div class="meta-header">
 
 				<?php
