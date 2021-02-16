@@ -532,19 +532,6 @@ WIDGET STYLES
 CAPTION AND SHAREBAR STYLES
 *******************************/
 
-.wp-block-gallery .blocks-gallery-image figcaption,
-.wp-block-gallery .blocks-gallery-item figcaption {
-    position: relative;
-    bottom: inherit;
-    width: initial;
-    max-height: initial;
-    overflow: initial;
-    padding: initial;
-    text-align: initial;
-    font-size: initial;
-    background: initial;
-}
-
 .fs-drawer-mobile-more {
     width: 30px;
     height: 30px;
@@ -590,7 +577,7 @@ figure {
     color: #fff;
 
     figcaption {
-        display: none !important;
+        opacity: 0;
     }
 }
 

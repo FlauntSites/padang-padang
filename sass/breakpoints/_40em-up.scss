@@ -573,16 +573,20 @@ figure:hover .fs-drawer {
     }
 }
 
-figure {
-    color: #fff;
-    position: relative;
-    figcaption {
-        display: block !important;
-        position: absolute;
-        bottom: 0;
-        line-height: initial;
-        padding: 0.5em;
-        width: 100%;
+.blocks-gallery-item {
+    figure {
+        color: #fff;
+        position: relative;
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            line-height: initial;
+            padding: 0.5em;
+            width: 100%;
+        }
+        &:hover figcaption {
+            opacity: 100;
+        }
     }
 }
 
