@@ -183,6 +183,18 @@ padang_padang_Kirki::add_section( 'typography', array(
 	/**
 	* Add the Headers Typography control
 	*/
+
+	padang_padang_Kirki::add_field( 'padang_padang', [
+		'type'        => 'toggle',
+		'settings'    => 'heading_independent_setting',
+		'label'       => esc_html__( 'Unique heading fonts & settings', 'padang_padang'  ),
+		'description' => esc_attr__( 'If you would like the H1, H2, H3, etc. to be different fonts and sizes, turn this on.', 'padang_padang' ),
+		'section'     => 'typography',
+		'default'     => '0',
+		'priority'    => 10,
+	] );
+
+
 	padang_padang_Kirki::add_field( 'padang_padang', array(
 		'type'        => 'typography',
 		'settings'    => 'headers_typography',
@@ -192,15 +204,218 @@ padang_padang_Kirki::add_section( 'typography', array(
 		'section'     => 'typography',
 		'priority'    => 10,
 		'default'     => array(
-			'font-family' => 'Julius Sans One',
-			'font-size'   => '18px',
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
 		),
 		'output'      => array(
 			array(
 				'element' => array( 'h1', '.h1', 'h2', '.h2', 'h3', '.h3', 'h4', '.h4', 'h5', '.h5', 'h6', '.h6' ),
 			),
 		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => false,
+			]
+		],
 	) );
+
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h1_typography',
+		'label'       => esc_attr__( 'H1 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h1', '.h1'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h2_typography',
+		'label'       => esc_attr__( 'H2 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h2', '.h2'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h3_typography',
+		'label'       => esc_attr__( 'H3 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h3', '.h3'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h4_typography',
+		'label'       => esc_attr__( 'H4 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h4', '.h4'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h4_typography',
+		'label'       => esc_attr__( 'H4 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h4', '.h4'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h5_typography',
+		'label'       => esc_attr__( 'H5 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h5', '.h5'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+	padang_padang_Kirki::add_field( 'padang_padang', array(
+		'type'        => 'typography',
+		'settings'    => 'h6_typography',
+		'label'       => esc_attr__( 'H6 Typography', 'padang_padang' ),
+		'section'     => 'typography',
+		'priority'    => 10,
+		'default'     => array(
+			'font-family'    => 'Julius Sans One',
+			'font-size'      => '18px',
+			'variant'        => 'regular',
+			'line-height'    => '1.5',
+			'letter-spacing' => '0',
+		),
+		'output'      => array(
+			array(
+				'element' => array( 'h6', '.h6'),
+			),
+		),
+		'active_callback' => [
+			[
+				'setting'  => 'heading_independent_setting',
+				'operator' => '==',
+				'value'    => true,
+			]
+		],
+	) );
+
+
+
 
 
 	/**
