@@ -703,3 +703,15 @@ padang_padang_Kirki::add_panel( 'business_identity', array(
 			'default'     => '',
 			'transport'   => 'postMessage',
 		) );
+
+        padang_padang_Kirki::add_field( 'padang_padang', array(
+			'type'        => 'link',
+			'settings'    => 'vimeo_url',
+			'option_type' => 'option',
+			'option_name' => 'fsc_options',
+			'label'       => __( 'Vimeo URL', 'padang_padang' ),
+			'description' => __( 'Include the https://', 'padang_padang' ),
+			'section'     => 'social-links',
+			'default'     => '',
+			'transport'   => 'postMessage',
+		) );
